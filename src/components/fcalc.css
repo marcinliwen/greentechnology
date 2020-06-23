@@ -49,3 +49,6 @@
 .k_element:last-of-type:after {
     display: none;
 }
+.kalk_container form{
+    padding: 0 15px;
+}
