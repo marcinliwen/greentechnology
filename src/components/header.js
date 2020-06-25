@@ -2,18 +2,18 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import facebook from "./../images/facebook.svg"
+import instagram from "./../images/instagram.svg"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
       marginBottom: `1.45rem`,
     }}
   >
+      
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      className="header container"
     >
       <h1 style={{ margin: 0 }}>
         <Link
@@ -26,6 +26,13 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div className="h_banner">
+      <div className="contact">tel: 500 600 700</div>
+      <div className="social">
+        <Link to="/"><img src={facebook} width="24px" height="24px" /></Link>
+        <Link to="/"><img src={instagram}  width="24px" height="24px"/></Link>
+      </div>
+    </div>
     </div>
   </header>
 )

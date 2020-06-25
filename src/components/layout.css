@@ -622,3 +622,82 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+body{
+  background: #4AB75E;
+  background: linear-gradient(45deg,#4AB75E 20% , #18a98d 85%);
+  height: 100%;
+}
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.c_white{
+  color: #fff;
+}
+.header_title{
+  text-align: center;
+}
+.img_icon {
+  text-align: center;
+}
+.w_100{
+  width: 100%!important;
+}
+.header h1 {
+  font-weight: 200;
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
+  padding: 15px 0;
+}
+.h_banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social img {
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.contact {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media(min-width:760px){
+  .header_title h2{
+    font-size: 48px;
+    font-weight: 900;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+  .header h1{
+    font-size: 32px;
+    text-align: left;
+    width: auto;
+  }
+}

@@ -17,11 +17,11 @@
 }
 .k_element {
     display: flex;
-    margin: 32px 0;
-    padding: 15px;
-    position:relative;
+    padding: 15px 0;
+    position: relative;
+    flex-grow: 1;
 }
-.k_element:after {content: "";display: block;width: 1px;height: 30px;background: #2b2b2b;position: absolute;top: 100%;left: 47px;}
+/*.k_element:after {content: "";display: block;width: 1px;height: 30px;background: #2b2b2b;position: absolute;top: 100%;left: 47px;}*/
 .k_label {
     margin-top: auto;
     width: 100%;
@@ -50,5 +50,25 @@
     display: none;
 }
 .kalk_container form{
-    padding: 0 15px;
+    max-width: 960px;
+    margin: auto;
+}
+.kalk_container{
+    background: #fff;
+    padding: 30px 15px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.k_steps {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: auto;
+}
+
+@media(min-width:760px){
+    .k_element{
+        width: 50%;
+    }
 }

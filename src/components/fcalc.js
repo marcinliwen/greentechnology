@@ -24,22 +24,18 @@ const Fcalc =()=>{
     var kwp = Number.parseFloat(((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000).toFixed(2);
     
     var total_price = 0;
-    if(kwp > 0 &&  kwp <= 5){
+    if(kwp > 0 &&  kwp <= 7){
         let value = Math.floor(kwp);
-        total_price += 3780 * value;
-    }else if( kwp > 5 && kwp <= 10){
-        total_price += 5 * 3780;
-        let next_value = Math.floor(kwp - 5);
-        total_price += next_value * 3672; 
+        total_price += 3780 * value + 5000;
+    }else if( kwp > 7 && kwp <= 10){
+    
+        total_price += kwp * 3672 + 5000; 
     }else if(kwp > 10){
-        total_price += 5 * 3780;
-        total_price += 5 * 3672; 
-        let next_value = Math.floor(kwp - 10);
-        total_price += next_value * 3564; 
+        total_price += kwp * 3564; 
     }
 
     const returnTime = Math.floor(total_price / yearPrice)||0;
-    const yearSave =  (25 * yearPrice) - total_price;
+    const yearSave =  (15 * yearPrice) - total_price;
 
     const useStyles = makeStyles({
         root: {
@@ -73,11 +69,13 @@ const Fcalc =()=>{
       const classes = useStyles();
     return(
         <div className="kalk_container">
-            <h2>Dopasuj instalację fotowoltaiczną</h2>
             <form>
-                <div className="k_header">
-                    <div className="k_title">Miesięczny koszt energii:</div>
-                    <div className="k_start_value"><strong>{price}PLN/msc</strong></div> 
+            <div className="k_element">
+                    <div className="k_img"><img src={cash} width="32px"/></div>
+                    <div className="k_desc">
+                    <div className="k_label">Twój miesięczny koszt energii:</div>
+                    <div className="k_value"><strong>{price}PLN/msc</strong></div> 
+                    </div>
                 </div>
             {/*<input 
                 type="range" 
@@ -88,6 +86,7 @@ const Fcalc =()=>{
                 onChange={changeHandler}
                 className="c_slider"
             />*/}
+            <div className="k_element w_100">
              <Slider 
                 classes={{
                     root: classes.root, // class name, e.g. `classes-nesting-root-x`
@@ -100,11 +99,19 @@ const Fcalc =()=>{
                 value={price}
                 aria-labelledby="continuous-slider"
                 onChange={changeHandler}
-                min={0}
-                max={1500}
+                min={43}
+                max={1000}
             />
+            </div>
             </form>
-           
+           <div className="k_steps">
+            <div className="k_element">
+                <div className="k_img"><img src={ecology} width="32px"/></div>
+                <div className="k_desc">
+                    <div className="k_label">Rocznie potrzebujesz wyprodukować:</div>
+                    <strong className="k_value">{kwhyear}kWh</strong>
+                </div> 
+            </div>
             <div className="k_element">
                 <div className="k_img"><img src={power} width="32px"/></div>
                 <div className="k_desc">
@@ -112,40 +119,35 @@ const Fcalc =()=>{
                     <strong className="k_value">{kwp}kWp</strong>
                 </div>
             </div>
-            <div className="k_element">
-                <div className="k_img"><img src={ecology} width="32px"/></div>
-                    <div className="k_desc">
-                        <div className="k_label">Dzieki tej mocy wyprodukujesz rocznie:</div>
-                        <strong className="k_value">{kwhyear}kWh</strong>
-                    </div> 
-                </div>
+            
             <div className="k_element">
                 <div className="k_img"><img src={calculator} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
-                    <strong className="k_value">{total_price}PLN</strong>
+                    <strong className="k_value">{Math.round(total_price * 100) / 100}PLN</strong>
                 </div>
             </div>
-           <div className="k_element">
+           {/*<div className="k_element">
                 <div className="k_img"><img src={cash} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Roczny rachunek bez instalacji fotovoltaicznej:</div>
                     <strong className="k_value">{yearPrice}PLN</strong>
                 </div>
-            </div>
+            </div>*/}
            <div className="k_element">
                 <div className="k_img"><img src={line} width="32px"/></div>
                 <div className="k_desc">
-                    <div className="k_label">Okres zwrotu inwestycji:</div>
+                    <div className="k_label">Ta inwestycja zwróci Ci się po:</div>
                     <strong className="k_value">{returnTime} lat</strong>
                 </div>
             </div>
-            <div className="k_element b_green">
+            <div className="k_element">
                 <div className="k_img"><img src={money} width="32px"/></div>
                 <div className="k_desc">
-                    <div className="k_label">Oszczędnośc po 25 latach:</div>
-                    <strong className="k_value">{yearSave}PLN</strong>
+                    <div className="k_label">Po 15 latach zaoszczędzisz:</div>
+                    <strong className="k_value">{Math.round(yearSave * 100) / 100}PLN</strong>
                 </div>
+            </div>
             </div>
         </div>
     )
