@@ -32,11 +32,6 @@ const Welcome = class extends React.Component {
       })
     };
     render() {
-        if(this.state.fromTop > (this.state.windowHeight - 150)){
-            document.body.classList.add('kalk');
-        }else{
-            document.body.classList.remove('kalk');
-        };
         if(window.innerWidth > 760){
             var scale= 1-(this.state.fromTop/500);
         }else{
