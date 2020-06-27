@@ -12,12 +12,14 @@ const Welcome = class extends React.Component {
         navBarActiveClass: '',
         isVisible: false,
         fromTop: 0,
-        windowHeight: 0
+        windowHeight: 0,
+        windowWidth: 0
       }
     }
  
     componentDidMount() {
       window.addEventListener('scroll', this.handleScroll, true);
+      this.setState({ windowWidth: window.innerWidth });
     }
   
     componentWillUnmount() {
@@ -32,7 +34,8 @@ const Welcome = class extends React.Component {
       })
     };
     render() {
-        if(window.innerWidth > 760){
+        
+        if(this.state.windowWidth > 760){
             var scale= 1-(this.state.fromTop/500);
         }else{
             var scale = 1;
