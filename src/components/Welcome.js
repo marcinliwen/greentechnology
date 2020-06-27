@@ -48,21 +48,6 @@ const Welcome = class extends React.Component {
                     transform: `scale(`+ (scale > 0.7? scale: 0.7) +`)`,
                 }}
                 >{this.props.children}</h2>
-                <div className={'btn-conteiner' + (this.state.fromTop > (this.state.windowHeight/2) ? ' visible':'')}>
-                    <div className="btn next">
-                        <Links
-                            className="navbar-item" 
-                            activeClass="active"
-                            to="kalkulator"
-                            spy={true}
-                            smooth={true}
-                            offset={-15}
-                            duration={500}
-                        >
-                            <div className="arrow bounce"></div>
-                        </Links>
-                    </div>
-                </div>
             </div>
         )
     

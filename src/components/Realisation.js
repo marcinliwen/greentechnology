@@ -46,7 +46,7 @@ export default function CustomizedTimeline() {
         </div>
         <div className="steps_item">    
             <div className="number">7</div>
-            <div className="steps_item_title">Wszystko juz gotowe</div>
+            <div className="steps_item_title">Ciesz się darmowym prądem</div>
             <div className="steps_item_desc"></div>
         </div>
     </div>

@@ -17,7 +17,7 @@
 }
 .k_element {
     display: flex;
-    padding: 15px 0;
+    padding: 15px;
     position: relative;
     flex-grow: 1;
 }
@@ -28,12 +28,12 @@
 }
 .k_value {
     margin-bottom: auto;
-    margin-top: auto;
+    margin-top: 10px;
     font-size: 20px;
 }
 .k_desc {
     text-align: left;
-    margin-left: 32px;
+    margin-left: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -55,7 +55,7 @@
     margin: auto;
 }
 .kalk_container{
-    background: rgba(255, 255, 255, 0.57);
+    background: rgba(240, 236, 211, 0.80);
     padding: 30px 15px;
     border-radius: 10px;
     margin-bottom: 60px;

@@ -5,9 +5,24 @@ import React from "react"
 
 import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
+import menu_btn from "./../images/menu.svg"
+
+
+
 
 const Header = ({ siteTitle }) => (
   <header>    
+     <div
+      role = "button"
+      tabIndex={0}
+      //onKeyDown={() => toggleHamburger()}
+      className={`navbar-burger burger`}
+      data-target="navMenu"
+     // onClick={() => toggleHamburger()}
+    >
+      <img src={menu_btn} width="24px" height="24px"/>
+    </div>
+         
     <div
       className="header container"
     >

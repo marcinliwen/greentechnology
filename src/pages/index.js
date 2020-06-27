@@ -44,7 +44,7 @@ const IndexPage = () => (
             <img src={garden} width="64" height="64" /> 
           </div>
             <div>
-            Bądź niezaleny energetycznie na lata
+            Bądź niezaleny energetycznie
               </div>
             </li>
         <li>

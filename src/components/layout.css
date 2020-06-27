@@ -757,7 +757,16 @@ header a, header h1 {
 .MuiTimelineItem-missingOppositeContent:before{
   /*display: none!important;*/
 }
+.navbar-burger.burger {
+  position: absolute;
+  left: 15px;
+  top: calc((65px/2) - 15px);
+  transform: rotate(180deg);
+}
 @media(min-width:760px){
+  .navbar-burger.burger{
+    display: none;;
+  }
   nav {
     visibility: visible;
 }

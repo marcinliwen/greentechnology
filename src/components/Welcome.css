@@ -1,10 +1,9 @@
 .header_title{
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: calc(100vh - 65px);
-    position: relative;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
 }
 .btn-conteiner {
     width: 100%;
@@ -26,24 +25,23 @@
     transition-duration: 0.3s;
 }
 .header_title h2 {
-    color: #2b2b2b;
-    font-size: 44px;
-    line-height: 64px;
-    font-weight: 200;
-    background: #ffffff59;
-    padding: 10px 27px;
+  color: #2b2b2b;
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 200;
+  padding: 150px 10px 27px;
 }
 @media(min-width:760px){
     .header_title h2{
-        font-size: 68px;
-        line-height: 85px;
-        font-weight: 200;
-        width: 100%;
-        padding: 28px 222px;
-        margin: auto;
-        background: none;
-        position: sticky;
-        top: 15px;
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 200;
+      width: 100%;
+      padding: 150px 222px 28px;
+      margin: auto;
+      background: none;
+      position: sticky;
+      top: 15px;
     }
   }
 @keyframes bounce {

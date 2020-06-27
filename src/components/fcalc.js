@@ -69,7 +69,6 @@ const Fcalc =()=>{
       const classes = useStyles();
     return(
         <div id="kalkulator" className="kalk_container">
-            <h2>Oblicz jak zmniejszyć rachunki za prąd do 0zł!</h2>
             <form>
             <div className="k_element">
                     <div className="k_img b_grafit"><img src={cash} width="32px"/></div>
