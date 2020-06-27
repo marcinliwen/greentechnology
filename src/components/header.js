@@ -15,7 +15,6 @@ const Header = ({ siteTitle }) => (
         <Links
           to="/"
           style={{
-            color: `#2b2b2b`,
             textDecoration: `none`,
           }}
         >

@@ -743,6 +743,17 @@ section#pros {
   text-align: center;
   width: 250px;
 }
+header, footer {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+header a, header h1 {
+  color: #fff;
+}
+.h_banner {
+  color: #2b2b2b;
+}
 @media(min-width:760px){
   nav {
     visibility: visible;
