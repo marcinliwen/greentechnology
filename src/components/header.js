@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import { Link as Links, animateScroll as scroll } from "react-scroll";
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -6,17 +7,12 @@ import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-      
+  <header>    
     <div
       className="header container"
     >
       <h1 style={{ margin: 0 }}>
-        <Link
+        <Links
           to="/"
           style={{
             color: `#2b2b2b`,
@@ -24,8 +20,50 @@ const Header = ({ siteTitle }) => (
           }}
         >
           {siteTitle}
-        </Link>
+        </Links>
       </h1>
+      <nav>
+      <Links className="navbar-item" 
+        activeClass="active"
+        to="kalkulator"
+        spy={true}
+        smooth={true}
+        offset={70}
+        duration={500}
+      >
+        Kalkulator
+      </Links>
+      <Links className="navbar-item" 
+        activeClass="active"
+        to="kalkulator"
+        spy={true}
+        smooth={true}
+        offset={70}
+        duration={500}
+      >
+        Realizacje
+      </Links>
+      <Links className="navbar-item" 
+        activeClass="active"
+        to="kalkulator"
+        spy={true}
+        smooth={true}
+        offset={70}
+        duration={500}
+      >
+        O nas
+      </Links>
+      <Links className="navbar-item" 
+        activeClass="active"
+        to="kalkulator"
+        spy={true}
+        smooth={true}
+        offset={70}
+        duration={500}
+      >
+        Wiedza
+      </Links>
+      </nav>
       <div className="h_banner">
       <div className="contact">tel: 500 600 700</div>
       <div className="social">

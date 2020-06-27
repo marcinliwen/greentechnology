@@ -27,14 +27,18 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container">
+     
         <main>{children}</main>
-        <footer>
+        <footer
+          style={{textAlign: `center`}}
+        > 
+          <div className="container">
           © {new Date().getFullYear()}, 
           {` `}
           Zielone Technologie
+          </div>
         </footer>
-      </div>
+    
     </>
   )
 }
