@@ -28,6 +28,7 @@
 }
 .k_value {
     margin-bottom: auto;
+    margin-top: auto;
     font-size: 20px;
 }
 .k_desc {
@@ -86,5 +87,14 @@ body.kalk .kalk_container h2 {
     .kalk_container h2{
         font-size: 38px;
         line-height: 44px;
+    }
+    .k_img {
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+    }
+    
+    .k_img>img {
+        width: 44px;
     }
 }

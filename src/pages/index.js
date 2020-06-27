@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Fcalc from "../components/fcalc"
 import Welcome from "../components/Welcome"
+import Realisation from "../components/Realisation"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -11,6 +12,7 @@ import greent from "../images/greent.svg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
+import steps from "../images/realizacja.png"
 
 const IndexPage = () => (
   <Layout>
@@ -30,36 +32,46 @@ const IndexPage = () => (
         <Fcalc />
      </div>
    </section>
-   <section id="pros">
-     <div className="container">
-       <div className="section-title">
-        <h2>Korzyści z Fotowoltaiki</h2>
-       </div>
-     <div>
-       <ul className="pros-container">
-         <li>
-           <div>
+  <section id="pros">
+    <div className="container">
+      <div className="section-title">
+        <h2>Jakie korzyści z Fotowoltaiki</h2>
+      </div>
+    <div>
+      <ul className="pros-container">
+        <li>
+          <div>
             <img src={garden} width="64" height="64" /> 
-           </div>
+          </div>
             <div>
-            Niezalezność energetyczna na lata
+            Bądź niezaleny energetycznie na lata
               </div>
             </li>
-         <li>
-         <div>
+        <li>
+        <div>
             <img src={money_save} width="64" height="64" /> 
-           </div>
-            <div>Redukcja rachunków za prąd do 0zł</div></li>
-         <li>
-         <div>
+          </div>
+            <div>Redukuj rachunków za prąd do 0zł</div></li>
+        <li>
+        <div>
             <img src={planet} width="64" height="64" /> 
-           </div>
+          </div>
             <div>Dbaj o środowisko</div></li>
-       </ul>
-     </div>
-     </div>
-     
-   </section>
+      </ul>
+    </div>
+    </div>
+  </section>
+  <section id="steps">
+    <div className="container">
+      <div className="section-title">
+        <h2>Jak realizujemy projekt</h2>
+      </div>
+    <div className="steps_content">
+      
+      <Realisation />
+    </div>
+    </div>
+  </section>
   </Layout>
 )
 

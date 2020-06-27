@@ -720,7 +720,7 @@ section#pros {
 
 .section-title {
   text-align: center;
-  margin: 60px 0 80px;
+  padding: 60px 0 80px;
 }
 
 .section-title h2 {
@@ -754,6 +754,9 @@ header a, header h1 {
 .h_banner {
   color: #2b2b2b;
 }
+.MuiTimelineItem-missingOppositeContent:before{
+  /*display: none!important;*/
+}
 @media(min-width:760px){
   nav {
     visibility: visible;
@@ -772,6 +775,6 @@ header a, header h1 {
   }
   .section-title {
     text-align: center;
-    margin: 160px 0 180px;
+    padding: 160px 0 180px;
   }
 }

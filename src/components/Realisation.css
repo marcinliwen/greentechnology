@@ -1,0 +1,46 @@
+.steps_item {
+    position: relative;
+    padding: 0px 25px 25px 0px;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.steps_content>div {
+    display: block;
+}
+
+.number {
+    position: absolute;
+    font-size: 164px;
+    font-weight: 900;
+    left: 0;
+    top: 0;
+    color: #4ab75e4d;;
+    z-index: 0;
+    line-height: 164px;
+}
+
+.steps_item_title {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 900;
+    position: relative;
+    height: 138px;
+    display: flex;
+    align-items: flex-end;
+}
+
+section#steps {
+    background-blend-mode: difference;
+    background: #fff;
+}
+@media(min-width: 760px){
+    .steps_content>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
