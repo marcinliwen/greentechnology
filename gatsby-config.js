@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Zielone Tchnologie`,
+        short_name: `ZT`,
         start_url: `/`,
         background_color: `#2b2b2b`,
         theme_color: `#2b2b2b`,
