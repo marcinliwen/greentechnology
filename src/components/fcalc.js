@@ -28,8 +28,7 @@ const Fcalc =()=>{
         let value = Math.floor(kwp);
         total_price += 3780 * value + 5000;
     }else if( kwp > 7 && kwp <= 10){
-    
-        total_price += kwp * 3672 + 5000; 
+        total_price += kwp * 3672 + 3000; 
     }else if(kwp > 10){
         total_price += kwp * 3564; 
     }
