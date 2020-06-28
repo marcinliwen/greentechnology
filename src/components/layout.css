@@ -623,8 +623,7 @@ pre tt:after {
 }
 
 body{
-  background: #4AB75E;
-  background: linear-gradient(45deg,#4AB75E 20% , #18a98d 85%);
+  
 }
 .green_gradient{
   background: #4AB75E;
@@ -665,11 +664,13 @@ header{
   font-size: 28px;
   text-align: center;
   padding: 15px 0;
+  height: 65px;
 }
 .h_banner {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 10px;
 }
 
 .social img {
@@ -708,16 +709,44 @@ header{
   cursor: pointer;
 }
 nav {
-  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  z-index: 1;
+  background: #2b2b2b;
+  padding: 37px;
+  box-shadow: 3px 0 8px #00000059;
+  left: -100%;
+  transition-duration: 0.4s;
+}
+body.menu-open {
+  position: fixed;
+}
+
+nav.-open:after {content: "";position: fixed;width: 100%;top: 0;bottom: 0;left: 0;background: #2b2b2b6b;z-index: -1;transition-duration: 0.4s;}
+
+nav.-open {
+  left: 0;
+  transition-duration: 0.4s;
 }
 nav .navbar-item {
-  margin: 0 0 0 10px;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 25px;
+  margin: 0;
 }
 section#pros {
   color: #fff;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
-
+section#pros {
+  position: relative;
+  z-index: 1;
+}
 .section-title {
   text-align: center;
   padding: 60px 0 80px;
@@ -760,15 +789,40 @@ header a, header h1 {
 .navbar-burger.burger {
   position: absolute;
   left: 15px;
-  top: calc((65px/2) - 15px);
+  top: calc((65px/2) - 12px);
   transform: rotate(180deg);
+  height: 24px;
 }
+.has_img_bg {
+  position: relative;
+}
+
+.img_background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+}
+
+.img_background >img {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+  object-fit: cover;
+}
+
 @media(min-width:760px){
   .navbar-burger.burger{
     display: none;;
   }
   nav {
     visibility: visible;
+    position: static;
+    display: inline-block;
+    padding: 0;
+    box-shadow: none;
 }
   
   .header h1{
@@ -786,4 +840,15 @@ header a, header h1 {
     text-align: center;
     padding: 160px 0 180px;
   }
+  .img_background img {
+    height: auto;
+    width: 100%;
+    max-width: initial;
+    object-fit: cover;
+  }
+  nav .navbar-item {
+    font-size: 16px;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
 }

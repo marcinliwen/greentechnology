@@ -8,6 +8,11 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import sky_3 from "../images/sky_9.jpg"
+import img_cover_1 from "../images/sky_9_1.png"
+import img_cover_414 from "../images/sky_9_x414.png"
+import img_cover_768 from "../images/sky_9_x768.png"
+import img_cover_1280 from "../images/sky_9_x1280.png"
+import img_cover_1440 from "../images/sky_9_x1440.png"
 import greent from "../images/greent.svg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
@@ -17,22 +22,23 @@ import steps from "../images/realizacja.png"
 const IndexPage = () => (
   <Layout>
     <SEO title="Zielone Technologie" />
-   <section 
-   className="img_position"
-   style={{
-    backgroundImage: `url(${
-      sky_3 
-    })`,
-    backgroundAttachment: `fixed`
-   }}
-   
-   >
+   <section className="has_img_bg">
+    <div className="img_background">
+      <picture>
+        <source media="(min-width: 1441px)" srcSet={img_cover_1}/>
+        <source media="(min-width: 1281px) and (max-width: 1440px)" srcSet={img_cover_1440}/>
+        <source media="(min-width: 769px) and (max-width: 1280px)" srcSet={img_cover_1280}/>
+        <source media="(min-width: 415px) and (max-width: 768px)" srcSet={img_cover_768}/>
+        <source media="(max-width: 414px)" srcSet={img_cover_414}/>
+        <img src={img_cover_1} />
+      </picture>
+    </div>
      <div className="container">
         <Welcome>Oblicz jak zmniejszyć rachunki za prąd do 0zł!</Welcome>
         <Fcalc />
      </div>
    </section>
-  <section id="pros">
+  <section id="pros" className="green_gradient">
     <div className="container">
       <div className="section-title">
         <h2>Jakie korzyści z Fotowoltaiki</h2>
