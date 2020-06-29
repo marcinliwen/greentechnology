@@ -6,6 +6,7 @@ import React, {useState, useEffect} from "react"
 import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
 import menu_btn from "./../images/menu.svg"
+import menu_close from "./../images/cancel.svg"
 
 
 
@@ -29,7 +30,11 @@ const Header = ({ siteTitle }) => {
       data-target="navMenu"
       onClick={toggleHamburger}
     >
+      {menu?
+      <img src={menu_close} width="24px" height="24px"/>:
       <img src={menu_btn} width="24px" height="24px"/>
+      
+      }
     </div>
          
     <div
@@ -55,38 +60,42 @@ const Header = ({ siteTitle }) => {
         to="kalkulator"
         spy={true}
         smooth={true}
-        offset={70}
+        offset={0}
         duration={500}
+        onClick={toggleHamburger}
       >
         Kalkulator
       </Links>
       <Links className="navbar-item" 
         activeClass="active"
-        to="kalkulator"
+        to="steps"
         spy={true}
         smooth={true}
-        offset={70}
-        duration={500}
+        offset={0}
+        duration={800}
+        onClick={toggleHamburger}
       >
         Realizacje
       </Links>
       <Links className="navbar-item" 
         activeClass="active"
-        to="kalkulator"
+        to=""
         spy={true}
         smooth={true}
-        offset={70}
-        duration={500}
+        offset={0}
+        duration={900}
+        onClick={toggleHamburger}
       >
         O nas
       </Links>
       <Links className="navbar-item" 
         activeClass="active"
-        to="kalkulator"
+        to="faq"
         spy={true}
         smooth={true}
-        offset={70}
-        duration={500}
+        offset={0}
+        duration={1000}
+        onClick={toggleHamburger}
       >
         Wiedza
       </Links>
