@@ -7,6 +7,8 @@ import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
+import f_white from "./../images/facebook_white.svg"
+import inst_white from "./../images/instagram_white.svg"
 
 
 
@@ -40,7 +42,7 @@ const Header = ({ siteTitle }) => {
     <div
       className="header container"
     >
-      <h1 style={{ margin: 0 }}>
+      <h1>
         <Links
           to="/"
           style={{
@@ -55,12 +57,13 @@ const Header = ({ siteTitle }) => {
         onKeyDown={toggleHamburger}
         onClick={toggleHamburger}
       >
+     
       <Links className="navbar-item" 
         activeClass="active"
         to="kalkulator"
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-120}
         duration={500}
         onClick={toggleHamburger}
       >
@@ -71,7 +74,7 @@ const Header = ({ siteTitle }) => {
         to="steps"
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-80}
         duration={800}
         onClick={toggleHamburger}
       >
@@ -82,7 +85,7 @@ const Header = ({ siteTitle }) => {
         to=""
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-80}
         duration={900}
         onClick={toggleHamburger}
       >
@@ -93,12 +96,17 @@ const Header = ({ siteTitle }) => {
         to="faq"
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-80}
         duration={1000}
         onClick={toggleHamburger}
       >
         Wiedza
       </Links>
+      <div className="contact mobile">tel: 500 600 700</div>
+      <div className="social mobile">
+        <Link to="/"><img src={f_white} width="24px" height="24px" /></Link>
+        <Link to="/"><img src={inst_white}  width="24px" height="24px"/></Link>
+      </div>
       </nav>
       <div className="h_banner">
       <div className="contact">tel: 500 600 700</div>

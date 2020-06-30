@@ -83,6 +83,7 @@ body.kalk .kalk_container h2 {
     height: 54px;
     transition-duration: .4s;
 }
+
 @media(min-width:760px){
     .k_element{
         width: 50%;

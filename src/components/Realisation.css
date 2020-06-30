@@ -36,6 +36,7 @@
 section#steps {
     background-blend-mode: difference;
     background: #fff;
+    padding-bottom: 80px;
 }
 @media(min-width: 760px){
     .steps_content>div {

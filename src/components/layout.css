@@ -665,6 +665,7 @@ header{
   text-align: center;
   padding: 15px 0;
   height: 65px;
+  margin: 0;
 }
 .h_banner {
   display: flex;
@@ -718,10 +719,11 @@ nav {
   justify-content: center;
   z-index: 999;
   background: #2b2b2b;
-  padding: 37px;
+  padding: 15px;
   box-shadow: 3px 0 8px #00000059;
   left: -100%;
   transition-duration: 0.4s;
+  width: 80%;
 }
 
 @media(max-width: 767px){
@@ -741,6 +743,7 @@ nav .navbar-item {
   line-height: 28px;
   padding: 25px;
   margin: 0;
+  text-align: center;
 }
 section#pros {
   color: #fff;
@@ -827,26 +830,63 @@ header a, header h1 {
 }
 .navbar-burger.burger {
   position: fixed;
-  z-index: 9;
-  background: #2b2b2b;
-  border-radius: 50%;
-  padding: 5px;
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 15px;
-  top: auto;
-  left: auto;
-  right: 15px;
-  box-shadow: -3px -3px 6px #0000005c;
+    z-index: 999;
+    background: #2b2b2b;
+    border-radius: 50%;
+    padding: 5px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    top: 8px;
+    left: 15px;
+    box-shadow: -3px -3px 6px #0000005c, 4px 1px 6px #6767673d;
 }
 
 .navbar-burger.burger:focus {
   outline: none;
 }
+.contact.mobile {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.social.mobile {
+  font-size: 25px;
+  line-height: 28px;
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+}
+
+.social.mobile img {
+  width: 32px;
+  height: 32px;
+}
+.h_banner{
+  display: none;
+}
+.header {
+  position: fixed;
+  background: #2b2b2b;
+  z-index: 998;
+  box-shadow: 0px 3px 6px #2b2b2ba1;
+}
 @media(min-width:760px){
+  .header{
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+  .mobile{
+    display: none;
+}
   .navbar-burger.burger{
     display: none;;
   }
@@ -856,6 +896,7 @@ header a, header h1 {
     display: inline-block;
     padding: 0;
     box-shadow: none;
+    width: auto;
 }
   
   .header h1{
