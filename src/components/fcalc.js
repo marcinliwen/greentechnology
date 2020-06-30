@@ -11,6 +11,7 @@ import calculator from './../images/calculator.svg'
 import cash from './../images/cash.svg'
 import line from './../images/line.svg'
 import money from './../images/money.svg'
+import save_energy from './../images/save-energy.svg'
 
 
 const Fcalc =()=>{
@@ -21,18 +22,30 @@ const Fcalc =()=>{
    
     var kwhmsc = Math.round(price / 0.62);
     var kwhyear = Math.round(kwhmsc * 12);
-    var kwp = Number.parseFloat(((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000).toFixed(2);
-    
+    var kwp = Math.floor(((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
+    console.log(kwp);
     var total_price = 0;
-    if(kwp > 0 &&  kwp <= 7){
-        let value = Math.floor(kwp);
-        total_price += 3780 * value + 5000;
-    }else if( kwp > 7 && kwp <= 10){
-        total_price += kwp * 3672 + 3000; 
-    }else if(kwp > 10){
-        total_price += kwp * 3564; 
+    if(kwp <= 4){
+        switch(kwp){
+            case 1:
+                total_price = 12000;
+                break;
+            case 2:
+                total_price = 13500;
+                break;
+            case 3: 
+                total_price = 15000;
+                break;
+            case 4:
+                total_price = 18000;
+                break;
+        }
+    }   
+    else{
+        total_price = 18000 + ((kwp-4)*3000);
     }
 
+    console.log(total_price);
     const returnTime = Math.floor(total_price / yearPrice)||0;
     const yearSave =  (15 * yearPrice) - total_price;
 
@@ -98,7 +111,7 @@ const Fcalc =()=>{
                 value={price}
                 aria-labelledby="continuous-slider"
                 onChange={changeHandler}
-                min={43}
+                min={50}
                 max={1000}
             />
             </div>
@@ -123,16 +136,16 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={calculator} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
-                    <strong className="k_value">{Math.round(total_price * 100) / 100}PLN</strong>
+                    <strong className="k_value">{total_price}PLN</strong>
                 </div>
             </div>
-           {/*<div className="k_element">
-                <div className="k_img"><img src={cash} width="32px"/></div>
+            <div className="k_element">
+                <div className="k_img blue_gradient"><img src={save_energy} width="32px"/></div>
                 <div className="k_desc">
-                    <div className="k_label">Roczny rachunek bez instalacji fotovoltaicznej:</div>
-                    <strong className="k_value">{yearPrice}PLN</strong>
+                    <div className="k_label">Koszt brutto z dotacją <span style={{whiteSpace:"nowrap"}}>"Mój prąd":</span></div>
+                    <strong className="k_value">{total_price - 5000}PLN</strong>
                 </div>
-            </div>*/}
+            </div>
            <div className="k_element">
                 <div className="k_img b_grafit"><img src={line} width="32px"/></div>
                 <div className="k_desc">

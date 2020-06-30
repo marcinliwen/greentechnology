@@ -43,6 +43,9 @@
 .b_green {
     background: #48a73d2e;
 }
+.blue_gradient{
+    background: transparent linear-gradient(230deg,#26a5fc,#19319c) 0 0 no-repeat;
+}
 .k_start_value {
     margin: 15px 0 25px;
     font-size: 20px;
@@ -55,7 +58,7 @@
     margin: auto;
 }
 .kalk_container{
-    background: rgba(240, 236, 211, 0.80);
+    background: rgba(240, 236, 211, 0.35);
     padding: 30px 15px;
     border-radius: 10px;
     margin-bottom: 60px;
