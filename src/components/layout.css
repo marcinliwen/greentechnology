@@ -911,6 +911,13 @@ header a, header h1 {
   box-shadow: 0px 3px 6px #2b2b2ba1;
   width: 100%;
 }
+.key_more {
+  cursor: pointer;
+  line-height: 29px;
+  height: 29px;
+  display: flex;
+  margin-left: 10px;
+}
 @media(min-width:760px){
   .header{
     background: #fff;

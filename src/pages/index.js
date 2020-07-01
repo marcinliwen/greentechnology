@@ -28,7 +28,7 @@ import img_faq_1440 from "../images/faq_x1440.png"
 const IndexPage = () => (
   <Layout>
     <SEO title="Zielone Technologie" />
-   <section className="has_img_bg">
+   <section className="has_img_bg" id="home">
     <div className="img_background">
       <picture>
         <source media="(min-width: 1441px)" srcSet={img_cover_1}/>

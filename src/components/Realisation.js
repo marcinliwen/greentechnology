@@ -1,8 +1,11 @@
 import React from 'react';
-import './Realisation.css'
+import './Realisation.css';
+
+import Popover from './Popover';
+
+
 export default function CustomizedTimeline() {
   
-
   return (
     <div>
         <div className="steps_item">    
@@ -22,8 +25,9 @@ export default function CustomizedTimeline() {
         </div>
         <div className="steps_item">    
             <div className="number">4</div>
-            <div className="steps_item_title">Wykonanie instalacji „pod klucz”</div>
-            <div className="steps_item_desc">
+            <div className="steps_item_title">
+                Wykonanie instalacji "pod klucz"
+                <Popover title="„pod klucz">
                 <ul>
                     <li>przygotowanie projektu wykonawczego instalacji</li>
                     <li>wykonanie instalacji fotowoltaicznej</li>
@@ -32,7 +36,13 @@ export default function CustomizedTimeline() {
                     <li>transport</li>
                     <li>przygotowanie kompletu dokumentów niezbędnych do przyłączenia instalacji do sieci</li>
                 </ul>
+            </Popover>
             </div>
+            
+            
+            
+                
+            
         </div>
         <div className="steps_item">    
             <div className="number">5</div>

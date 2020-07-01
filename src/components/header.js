@@ -57,10 +57,10 @@ const Header = ({ siteTitle }) => {
       
         <Links className="navbar-item" 
           activeClass="active"
-          to="kalkulator"
+          to="home"
           spy={true}
           smooth={true}
-          offset={-120}
+          offset={-65}
           duration={500}
           onClick={toggleHamburger}
         >
@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => {
           to="steps"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={-65}
           duration={800}
           onClick={toggleHamburger}
         >
@@ -82,7 +82,7 @@ const Header = ({ siteTitle }) => {
           to=""
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={-65}
           duration={900}
           onClick={toggleHamburger}
         >
@@ -93,7 +93,7 @@ const Header = ({ siteTitle }) => {
           to="faq"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={-65}
           duration={1000}
           onClick={toggleHamburger}
         >
