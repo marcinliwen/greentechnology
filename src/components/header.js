@@ -39,80 +39,79 @@ const Header = ({ siteTitle }) => {
       }
     </div>
          
-    <div
-      className="header container"
-    >
-      <h1>
-        <Links
-          to="/"
-          style={{
-            textDecoration: `none`,
-          }}
+    <div className="header">
+      <div className="container">
+        <h1>
+          <Links
+            to="/"
+            className="text-green"
+          >
+            Zielone <span className="text-gray">Technologie</span>
+          </Links>
+        </h1>
+        <nav 
+          className={menu?"-open":""}
+          onKeyDown={toggleHamburger}
+          onClick={toggleHamburger}
         >
-          {siteTitle}
+      
+        <Links className="navbar-item" 
+          activeClass="active"
+          to="kalkulator"
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          onClick={toggleHamburger}
+        >
+          Kalkulator
         </Links>
-      </h1>
-      <nav 
-        className={menu?"-open":""}
-        onKeyDown={toggleHamburger}
-        onClick={toggleHamburger}
-      >
-     
-      <Links className="navbar-item" 
-        activeClass="active"
-        to="kalkulator"
-        spy={true}
-        smooth={true}
-        offset={-120}
-        duration={500}
-        onClick={toggleHamburger}
-      >
-        Kalkulator
-      </Links>
-      <Links className="navbar-item" 
-        activeClass="active"
-        to="steps"
-        spy={true}
-        smooth={true}
-        offset={-80}
-        duration={800}
-        onClick={toggleHamburger}
-      >
-        Realizacje
-      </Links>
-      <Links className="navbar-item" 
-        activeClass="active"
-        to=""
-        spy={true}
-        smooth={true}
-        offset={-80}
-        duration={900}
-        onClick={toggleHamburger}
-      >
-        O nas
-      </Links>
-      <Links className="navbar-item" 
-        activeClass="active"
-        to="faq"
-        spy={true}
-        smooth={true}
-        offset={-80}
-        duration={1000}
-        onClick={toggleHamburger}
-      >
-        Wiedza
-      </Links>
-      <div className="contact mobile">tel: 500 600 700</div>
-      <div className="social mobile">
-        <Link to="/"><img src={f_white} width="24px" height="24px" /></Link>
-        <Link to="/"><img src={inst_white}  width="24px" height="24px"/></Link>
-      </div>
-      </nav>
-      <div className="h_banner">
-      <div className="contact">tel: 500 600 700</div>
-      <div className="social">
-        <Link to="/"><img src={facebook} width="24px" height="24px" /></Link>
-        <Link to="/"><img src={instagram}  width="24px" height="24px"/></Link>
+        <Links className="navbar-item" 
+          activeClass="active"
+          to="steps"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={800}
+          onClick={toggleHamburger}
+        >
+          Realizacje
+        </Links>
+        <Links className="navbar-item" 
+          activeClass="active"
+          to=""
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={900}
+          onClick={toggleHamburger}
+        >
+          O nas
+        </Links>
+        <Links className="navbar-item" 
+          activeClass="active"
+          to="faq"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={1000}
+          onClick={toggleHamburger}
+        >
+          Wiedza
+        </Links>
+        <div className="contact mobile">tel: 500 600 700</div>
+        <div className="social mobile">
+          <Link to="/"><img src={f_white} width="24px" height="24px" /></Link>
+          <Link to="/"><img src={inst_white}  width="24px" height="24px"/></Link>
+        </div>
+        </nav>
+        <div className="nav_back"></div>
+        <div className="h_banner">
+        <div className="contact">tel: 500 600 700</div>
+        <div className="social">
+          <Link to="/"><img src={facebook} width="24px" height="24px" /></Link>
+          <Link to="/"><img src={instagram}  width="24px" height="24px"/></Link>
+        </div>
       </div>
     </div>
     </div>
