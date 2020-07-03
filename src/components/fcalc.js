@@ -157,7 +157,7 @@ const Fcalc =()=>{
                 <div className="k_img green_gradient"><img src={money} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Po 15 latach zaoszczędzisz:</div>
-                    <strong className="k_value">{Math.round(yearSave * 100) / 100}PLN</strong>
+                    <strong className="k_value">{Math.round(yearSave * 100) / 100 > 0? Math.round(yearSave * 100) / 100 : 0}PLN</strong>
                 </div>
             </div>
             </div>

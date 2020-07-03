@@ -814,6 +814,8 @@ footer {
 }
 header{
   background: #fff;
+  position: fixed;
+  z-index: 998;
 }
 header a, header h1 {
   color: #fff;
@@ -917,6 +919,9 @@ header a, header h1 {
   height: 29px;
   display: flex;
   margin-left: 10px;
+}
+.gatsby-image-wrapper{
+  height: 100vh;
 }
 @media(min-width:760px){
   .header{

@@ -28,7 +28,8 @@ export default function CustomizedTimeline() {
             <div className="steps_item_title">
                 Wykonanie instalacji "pod klucz"
                 <Popover title="„pod klucz">
-                <ul>
+                <ul style={{    padding: '30px 15px',
+    marginBottom: '0'}}>
                     <li>przygotowanie projektu wykonawczego instalacji</li>
                     <li>wykonanie instalacji fotowoltaicznej</li>
                     <li>prace montażowe niezbędne do przyłączenia instalacji do sieci energetycznej</li>
