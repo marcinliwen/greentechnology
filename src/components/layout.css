@@ -452,7 +452,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 noscript {
   margin-left: 0;
@@ -923,6 +923,13 @@ header a, header h1 {
 .gatsby-image-wrapper{
   height: 100vh;
 }
+#contact{
+  background: #fff;
+}
+.contact_content {
+  padding: 0 0 120px;
+  text-align: center;
+}
 @media(min-width:760px){
   .header{
     background: #fff;
@@ -992,4 +999,22 @@ nav a{
     width: 85%;
     margin: auto;
   }
+  section#contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 15px;
+    width: 50%;
+}
+
+section#contact .section-title {
+    text-align: left;
+    margin-right: 50px;
+    padding: 0;
+    width: 50%;
+}
+
+section#contact .contact_content {
+    padding: 0;
+}
 }

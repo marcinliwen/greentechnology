@@ -6,6 +6,8 @@ import Fcalc from "../components/fcalc"
 import Welcome from "../components/Welcome"
 import Realisation from "../components/Realisation"
 import Faq from "../components/Faq"
+import Contact from "../components/contact"
+import Contactform from "../components/contactform"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -122,6 +124,15 @@ const IndexPage = () => {
       <div className="faq_content">
         <Faq />
       </div>
+    </div>
+  </section>
+  <section id="contact">
+  <div className="container">
+      <div className="section-title">
+        <h2>Napisz do nas</h2>
+        <p>i dowiedz się co jeszcze mozesz zyskać inwestując  w fotowoltaikę.</p> 
+      </div>
+    <Contactform />
     </div>
   </section>
   </Layout>

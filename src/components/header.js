@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import { Link as Links, animateScroll as scroll } from "react-scroll";
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
+import Button from '@material-ui/core/Button';
 
 import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
@@ -79,17 +80,6 @@ const Header = ({ siteTitle }) => {
         </Links>
         <Links className="navbar-item" 
           activeClass="active"
-          to=""
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={900}
-          onClick={toggleHamburger}
-        >
-          O nas
-        </Links>
-        <Links className="navbar-item" 
-          activeClass="active"
           to="faq"
           spy={true}
           smooth={true}
@@ -98,6 +88,17 @@ const Header = ({ siteTitle }) => {
           onClick={toggleHamburger}
         >
           Wiedza
+        </Links>
+        <Links className="navbar-item" 
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-65}
+          duration={1000}
+          onClick={toggleHamburger}
+        >
+          Umów rozmowę
         </Links>
         <div className="contact mobile">tel: 500 600 700</div>
         <div className="social mobile">
