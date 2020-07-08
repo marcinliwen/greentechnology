@@ -85,7 +85,7 @@ const Layout = ({ children }) => {
                   offset={-65}
                   duration={1000}
                 >
-                  Umów rozmowę
+                  Zapytaj o ofertę
                 </Links>
               </div>
             </div>

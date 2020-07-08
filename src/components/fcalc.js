@@ -127,7 +127,7 @@ const Fcalc =()=>{
             <div className="k_element">
                 <div className="k_img b_grafit"><img src={power} width="32px"/></div>
                 <div className="k_desc">
-                    <div className="k_label">Ptrzebna moc instalacji: </div>
+                    <div className="k_label">Potrzebna moc instalacji: </div>
                     <strong className="k_value">{kwp}kWp</strong>
                 </div>
             </div>

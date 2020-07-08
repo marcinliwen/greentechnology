@@ -101,7 +101,7 @@ const Header = ({ siteTitle }) => {
           duration={1000}
           onClick={toggleHamburger}
         >
-          Umów rozmowę
+          Zapytaj o ofertę
         </Links>
         <div className="contact mobile">tel: 694 163 440 | 609 594 480</div>
         <div className="social mobile">

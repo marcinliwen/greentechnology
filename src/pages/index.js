@@ -77,14 +77,14 @@ const IndexPage = () => {
             <img src={garden} width="64" height="64" /> 
           </div>
             <div>
-            Bądź niezaleny energetycznie
+            Bądź niezależny energetycznie
               </div>
             </li>
         <li>
         <div>
             <img src={money_save} width="64" height="64" /> 
           </div>
-            <div>Redukuj rachunków za prąd do 0zł</div></li>
+            <div>Redukuj rachunki za prąd do 0zł</div></li>
         <li>
         <div>
             <img src={planet} width="64" height="64" /> 
@@ -130,7 +130,7 @@ const IndexPage = () => {
   <div className="container">
       <div className="section-title">
         <h2>Napisz do nas</h2>
-        <p>i dowiedz się co jeszcze mozesz zyskać inwestując  w fotowoltaikę.</p> 
+        <p>i dowiedz się co jeszcze możesz zyskać inwestując  w fotowoltaikę.</p> 
       </div>
     <Contactform />
     </div>

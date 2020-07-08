@@ -71,7 +71,7 @@ export default function FormDialog() {
   return (
     <div className="contact_content">
         <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
-            Umów rozmowę
+            Zapytaj o ofertę
         </Button>
 
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
