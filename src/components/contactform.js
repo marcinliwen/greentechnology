@@ -116,6 +116,15 @@ export default function FormDialog() {
                     fullWidth
                     onChange={handleChange}
                 />
+                <TextField
+                    margin="dense"
+                    id="kwp_msc"
+                    name="kwp_msc"
+                    label="Ile miesięcznie płacisz za prąd?"
+                    type="text"
+                    fullWidth
+                    onChange={handleChange}
+                />
 
                 <TextField
                     margin="dense"
