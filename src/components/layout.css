@@ -783,7 +783,7 @@ nav {
 }
 
 .footer_content .logo {
-  lex-wrap: wrap;
+  flex-wrap: wrap;
     justify-content: flex-start;
     text-align: left;
     width: 100%;
@@ -1004,6 +1004,9 @@ header a, header h1 {
   padding-bottom: 8px;
 }
 @media(min-width:760px){
+  .footer_content .logo{
+    width:auto;
+  }
   .logo{
     font-size: 24px;
   }
