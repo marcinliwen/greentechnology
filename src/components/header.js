@@ -10,6 +10,7 @@ import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
 import f_white from "./../images/facebook_white.svg"
 import inst_white from "./../images/instagram_white.svg"
+import logo from "./../images/logo.svg"
 
 
 
@@ -45,9 +46,11 @@ const Header = ({ siteTitle }) => {
         <h1>
           <Links
             to="/"
-            className="text-green"
           >
-            Zielone <span className="text-gray">Technologie</span>
+            <div className="logo">
+            <span className="text-green">Zielone</span> <img src={logo} width="32px" /><span className="text-gray">Technologie</span>
+            </div>
+          
           </Links>
         </h1>
         <nav 
@@ -100,7 +103,7 @@ const Header = ({ siteTitle }) => {
         >
           Umów rozmowę
         </Links>
-        <div className="contact mobile">tel: 500 600 700</div>
+        <div className="contact mobile">tel: 694 163 440 | 609 594 480</div>
         <div className="social mobile">
           <Link to="/"><img src={f_white} width="24px" height="24px" /></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px"/></Link>
@@ -108,7 +111,7 @@ const Header = ({ siteTitle }) => {
         </nav>
         <div className="nav_back"></div>
         <div className="h_banner">
-        <div className="contact">tel: 500 600 700</div>
+        <div className="contact">tel: 694 163 440 | 609 594 480</div>
         <div className="social">
           <Link to="/"><img src={facebook} width="24px" height="24px" /></Link>
           <Link to="/"><img src={instagram}  width="24px" height="24px"/></Link>
