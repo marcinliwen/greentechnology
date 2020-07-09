@@ -23,6 +23,7 @@ import greent from "../images/greent.svg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
+import solar_panel from "../images/solar-panel.svg"
 import steps from "../images/realizacja.png"
 import img_faq_1 from "../images/faq_x1.png"
 import img_faq_414 from "../images/faq_x414.png"
@@ -134,7 +135,8 @@ const IndexPage = () => {
       </div>
     {/*<Contactform />*/}
     <Contact />
-    </div>
+    <div className="contact_icon"><img src={solar_panel} width="64px"/></div>
+  </div>
   </section>
   </Layout>
 )
