@@ -7,6 +7,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 
 function encode(data) {
@@ -33,14 +34,26 @@ export default function Contact() {
         ...state,
       }),
     })
-      //.then(() => navigate(form.getAttribute('action')))
-      .then(()=>{})
-      .catch((error) => alert(error))
+      .then(() => handleSuccess())
+      .then(()=> setTimeout (()=>{ handleClose()}, 3000))
+      .catch((error) => handleError(error))
+  }
+
+  const [messageError, setError] = React.useState();
+  const handleError = (error) => {
+      setError(error);
+  }
+
+  const [messageSuccess, setSuccess] = React.useState(false);
+  const handleSuccess = () => {
+      setSuccess(true);
   }
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
+    setSuccess(false);
+    setError();
   };
 
   const handleClose = () => {
@@ -79,10 +92,12 @@ export default function Contact() {
             <DialogContentText>
                 Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
             </DialogContentText>
+            
+ 
       <form
         name="contact"
         method="post"
-       // action="/thanks/"
+        //action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
@@ -145,6 +160,9 @@ export default function Contact() {
           </Button>
           </DialogActions>
       </form>
+      {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
+      {messageError ? ( <Alert style={{margin:'15px 0 25px 0'}} severity="error">{messageError}</Alert>) : ""}  
+           
       </DialogContent>
         
         
