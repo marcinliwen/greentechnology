@@ -85,7 +85,7 @@ export default function FormDialog() {
                 
             >
             <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
-            <DialogContent className={classes.root}>
+            <DialogContent >
             <DialogContentText>
                 Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
             </DialogContentText>

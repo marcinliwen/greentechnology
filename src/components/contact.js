@@ -37,6 +37,16 @@ export default function Contact() {
       .then(()=>{})
       .catch((error) => alert(error))
   }
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const useStyles = makeStyles((theme) => ({
     root: {
         '& .MuiInput-underline:after': {
@@ -58,7 +68,17 @@ export default function Contact() {
   }));
   const classes = useStyles();
   return (
-  
+    <div className="contact_content">
+    <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
+            Zapytaj o ofertę
+        </Button>
+
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+      <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
+            <DialogContent >
+            <DialogContentText>
+                Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
+            </DialogContentText>
       <form
         name="contact"
         method="post"
@@ -75,7 +95,7 @@ export default function Contact() {
             Don’t fill this out: <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
-        <TextField
+                <TextField
                     margin="dense"
                     id="name"
                     name="name"
@@ -116,11 +136,21 @@ export default function Contact() {
                     onChange={handleChange}
                     className={classes.underline}
                 />
-        <p style={{textAlign:'right', marginTop: '50px'}}>
+        <DialogActions>
+        <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
+            Anuluj
+          </Button>
           <Button variant="outlined" className={classes.root, classes.outlined}  type="submit" >
             Wyślij 
           </Button>
-        </p>
+          </DialogActions>
       </form>
+      </DialogContent>
+        
+        
+          
+        
+      </Dialog>
+      </div>
   )
 }
