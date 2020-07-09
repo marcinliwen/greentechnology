@@ -1,6 +1,13 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import { makeStyles } from '@material-ui/core/styles';
 
 function encode(data) {
   return Object.keys(data)
@@ -30,7 +37,26 @@ export default function Contact() {
       .then(()=>{})
       .catch((error) => alert(error))
   }
-
+  const useStyles = makeStyles((theme) => ({
+    root: {
+        '& .MuiInput-underline:after': {
+            borderBottomColor: '#11B91B',
+            },
+        '& label.Mui-focused': {
+            color: '#11B91B',
+            },
+    },
+    outlined:{
+        borderColor: 'rgba(17, 185, 27, 0.5)',
+        color: '#11B91B',
+    },
+    textPrimary:{
+        color: '#11B91B'
+    },
+   
+    
+  }));
+  const classes = useStyles();
   return (
   
       <form
@@ -40,37 +66,60 @@ export default function Contact() {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
+        className={classes.root}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="contact"  />
         <p hidden>
           <label>
             Don’t fill this out: <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
-        <p>
-          <label>
-            name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
+        <TextField
+                    margin="dense"
+                    id="name"
+                    name="name"
+                    label="Imię"
+                    type="text"
+                    required="true"
+                    fullWidth
+                    onChange={handleChange}
+                />
+                <TextField
+                    margin="dense"
+                    id="email"
+                    name="email"
+                    label="Email"
+                    type="email"
+                    required="true"
+                    fullWidth
+                    onChange={handleChange}
+                />
+                <TextField
+                    margin="dense"
+                    id="kwp_msc"
+                    name="kwp_msc"
+                    label="Ile miesięcznie płacisz za prąd?"
+                    type="text"
+                    fullWidth
+                    onChange={handleChange}
+                />
+
+                <TextField
+                    margin="dense"
+                    id="message"
+                    name="message"
+                    label="Wiadomość"
+                    fullWidth
+                    multiline
+                    rowsMax={4}
+                    onChange={handleChange}
+                    className={classes.underline}
+                />
+        <p style={{textAlign:'right', marginTop: '50px'}}>
+          <Button variant="outlined" className={classes.root, classes.outlined}  type="submit" >
+            Wyślij 
+          </Button>
         </p>
       </form>
   )

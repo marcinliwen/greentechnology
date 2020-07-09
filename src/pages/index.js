@@ -132,7 +132,8 @@ const IndexPage = () => {
         <h2>Napisz do nas</h2>
         <p>i dowiedz się co jeszcze możesz zyskać inwestując  w fotowoltaikę.</p> 
       </div>
-    <Contactform />
+    {/*<Contactform />*/}
+    <Contact />
     </div>
   </section>
   </Layout>

@@ -82,10 +82,10 @@ export default function FormDialog() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
-                className={classes.root}
+                
             >
             <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
-            <DialogContent>
+            <DialogContent className={classes.root}>
             <DialogContentText>
                 Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
             </DialogContentText>
