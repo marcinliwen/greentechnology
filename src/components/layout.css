@@ -713,9 +713,7 @@ header{
 }
 
 .contact {
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  text-align: center;
   font-size: 16px;
   color: #fff;
 }
@@ -739,7 +737,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 999;
   padding: 15px;
   box-shadow: 3px 0 8px #00000059;
@@ -838,9 +836,9 @@ nav {
 
 
 nav .navbar-item {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 28px;
-  padding: 25px;
+  padding: 16px;
   margin: 0;
   text-align: center;
 }
@@ -957,7 +955,7 @@ header a, header h1 {
   padding: 25px;
   margin: 0;
   text-align: center;
-  margin-top: auto;
+  margin-top: 40px;
 }
 
 .social.mobile {

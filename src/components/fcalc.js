@@ -22,30 +22,30 @@ const Fcalc =()=>{
    
     var kwhmsc = Math.round(price / 0.62);
     var kwhyear = Math.round(kwhmsc * 12);
-    var kwp = Math.floor(((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
-    console.log(kwp);
+    var kwp = (((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
+    //console.log(kwp);
     var total_price = 0;
     if(kwp <= 4){
-        switch(kwp){
-            case 1:
-                total_price = 12000;
-                break;
-            case 2:
-                total_price = 13500;
-                break;
-            case 3: 
-                total_price = 15000;
-                break;
-            case 4:
-                total_price = 18000;
-                break;
+        if(kwp < 2){
+          
+            total_price = 12000 ;
         }
+        else if(kwp >= 2 && kwp < 3){
+            let unit = (15000 - 13500)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 13500 + (unit * perUnit);
+        }
+        else if(kwp >= 3 && kwp < 4 ){
+            let unit = (18000 - 15000)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 15000 + (unit * perUnit);
+        }  
     }   
     else{
         total_price = 18000 + ((kwp-4)*3000);
     }
 
-    console.log(total_price);
+    //console.log(total_price);
     const returnTime = Math.floor(total_price / yearPrice)||0;
     const yearSave =  (15 * yearPrice) - total_price;
 
@@ -128,7 +128,7 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={power} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Potrzebna moc instalacji: </div>
-                    <strong className="k_value">{kwp}kWp</strong>
+                    <strong className="k_value">{Math.floor(kwp)}kWp</strong>
                 </div>
             </div>
             
@@ -136,14 +136,14 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={calculator} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
-                    <strong className="k_value">{total_price}PLN</strong>
+                    <strong className="k_value">{Math.floor(total_price)}PLN</strong>
                 </div>
             </div>
             <div className="k_element">
                 <div className="k_img blue_gradient"><img src={save_energy} width="32px"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto z dotacją <span style={{whiteSpace:"nowrap"}}>"Mój prąd":</span></div>
-                    <strong className="k_value">{total_price - 5000}PLN</strong>
+                    <strong className="k_value">{Math.floor(total_price - 5000)}PLN</strong>
                 </div>
             </div>
            <div className="k_element">
