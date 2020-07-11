@@ -5,7 +5,7 @@ import Fcalc from "../components/fcalc"
 import Welcome from "../components/Welcome"
 import Realisation from "../components/Realisation"
 import Faq from "../components/Faq"
-import Contact from "../components/contact"
+//import Contact from "../components/contact"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,7 +14,7 @@ import Faqimg from "../components/Faqimg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
-import solar_panel from "../images/solar-panel.svg"
+//import solar_panel from "../images/solar-panel.svg"
 
 const IndexPage = () => { 
   const data = useStaticQuery( graphql`
@@ -112,17 +112,16 @@ const IndexPage = () => {
       </div>
     </div>
   </section>
-  <section id="contact">
+ {/* <section id="contact">
   <div className="container">
       <div className="section-title">
         <h2>Napisz do nas</h2>
         <p>i dowiedz się co jeszcze możesz zyskać inwestując  w fotowoltaikę.</p> 
       </div>
-    {/*<Contactform />*/}
     <Contact />
     <div className="contact_icon"><img src={solar_panel} width="64px" alt="solar panel"/></div>
   </div>
-  </section>
+    </section>*/}
   </Layout>
 )
     }
