@@ -45,7 +45,6 @@ const Fcalc =()=>{
         total_price = 18000 + ((kwp-4)*3000);
     }
 
-
     const returnTime = Math.floor(total_price / yearPrice)||0;
     const yearSave =  (15 * yearPrice) - total_price;
 
