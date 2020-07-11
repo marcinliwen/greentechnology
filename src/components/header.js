@@ -102,7 +102,7 @@ const Header = ({ siteTitle }) => {
         >
           Zapytaj o ofertę
         </Links>
-        <div className="contact mobile">tel: 694 163 440 | 609 594 480</div>
+        <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
         <div className="social mobile">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>
