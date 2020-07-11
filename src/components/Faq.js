@@ -39,7 +39,7 @@ export default function ControlledAccordions() {
     <div className={classes.root}>
         {data_faq.map((data, index)=>(
           
-            <Accordion expanded={expanded === 'panel'+index} onChange={handleChange('panel'+index)}>
+            <Accordion key={index} expanded={expanded === 'panel'+index} onChange={handleChange('panel'+index)}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1bh-content"

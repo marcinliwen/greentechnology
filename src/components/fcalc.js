@@ -1,10 +1,8 @@
-import PropTypes from "prop-types"
 import React ,{useState} from "react"
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
 
 import "./fcalc.css"
-import kalkdata from "./kalkdata.json"
 import power from './../images/power.svg'
 import ecology from './../images/ecology.svg'
 import calculator from './../images/calculator.svg'
@@ -23,7 +21,7 @@ const Fcalc =()=>{
     var kwhmsc = Math.round(price / 0.62);
     var kwhyear = Math.round(kwhmsc * 12);
     var kwp = Math.floor(((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
-    console.log(kwp);
+   
     var total_price = 0;
     if(kwp <= 4){
         switch(kwp){
@@ -39,13 +37,15 @@ const Fcalc =()=>{
             case 4:
                 total_price = 18000;
                 break;
+            default:
+                break;
         }
     }   
     else{
         total_price = 18000 + ((kwp-4)*3000);
     }
 
-    console.log(total_price);
+ 
     const returnTime = Math.floor(total_price / yearPrice)||0;
     const yearSave =  (15 * yearPrice) - total_price;
 
@@ -83,7 +83,7 @@ const Fcalc =()=>{
         <div id="kalkulator" className="kalk_container">
             <form>
             <div className="k_element">
-                    <div className="k_img b_grafit"><img src={cash} width="32px"/></div>
+                    <div className="k_img b_grafit"><img src={cash} width="32px" alt="cash"/></div>
                     <div className="k_desc">
                     <div className="k_label">Twój miesięczny koszt energii:</div>
                     <div className="k_value"><strong>{price}PLN/msc</strong></div> 
@@ -118,14 +118,14 @@ const Fcalc =()=>{
             </form>
            <div className="k_steps">
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={ecology} width="32px"/></div>
+                <div className="k_img b_grafit"><img src={ecology} width="32px" alt="ecology"/></div>
                 <div className="k_desc">
                     <div className="k_label">Rocznie potrzebujesz wyprodukować:</div>
                     <strong className="k_value">{kwhyear}kWh</strong>
                 </div> 
             </div>
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={power} width="32px"/></div>
+                <div className="k_img b_grafit"><img src={power} width="32px" alt="power"/></div>
                 <div className="k_desc">
                     <div className="k_label">Potrzebna moc instalacji: </div>
                     <strong className="k_value">{kwp}kWp</strong>
@@ -133,28 +133,28 @@ const Fcalc =()=>{
             </div>
             
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={calculator} width="32px"/></div>
+                <div className="k_img b_grafit"><img src={calculator} width="32px" alt="calculator"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
                     <strong className="k_value">{total_price}PLN</strong>
                 </div>
             </div>
             <div className="k_element">
-                <div className="k_img blue_gradient"><img src={save_energy} width="32px"/></div>
+                <div className="k_img blue_gradient"><img src={save_energy} width="32px" alt="save energy"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto z dotacją <span style={{whiteSpace:"nowrap"}}>"Mój prąd":</span></div>
                     <strong className="k_value">{total_price - 5000}PLN</strong>
                 </div>
             </div>
            <div className="k_element">
-                <div className="k_img b_grafit"><img src={line} width="32px"/></div>
+                <div className="k_img b_grafit"><img src={line} width="32px" alt="line"/></div>
                 <div className="k_desc">
                     <div className="k_label">Ta inwestycja zwróci Ci się po:</div>
                     <strong className="k_value">{returnTime} lat</strong>
                 </div>
             </div>
             <div className="k_element">
-                <div className="k_img green_gradient"><img src={money} width="32px"/></div>
+                <div className="k_img green_gradient"><img src={money} width="32px" alt="money"/></div>
                 <div className="k_desc">
                     <div className="k_label">Po 15 latach zaoszczędzisz:</div>
                     <strong className="k_value">{Math.round(yearSave * 100) / 100 > 0? Math.round(yearSave * 100) / 100 : 0}PLN</strong>

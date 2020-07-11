@@ -4,18 +4,15 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import { Link } from "gatsby"
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link as Links, animateScroll as scroll } from "react-scroll";
+import { Link as Links} from "react-scroll";
 
 import Header from "./header"
-import Dialbutton from "./dialbutton"
+
 import "./layout.css"
 import logo from "./../images/logo.svg"
-import f_white from "./../images/facebook_white.svg"
-import inst_white from "./../images/instagram_white.svg"
 
 
 const Layout = ({ children }) => {
@@ -40,7 +37,7 @@ const Layout = ({ children }) => {
           <div className="container">
             <div className="footer_content">
             <div className="logo">
-              <span className="text-green">Zielone</span> <img src={logo} width="32px" /><span className="text-gray">Technologie</span>
+              <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
             <div className="footer_nav">
               <div>

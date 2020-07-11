@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
-import { Link as Links, animateScroll as scroll } from "react-scroll";
+import { Link as Links} from "react-scroll";
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
-import Button from '@material-ui/core/Button';
 
 import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
@@ -35,8 +34,8 @@ const Header = ({ siteTitle }) => {
       onClick={toggleHamburger}
     >
       {menu?
-      <img src={menu_close} width="24px" height="24px"/>:
-      <img src={menu_btn} width="24px" height="24px"/>
+      <img src={menu_close} width="24px" height="24px" alt="menu"/>:
+      <img src={menu_btn} width="24px" height="24px" alt="menu"/>
       
       }
     </div>
@@ -48,7 +47,7 @@ const Header = ({ siteTitle }) => {
             to="/"
           >
             <div className="logo">
-            <span className="text-green">Zielone</span> <img src={logo} width="32px" /><span className="text-gray">Technologie</span>
+            <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
           
           </Links>
@@ -105,16 +104,16 @@ const Header = ({ siteTitle }) => {
         </Links>
         <div className="contact mobile">tel: 694 163 440 | 609 594 480</div>
         <div className="social mobile">
-          <Link to="/"><img src={f_white} width="24px" height="24px" /></Link>
-          <Link to="/"><img src={inst_white}  width="24px" height="24px"/></Link>
+          <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
+          <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>
         </div>
         </nav>
         <div className="nav_back"></div>
         <div className="h_banner">
         <div className="contact">tel: 694 163 440 | 609 594 480</div>
         <div className="social">
-          <Link to="/"><img src={facebook} width="24px" height="24px" /></Link>
-          <Link to="/"><img src={instagram}  width="24px" height="24px"/></Link>
+          <Link to="/"><img src={facebook} width="24px" height="24px" alt="facebook"/></Link>
+          <Link to="/"><img src={instagram}  width="24px" height="24px" alt="instagram"/></Link>
         </div>
       </div>
     </div>

@@ -622,9 +622,6 @@ pre tt:after {
   }
 }
 
-body{
-  
-}
 .green_gradient{
   background: #4AB75E;
   background: linear-gradient(45deg,#4AB75E 20% , #18a98d 85%);
@@ -890,9 +887,6 @@ header a, header h1 {
   color: #fff;
 }
 
-.MuiTimelineItem-missingOppositeContent:before{
-  /*display: none!important;*/
-}
 .navbar-burger.burger {
   position: absolute;
   left: 15px;
