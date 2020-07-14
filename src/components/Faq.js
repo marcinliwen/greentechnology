@@ -45,7 +45,7 @@ export default function ControlledAccordions() {
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
-                <Typography className={classes.heading, classes.content}>{data.q}</Typography>
+                <Typography className={classes.content}>{data.q}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography className={classes.p}>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -104,10 +103,10 @@ export default function Contact() {
         className={classes.root}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact"  />
+        <input type="hidden" name="form-name" value="contact" aria-label="hidden" />
         <p hidden>
           <label>
-            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+            Don’t fill this out: <input name="bot-field" onChange={handleChange} aria-label="hidden"/>
           </label>
         </p>
                 <TextField

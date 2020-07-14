@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link as Links, animateScroll as scroll } from "react-scroll";
-import down_arrow from './../images/down-arrow.gif'
 
 import './Welcome.css'
 
@@ -34,11 +32,11 @@ const Welcome = class extends React.Component {
       })
     };
     render() {
-        
+      var scale = 0;
         if(this.state.windowWidth > 760){
-            var scale= 1-(this.state.fromTop/500);
+            scale= 1-(this.state.fromTop/500);
         }else{
-            var scale = 1;
+            scale = 1;
         }
         
         return (

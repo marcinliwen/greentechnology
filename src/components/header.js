@@ -54,8 +54,8 @@ const Header = ({ siteTitle }) => {
         </h1>
         <nav 
           className={menu?"-open":""}
-          onKeyDown={toggleHamburger}
-          onClick={toggleHamburger}
+          //onKeyDown={toggleHamburger}
+          //onClick={toggleHamburger}
         >
       
         <Links className="navbar-item" 
