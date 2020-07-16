@@ -1,10 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Zielone Technologie`,
-    description: `Rachunki za prąd za 0zł z panelami słonecznymi`,
+    description: `Zielone Technologie - Rachunki za prąd za 0zł z panelami słonecznymi`,
     author: `@MarcinL`,
-  },
-  siteMetadata: {
     siteUrl: `https://zielonetechnologie.net`,
   },
   plugins: [
