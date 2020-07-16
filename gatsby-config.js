@@ -5,7 +5,7 @@ module.exports = {
     author: `@MarcinL`,
   },
   siteMetadata: {
-    siteUrl: `https://www.zielonetechnologie.net`,
+    siteUrl: `https://zielonetechnologie.net`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
