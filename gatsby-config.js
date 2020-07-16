@@ -4,10 +4,14 @@ module.exports = {
     description: `Rachunki za prąd za 0zł z panelami słonecznymi`,
     author: `@MarcinL`,
   },
+  siteMetadata: {
+    siteUrl: `https://www.zielonetechnologie.net`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
