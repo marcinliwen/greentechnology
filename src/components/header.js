@@ -42,8 +42,8 @@ const Header = ({ siteTitle }) => {
          
     <div className="header">
       <div className="container">
-        <h1>
-          <Links
+        <div className="logo-container">
+        <Links
             to="/"
           >
             <div className="logo">
@@ -51,7 +51,9 @@ const Header = ({ siteTitle }) => {
             </div>
           
           </Links>
-        </h1>
+        </div>
+          
+
         <nav 
           className={menu?"-open":""}
           //onKeyDown={toggleHamburger}

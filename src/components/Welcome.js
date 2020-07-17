@@ -40,12 +40,13 @@ const Welcome = class extends React.Component {
         }
         
         return (
-            <div className="c_white header_title">
-                <h2
-                style={{
-                    transform: `scale(`+ (scale > 0.7? scale: 0.7) +`)`,
-                }}
-                >{this.props.children}</h2>
+            <div className="c_white header_title" 
+              style={{
+                  transform: `scale(`+ (scale > 0.7? scale: 0.7) +`)`,
+              }}
+            >
+                <h1>Fotowoltaika</h1>
+                <h2>{this.props.children}</h2>
             </div>
         )
     

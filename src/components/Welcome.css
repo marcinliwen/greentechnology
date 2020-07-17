@@ -1,9 +1,10 @@
 .header_title{
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   position: relative;
+  padding: 150px 0 25px;
 }
 .btn-conteiner {
     width: 100%;
@@ -29,7 +30,12 @@
   font-size: 28px;
   line-height: 44px;
   font-weight: 200;
-  padding: 150px 10px 27px;
+  padding: 0;
+}
+.c_white.header_title h1 {
+  color: #2b2b2b;
+  font-size: 25px;
+  margin: 0;
 }
 @media(min-width:760px){
     .header_title h2{
@@ -37,7 +43,7 @@
       line-height: 44px;
       font-weight: 200;
       width: 100%;
-      padding: 150px 222px 28px;
+      padding: 0;
       margin: auto;
       background: none;
       position: sticky;

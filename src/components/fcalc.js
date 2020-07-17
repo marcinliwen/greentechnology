@@ -82,7 +82,7 @@ const Fcalc =()=>{
         <div id="kalkulator" className="kalk_container">
             <form>
             <div className="k_element">
-                    <div className="k_img b_grafit"><img src={cash} width="32px" alt="cash"/></div>
+                    <div className="k_img b_grafit"><img src={cash} width="24px" alt="cash"/></div>
                     <div className="k_desc">
                     <div className="k_label">Twój miesięczny koszt energii:</div>
                     <div className="k_value"><strong>{price}PLN/msc</strong></div> 
@@ -117,14 +117,14 @@ const Fcalc =()=>{
             </form>
            <div className="k_steps">
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={ecology} width="32px" alt="ecology"/></div>
+                <div className="k_img b_grafit"><img src={ecology} width="24px" alt="ecology"/></div>
                 <div className="k_desc">
                     <div className="k_label">Rocznie potrzebujesz wyprodukować:</div>
                     <strong className="k_value">{kwhyear}kWh</strong>
                 </div> 
             </div>
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={power} width="32px" alt="power"/></div>
+                <div className="k_img b_grafit"><img src={power} width="24px" alt="power"/></div>
                 <div className="k_desc">
                     <div className="k_label">Potrzebna moc instalacji: </div>
                     <strong className="k_value">{Math.floor(kwp)}kWp</strong>
@@ -132,28 +132,28 @@ const Fcalc =()=>{
             </div>
             
             <div className="k_element">
-                <div className="k_img b_grafit"><img src={calculator} width="32px" alt="calculator"/></div>
+                <div className="k_img b_grafit"><img src={calculator} width="24px" alt="calculator"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
                     <strong className="k_value">{Math.floor(total_price)}PLN</strong>
                 </div>
             </div>
             <div className="k_element">
-                <div className="k_img blue_gradient"><img src={save_energy} width="32px" alt="save energy"/></div>
+                <div className="k_img blue_gradient"><img src={save_energy} width="24px" alt="save energy"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto z dotacją <span style={{whiteSpace:"nowrap"}}>"Mój prąd":</span></div>
                     <strong className="k_value">{Math.floor(total_price - 5000)}PLN</strong>
                 </div>
             </div>
            <div className="k_element">
-                <div className="k_img b_grafit"><img src={line} width="32px" alt="line"/></div>
+                <div className="k_img b_grafit"><img src={line} width="24px" alt="line"/></div>
                 <div className="k_desc">
                     <div className="k_label">Ta inwestycja zwróci Ci się po:</div>
                     <strong className="k_value">{returnTime} lat</strong>
                 </div>
             </div>
             <div className="k_element">
-                <div className="k_img green_gradient"><img src={money} width="32px" alt="money"/></div>
+                <div className="k_img green_gradient"><img src={money} width="24px" alt="money"/></div>
                 <div className="k_desc">
                     <div className="k_label">Po 15 latach zaoszczędzisz:</div>
                     <strong className="k_value">{Math.round(yearSave * 100) / 100 > 0? Math.round(yearSave * 100) / 100 : 0}PLN</strong>
