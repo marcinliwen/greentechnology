@@ -999,6 +999,13 @@ header a, header h1 {
 .contact_icon{
   display: none;
 }
+.navbar-item .contact_content {
+  display: inline;
+  padding: 0;
+}
+.kalk_container .contact_content {
+  padding: 50px 0 20px;
+}
 @media(min-width:760px){
   .footer_nav a, .footer_company p{
     font-size: 16px;

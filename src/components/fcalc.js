@@ -1,6 +1,7 @@
 import React ,{useState} from "react"
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
+import Contact from "../components/contact"
 
 import "./fcalc.css"
 import power from './../images/power.svg'
@@ -160,6 +161,7 @@ const Fcalc =()=>{
                 </div>
             </div>
             </div>
+            <Contact />
         </div>
     )
 }

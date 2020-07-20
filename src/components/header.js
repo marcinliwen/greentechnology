@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import { Link as Links} from "react-scroll";
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
+import Contact from "../components/contact"
 
 import facebook from "./../images/facebook.svg"
 import instagram from "./../images/instagram.svg"
@@ -95,14 +96,14 @@ const Header = ({ siteTitle }) => {
         </Links>
         <Links className="navbar-item" 
           activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={1000}
-          onClick={toggleHamburger}
+          //to="contact"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
+          //onClick={toggleHamburger}
         >
-          Zapytaj o ofertę
+          <Contact />
         </Links>
         <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
         <div className="social mobile">

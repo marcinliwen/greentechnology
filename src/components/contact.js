@@ -81,16 +81,19 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className="contact_content">
-    <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
+      <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
             Zapytaj o ofertę
         </Button>
 
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
       <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
             <DialogContent >
-            <DialogContentText>
+            <h4 style={{fontSize:'18px'}}>
                 Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
-            </DialogContentText>
+            </h4>
+            <p style={{fontSize:'14px', padding: '0px'}}>
+              Zostaw kontakt do siebie a my oddzwonimy lub odpiszemy.
+            </p>
             
  
       <form
@@ -126,6 +129,15 @@ export default function Contact() {
                     label="Email"
                     type="email"
                     required="true"
+                    fullWidth
+                    onChange={handleChange}
+                />
+                <TextField
+                    margin="dense"
+                    id="phone"
+                    name="phone"
+                    label="Nr telefonu"
+                    type="text"
                     fullWidth
                     onChange={handleChange}
                 />
