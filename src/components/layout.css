@@ -1044,8 +1044,9 @@ header a, header h1 {
 nav a{
   color: #2b2b2b;
 }
-.contact{
+.contact, .contact a{
   color: #2b2b2b;
+  text-decoration: none;
 }
   .header h1,  .header .logo-container{
     font-size: 32px;
