@@ -96,14 +96,15 @@ const Header = ({ siteTitle }) => {
         </Links>
         <Links className="navbar-item" 
           activeClass="active"
-          //to="contact"
-          //spy={true}
-          //smooth={true}
-          //offset={-65}
-          //duration={1000}
-          //onClick={toggleHamburger}
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-65}
+          duration={1000}
+          onClick={toggleHamburger}
+          
         >
-          <Contact />
+          Zapytaj o ofertę
         </Links>
         <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
         <div className="social mobile">

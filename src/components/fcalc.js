@@ -161,7 +161,6 @@ const Fcalc =()=>{
                 </div>
             </div>
             </div>
-            <Contact />
         </div>
     )
 }
