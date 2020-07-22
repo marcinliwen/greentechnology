@@ -44,14 +44,14 @@ const Header = ({ siteTitle }) => {
     <div className="header">
       <div className="container">
         <div className="logo-container">
-        <Links
+        <Link
             to="/"
           >
             <div className="logo">
             <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
           
-          </Links>
+          </Link>
         </div>
           
 
@@ -83,17 +83,28 @@ const Header = ({ siteTitle }) => {
         >
           Realizacje
         </Links>
-        <Links className="navbar-item" 
+        <Link className="navbar-item" 
           activeClass="active"
-          to="faq"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={1000}
+          to="wiedza"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
           onClick={toggleHamburger}
         >
           Wiedza
-        </Links>
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
+          to="/onas"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
+          onClick={toggleHamburger}
+        >
+          O nas
+        </Link>
         <Links className="navbar-item" 
           activeClass="active"
           to="contact"
