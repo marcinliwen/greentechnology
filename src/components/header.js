@@ -85,7 +85,7 @@ const Header = ({ siteTitle }) => {
         </Links>
         <Link className="navbar-item" 
           activeClass="active"
-          to="wiedza"
+          to="/wiedza"
           //spy={true}
           //smooth={true}
           //offset={-65}

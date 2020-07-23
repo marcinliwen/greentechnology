@@ -1,82 +1,90 @@
 .jtd_content {
     display: flex;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .jtd_img {
-    width: 50%;
+    width: 100%;
     position: relative;
+    max-width: 330px;
+    margin: auto;
 }
 .jtd_mapping {
     position: absolute;
     top: 0;
     left: 0;
-    right: 50%;
+    right: 0;
     bottom: 0;
+    max-width: 330px;
+    margin: auto;
 }
 
 .jtd_mapping_item {
     position: absolute;
-    width: 24px;
-    background: lightgreen;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    background: #19a71957;
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
+    font-size: 24px;
 }
 
 .jtd_mapping_item:nth-child(1) {
     top: 45px;
-    left: 100px;
+    left: 64px;
 }
 
 .jtd_mapping_item:nth-child(2) {
-    top: 248px;
+    top: 142px;
     left: 46px;
 }
 
 .jtd_mapping_item:nth-child(3) {
-    top: 285px;
-    left: 175px;
+    top: 136px;
+    left: 111px;
 }
 
 .jtd_mapping_item:nth-child(4) {
-    top: 146px;
-    left: 250px;
+    top: 71px;
+    left: 118px;
 }
 
 .jtd_mapping_item:nth-child(5) {
     top: 20px;
-    left: 254px;
+    left: 237px;
 }
 
 .jtd_mapping_item:nth-child(6) {
-    top: 250px;
-    left: 358px;
+    top: 118px;
+    left: 208px;
 }
 
 .jtd_mapping_item:hover {
     box-shadow: 4px 4px 8px #0000003d;
 }
-.jtd_mapping_item:hover:after {content: "";display: block;position: absolute;width: 250px;height: 250px;background: #1f1f1f54;border-radius: 50%;top: -117px;left: -118px;}
 .jdt_mapping_container {
-    display: flex;
-    width: 50%;
+    width: 100%;
 }
 
 .jtd_mapping_description {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 25px;
+    padding: 25px;
     width: 100%;
+    margin-bottom: 0;
 }
 .jdt_mapping_link{
-    margin:50px 0 0 0;
+    margin:0;
+    text-align: center;
 }
 .jdt_mapping_link .navbar-item {
     color: #11B91B;
     text-decoration: none;
 }
 .jtd_mapping_desc_item {
-    margin-bottom: 8px;
+    line-height: 24px;
 }

@@ -7,6 +7,7 @@ import Welcome from "../components/Welcome"
 import Realisation from "../components/Realisation"
 import Faq from "../components/Faq"
 import Contact from "../components/contact"
+import Jaktodziala from "../components/Jaktodziala"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,8 +16,6 @@ import Faqimg from "../components/Faqimg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
-import jaktodziala_img from "../images/jaktodziala.jpg"
-import "../components/jtd.css"
 //import solar_panel from "../images/solar-panel.svg"
 
 
@@ -124,38 +123,7 @@ const classes = useStyles();
       <div className="section-title">
         <h2>Jak działa fotowoltaika?</h2>
       </div>
-      <div class="section_content jtd_content">
-        <div className="jtd_img">
-          <img src={jaktodziala_img} alt="jak działa fotowoltaika"/>
-        </div>
-        <div className="jdt_mapping_container">
-          <div className="jtd_mapping">
-            <div className="jtd_mapping_item">1</div>
-            <div className="jtd_mapping_item">2</div>
-            <div className="jtd_mapping_item">3</div>
-            <div className="jtd_mapping_item">4</div>
-            <div className="jtd_mapping_item">5</div>
-            <div className="jtd_mapping_item">6</div>
-          </div>
-          <div className="jtd_mapping_description">
-            <div className="jtd_mapping_desc_item">1. panele fotowoltaiczne</div>
-            <div className="jtd_mapping_desc_item">2. inverter (falownik)</div>
-            <div className="jtd_mapping_desc_item">3. dwukierunkowy licznik energii elektrycznej</div>
-            <div className="jtd_mapping_desc_item">4. bilansowanie energii z siecią</div>
-            <div className="jtd_mapping_desc_item">5. linia zakładu energetycznego</div>
-            <div className="jtd_mapping_desc_item">6. odbiornik</div>
-            <div className="jdt_mapping_link">
-            <Button variant="outlined" className={classes.root, classes.outlined}>
-            <Link className="navbar-item" 
-              to="wiedza" 
-            >
-              Dowiedz się więcej
-            </Link>
-            </Button>
-            </div>
-          </div>  
-        </div> 
-      </div>
+      <Jaktodziala />
     </div>
   </section>
   <section id="contact">
