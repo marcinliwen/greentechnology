@@ -45,7 +45,7 @@ const Jaktodziala = () =>{
                 <li className="jtd_mapping_desc_item">dwukierunkowy licznik energii elektrycznej</li>
                 <li className="jtd_mapping_desc_item">bilansowanie energii z siecią</li>
                 <li className="jtd_mapping_desc_item">linia zakładu energetycznego</li>
-                <li className="jtd_mapping_desc_item">odbiornik</li>
+                <li className="jtd_mapping_desc_item">odbiorniki</li>
             </ol>  
             <div className="jdt_mapping_link">
                     <Button variant="outlined" className={classes.root, classes.outlined}>

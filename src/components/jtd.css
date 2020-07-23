@@ -88,3 +88,50 @@
 .jtd_mapping_desc_item {
     line-height: 24px;
 }
+@media(min-width: 768px){
+    .jtd_img {
+        width: 50%;
+        max-width: 50%;
+        margin-right: auto;
+        margin-left: 0;
+    }
+    
+    .jdt_mapping_container {
+        width: 50%;
+    }
+    
+    .jtd_mapping {
+        max-width: 50%;
+        margin-left: 0;
+    }
+    
+    .jtd_mapping_item:nth-child(1) {
+        top: 93px;
+        left: 99px;
+    }
+    
+    .jtd_mapping_item:nth-child(2) {
+        top: 276px;
+        left: 77px;
+    }
+    
+    .jtd_mapping_item:nth-child(3) {
+        top: 252px;
+        left: 214px;
+    }
+    
+    .jtd_mapping_item:nth-child(4) {
+        top: 136px;
+        left: 237px;
+    }
+    
+    .jtd_mapping_item:nth-child(5) {
+        top: 20px;
+        left: 343px;
+    }
+    
+    .jtd_mapping_item:nth-child(6) {
+        top: 240px;
+        left: 378px;
+    }
+}
