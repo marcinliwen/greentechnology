@@ -15,7 +15,6 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     max-width: 330px;
     margin: auto;
 }
@@ -73,7 +72,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 25px;
+    padding: 25px 0px;
     width: 100%;
     margin-bottom: 0;
 }
@@ -87,6 +86,17 @@
 }
 .jtd_mapping_desc_item {
     line-height: 24px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.jtd_mapping_desc_item.this {
+    box-shadow: 1px 1px 6px #00000052;
+}
+.jtd_mapping_item.this {
+    color: #fff;
+    font-weight: 900;
+    background: #19a719c9;
 }
 @media(min-width: 768px){
     .jtd_img {
@@ -95,7 +105,9 @@
         margin-right: auto;
         margin-left: 0;
     }
-    
+    .jtd_mapping_description{
+        padding: 25px;
+    }
     .jdt_mapping_container {
         width: 50%;
     }
