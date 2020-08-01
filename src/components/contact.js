@@ -61,16 +61,26 @@ export default function Contact() {
 
   const useStyles = makeStyles((theme) => ({
     root: {
+      display: 'flex',
+      flexWrap: 'wrap',
         '& .MuiInput-underline:after': {
             borderBottomColor: '#11B91B',
             },
         '& label.Mui-focused': {
             color: '#11B91B',
             },
+        '& .MuiTextField-root': {
+          margin: theme.spacing(1),
+          [theme.breakpoints.up('sm')]: {
+            width: 'calc(50% - 16px)'
+          },
+          
+        },
     },
     outlined:{
         borderColor: 'rgba(17, 185, 27, 0.5)',
         color: '#11B91B',
+        marginTop: '20px',
     },
     textPrimary:{
         color: '#11B91B'
@@ -81,11 +91,11 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className="contact_content">
-      <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
+        {/*<Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
             Zapytaj o ofertę
-        </Button>
+  </Button>*/}
 
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+     {/* <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
       <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
             <DialogContent >
             <h4 style={{fontSize:'18px'}}>
@@ -94,7 +104,7 @@ export default function Contact() {
             <p style={{fontSize:'14px', padding: '0px'}}>
               Zostaw kontakt do siebie a my oddzwonimy lub odpiszemy.
             </p>
-            
+*/}    
  
       <form
         name="contact"
@@ -151,7 +161,7 @@ export default function Contact() {
                     onChange={handleChange}
                 />
 
-                <TextField
+                {/*<TextField
                     margin="dense"
                     id="message"
                     name="message"
@@ -161,11 +171,11 @@ export default function Contact() {
                     rowsMax={4}
                     onChange={handleChange}
                     className={classes.underline}
-                />
-        <DialogActions>
-        <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
+                />*/}
+        <DialogActions style={{width: '100%'}}>
+       {/*} <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
             Anuluj
-          </Button>
+              </Button>*/}
           <Button variant="outlined" className={classes.root, classes.outlined}  type="submit" >
             Wyślij 
           </Button>
@@ -174,12 +184,12 @@ export default function Contact() {
       {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
       {messageError ? ( <Alert style={{margin:'15px 0 25px 0'}} severity="error">{messageError}</Alert>) : ""}  
            
-      </DialogContent>
+      {/*</DialogContent>
         
         
           
         
-      </Dialog>
+      </Dialog>*/}
       </div>
   )
 }

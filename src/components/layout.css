@@ -849,7 +849,7 @@ section#pros {
 }
 .section-title {
   text-align: center;
-  padding: 60px 0 80px;
+  padding: 60px 0 0px;
 }
 
 .section-title h2 {
@@ -985,7 +985,7 @@ header a, header h1 {
   height: 100vh;
 }
 #contact{
-  background: #fff;
+  background: #eaeaea;
 }
 .contact_content {
   padding: 0 0 120px;
@@ -1061,7 +1061,7 @@ nav a{
   }
   .section-title {
     text-align: center;
-    padding: 160px 0 180px;
+    padding: 160px 0 0px;
   }
   .img_background img {
     height: auto;
@@ -1087,30 +1087,6 @@ nav a{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: 135px 15px;
-}
-
-section#contact .section-title {
-  text-align: left;
-  padding: 0;
-  width: 50%;
-  margin-left: auto;
-  padding-right: 25%;
-}
-
-section#contact .contact_content {
-  padding: 0;
-  width: 50%;
-  margin-left: auto;
-  text-align: left;
-}
-
-section#contact .container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas:
-      "icon text"
-      "icon form";
 }
 
 .contact_icon {
@@ -1129,7 +1105,7 @@ section#contact .section-title {
 
 section#contact .contact_content {
   grid-area: form;
-  width: 100%;
+  width: 60%;
 }
 
 .contact_icon img {

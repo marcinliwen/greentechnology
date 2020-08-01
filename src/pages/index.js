@@ -129,8 +129,8 @@ const classes = useStyles();
   <section id="contact">
   <div className="container">
       <div className="section-title">
-        <h2>Napisz do nas</h2>
-        <p>i dowiedz się co jeszcze możesz zyskać inwestując  w fotowoltaikę.</p> 
+        <h2>Skontaktujemy się z Tobą</h2>
+        <p>Zostaw nam swój numer, oddzwonimy!</p> 
       </div>
     <Contact />
    {/* <div className="contact_icon"><img src={solar_panel} width="64px" alt="solar panel"/></div>*/}
