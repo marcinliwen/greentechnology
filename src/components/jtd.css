@@ -69,12 +69,11 @@
 }
 
 .jtd_mapping_description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 25px 0px;
     width: 100%;
     margin-bottom: 0;
+    max-width: 290px;
+    margin: auto;
 }
 .jdt_mapping_link{
     margin:0;
@@ -89,9 +88,12 @@
     padding: 6px 20px;
     border-radius: 6px;
     cursor: pointer;
+    width: max-content;
+    display: block;
+    max-width: 290px;
 }
 .jtd_mapping_desc_item.this {
-    box-shadow: 1px 1px 6px #00000052;
+    box-shadow: 0px 0px 6px #0a7701a8;
 }
 .jtd_mapping_item.this {
     color: #fff;
@@ -145,5 +147,8 @@
     .jtd_mapping_item:nth-child(6) {
         top: 240px;
         left: 378px;
+    }
+    .jtd_content {
+        padding-bottom: 120px;
     }
 }
