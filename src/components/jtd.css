@@ -100,6 +100,9 @@
     font-weight: 900;
     background: #19a719c9;
 }
+.jtd_content {
+    padding-bottom: 120px;
+}
 @media(min-width: 768px){
     .jtd_img {
         width: 50%;
@@ -147,8 +150,5 @@
     .jtd_mapping_item:nth-child(6) {
         top: 240px;
         left: 378px;
-    }
-    .jtd_content {
-        padding-bottom: 120px;
     }
 }
