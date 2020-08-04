@@ -15,6 +15,7 @@ import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
 //import solar_panel from "../images/solar-panel.svg"
+import "./../components/onas.css"
 
 const IndexPage = () => { 
   const data = useStaticQuery( graphql`
@@ -30,58 +31,18 @@ const IndexPage = () => {
 `)
   return(
   <Layout>
-    <SEO title="Zielone Technologie" />
-   <section className="has_img_bg" id="home">
-    <div className="img_background">
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="A corgi smiling happily"
-      />
-    </div>
-     <div className="container">
-        <Welcome>Oblicz jak zmniejszyć rachunki za prąd do 0zł!</Welcome>
-        <Fcalc />
-     </div>
-   </section>
-  <section id="pros" className="green_gradient">
-    <div className="container">
-      <div className="section-title">
-        <h2>Jakie są korzyści z Fotowoltaiki?</h2>
+    <SEO title="Zielone Technologie - o nas" />
+    <section id="onas">
+      <div className="container">
+        <div className="section-title">
+          <h2>O nas</h2>
+        </div>
+        <div className="onas_content">
+          <p>Firma Zielone Technlogie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu.</p>
+          <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal. Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>
+        </div>
       </div>
-    <div>
-      <ul className="pros-container">
-        <li>
-          <div>
-            <img src={garden} width="64" height="64" alt="garden"/> 
-          </div>
-            <div>
-            Bądź niezależny energetycznie
-              </div>
-            </li>
-        <li>
-        <div>
-            <img src={money_save} width="64" height="64" alt="money"/> 
-          </div>
-            <div>Redukuj rachunki za prąd do 0zł</div></li>
-        <li>
-        <div>
-            <img src={planet} width="64" height="64"  alt="planet"/> 
-          </div>
-            <div>Dbaj o środowisko</div></li>
-      </ul>
-    </div>
-    </div>
-  </section>
-  <section id="steps">
-    <div className="container">
-      <div className="section-title">
-        <h2>Jak realizujemy projekt?</h2>
-      </div>
-    <div className="steps_content">   
-      <Realisation />
-    </div>
-    </div>
-  </section>
+    </section>
   <section id="contact">
   <div className="container">
       <div className="section-title">
