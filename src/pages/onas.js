@@ -19,16 +19,26 @@ import "./../components/onas.css"
 
 const IndexPage = () => { 
   const data = useStaticQuery( graphql`
-  query {
-    file(relativePath: {eq: "sky_9_1.png"}) {
-      childImageSharp {
-        fluid (fit: COVER){
-          ...GatsbyImageSharpFluid
+  query imageQuery {
+    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "onas"}}) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid {
+              base64
+              aspectRatio
+              sizes
+              src
+              srcSet
+            }
+          }
         }
       }
     }
   }
 `)
+
   return(
   <Layout>
     <SEO title="Zielone Technologie - o nas" />
@@ -37,9 +47,21 @@ const IndexPage = () => {
         <div className="section-title">
           <h2>O nas</h2>
         </div>
-        <div className="onas_content">
+        <div className="onas_content">  
+        <div className="onas_content_article">
+          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />                    
+         
           <p>Firma Zielone Technlogie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu.</p>
-          <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal. Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>
+        </div>
+        <div className="onas_content_article">
+        <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />      
+        <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal.</p>
+        </div>
+        <div className="onas_content_article">
+        <Img  fluid={data.allFile.edges[2].node.childImageSharp.fluid} />  
+        <p >Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>   
+        </div>
+        
         </div>
       </div>
     </section>
