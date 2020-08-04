@@ -49,17 +49,23 @@ const IndexPage = () => {
         </div>
         <div className="onas_content">  
         <div className="onas_content_article">
-          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />                    
-         
+          {data.allFile.edges.map(({node})=>(
+           node.base === 'onas_family.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
+          ))}
+                    
           <p>Firma Zielone Technlogie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu.</p>
         </div>
         <div className="onas_content_article">
-        <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />      
-        <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal.</p>
+        {data.allFile.edges.map(({node})=>(
+           node.base === 'onas_project.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
+          ))}     
+          <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal.</p>
         </div>
         <div className="onas_content_article">
-        <Img  fluid={data.allFile.edges[2].node.childImageSharp.fluid} />  
-        <p >Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>   
+        {data.allFile.edges.map(({node})=>(
+           node.base === 'onas_spec.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
+          ))}
+          <p >Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>   
         </div>
         
         </div>
