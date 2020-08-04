@@ -61,17 +61,13 @@ const Header = ({ siteTitle }) => {
           //onClick={toggleHamburger}
         >
       
-        <Links className="navbar-item" 
+        <Link className="navbar-item" 
           activeClass="active"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={500}
+          to="/"
           onClick={toggleHamburger}
         >
           Kalkulator
-        </Links>
+        </Link>
         <Links className="navbar-item" 
           activeClass="active"
           to="steps"

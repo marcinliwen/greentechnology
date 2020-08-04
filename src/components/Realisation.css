@@ -39,6 +39,10 @@ section#steps {
     background: #fff;
     padding-bottom: 80px;
 }
+section#steps .container {
+    max-width: 960px;
+  }
+  
 @media(min-width: 760px){
     .steps_content>div {
         display: grid;
