@@ -69,17 +69,12 @@ const Header = (props) => {
         >
           Kalkulator
         </Link>
-        <Links className="navbar-item" 
+        <Link className="navbar-item" 
           activeClass="active"
-          to="steps"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={800}
-          onClick={toggleHamburger}
+          to="/realizacje"
         >
           Realizacje
-        </Links>
+        </Link>
         <Link className="navbar-item" 
           activeClass="active"
           to="/wiedza"
