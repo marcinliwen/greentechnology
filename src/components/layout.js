@@ -15,7 +15,7 @@ import "./layout.css"
 import logo from "./../images/logo.svg"
 
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,12 +25,12 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+console.log(props.location)
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title}  location={props.location}/>
      
-        <main>{children}</main>
+        <main>{props.children}</main>
         <footer
           style={{textAlign: `center`}}
         > 

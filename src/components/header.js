@@ -15,7 +15,7 @@ import logo from "./../images/logo.svg"
 
 
 
-const Header = ({ siteTitle }) => {
+const Header = (props) => {
   const [menu, setMenu] = useState(false);
   const toggleHamburger =()=>{setMenu(!menu)}
 
@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => {
     if(menu){document.body.classList.add('menu-open')}
     else{document.body.classList.remove('menu-open')}
   });
+
   return(
   <header>    
      <div
@@ -101,7 +102,15 @@ const Header = ({ siteTitle }) => {
         >
           O nas
         </Link>
-        <Links className="navbar-item" 
+        <Link className="navbar-item" 
+          activeClass="active"
+          to="/kontakt"
+          onClick={toggleHamburger}
+        >
+          Kontakt
+        </Link>
+        {props.location != 'kontakt' ? 
+        <Links className="navbar-item text-green" 
           activeClass="active"
           to="contact"
           spy={true}
@@ -113,6 +122,7 @@ const Header = ({ siteTitle }) => {
         >
           Zapytaj o ofertę
         </Links>
+        : ""}
         <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
         <div className="social mobile">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
