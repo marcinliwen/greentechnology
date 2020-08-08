@@ -14,6 +14,7 @@ import Faqimg from "../components/Faqimg"
 import garden from "../images/garden.svg"
 import money_save from "../images/money_save.svg"
 import planet from "../images/planet.svg"
+import blob from "../images/blob.svg"
 //import solar_panel from "../images/solar-panel.svg"
 import "./../components/onas.css"
 
@@ -52,20 +53,31 @@ const IndexPage = () => {
           {data.allFile.edges.map(({node})=>(
            node.base === 'onas_family.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
           ))}
-                    
-          <p>Firma Zielone Technlogie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu.</p>
+          <div className="onas_content_text">
+            <div className="blob-bg"><img src={blob} alt="blob" /></div>
+            <p >Firma Zielone Technlogie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu.</p>
+          </div>
         </div>
         <div className="onas_content_article">
         {data.allFile.edges.map(({node})=>(
            node.base === 'onas_project.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
-          ))}     
+          ))}   
+          <div className="onas_content_text">
+          <div className="blob-bg"><img src={blob} alt="blob" /></div>
+  
           <p>O Fotowoltaice wiemy wszystko, nasi pracownicy to specjalici dbający o każdy detal.</p>
+          </div>
         </div>
         <div className="onas_content_article">
         {data.allFile.edges.map(({node})=>(
            node.base === 'onas_spec.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
           ))}
+                    <div className="onas_content_text">
+
+                    <div className="blob-bg"><img src={blob} alt="blob" /></div>
+
           <p >Wspieramy naszych klientów, na kadym etapie inwestycji. Po prostu lubimy, gdy wszystko działa tak jak należy.</p>   
+        </div>
         </div>
         
         </div>

@@ -1,15 +1,17 @@
 #onas .section-title {
     text-align: center;
-    padding: 160px 0 0px;
+    padding: 120px 0 60px;
 }
 .onas_content{
-    padding: 120px 0
+    padding: 0
 }
 .onas_content_article {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
 }
 .onas_content_article .gatsby-image-wrapper {
     flex: 0 0 100%;
@@ -17,11 +19,34 @@
 }
 .onas_content_article p {
     padding: 55px;
-    height: 100%;
     display: block;
-    margin: 0;
+    margin: auto;
+    width: 290px;
+    flex: 0 0 290px;
+    color: #fff;
+}
+
+.b-blob{
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg"><defs><linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color: rgb(74, 183, 94);"></stop><stop offset="100%" style="stop-color: rgb(24, 169, 141);"></stop></linearGradient></defs><path id="blob" d="M295.5,357Q126,464,140,274Q154,84,309.5,167Q465,250,295.5,357Z" fill="url(#gradient)"></path></svg>');
+}
+.blob-bg {
+    position: absolute;
+    width: 550px;
+    z-index: -1;
+    transform: rotate(375deg);
+}
+.onas_content_article:nth-child(2) .blob-bg {
+    transform: rotate(285deg);
+}
+.onas_content_article:nth-child(3) .blob-bg {
+    transform: rotate(162deg);
+}
+.onas_content_text {
+    position: relative;
     width: 100%;
-    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media(min-width: 767px){
     .onas_content_article .gatsby-image-wrapper {
@@ -30,13 +55,25 @@
     }
     
     .onas_content_article p {
-        height: 100%;
         display: block;
         margin: 0;
         width: 50%;
         flex: 0 0 50%;
     }
-    .onas_content_article:nth-child(2n) p {
+    .onas_content_article:nth-child(2n) .onas_content_text {
         order: -1;
+    }
+    .blob-bg {
+      width: 758px
+    }
+    .onas_content_article:nth-child(2) .blob-bg {
+        transform: rotate(285deg);
+    }
+    .onas_content_article:nth-child(3) .blob-bg {
+        transform: rotate(196deg);
+    }
+    .onas_content_text {
+        width: 50%;
+        height: 400px;
     }
 }
