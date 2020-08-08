@@ -987,10 +987,7 @@ header a, header h1 {
 #contact{
   background: #eaeaea;
 }
-.contact_content {
-  padding: 0 0 120px;
-  text-align: center;
-}
+
 .bottom_bar {
   font-size: 14px;
   color: #b0b0b0;

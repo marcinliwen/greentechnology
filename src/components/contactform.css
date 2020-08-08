@@ -1,0 +1,17 @@
+.contakt-title{
+    margin: 0 8px;
+}
+.contakt-company p {
+    margin: 0;
+}
+.contakt-company {
+    padding: 16px 44px;
+    box-shadow: 0 0 6px #00000059;
+    border-radius: 6px;
+    width: 240px;
+    margin-right: auto;
+}
+.contakt-address {
+    padding-bottom: 60px;
+}
+
