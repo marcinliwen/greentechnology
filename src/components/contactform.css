@@ -5,13 +5,36 @@
     margin: 0;
 }
 .contakt-company {
-    padding: 16px 44px;
-    box-shadow: 0 0 6px #00000059;
-    border-radius: 6px;
     width: 240px;
-    margin-right: auto;
+    margin: 0px 8px;
 }
-.contakt-address {
+.contakt-address, .contact_content {
     padding-bottom: 60px;
+    padding-top: 60px;
 }
-
+#kontakt .gmap {
+    width: 100%;
+    margin: 0;
+    border: none;
+    position: relative;
+    bottom: -7px;
+    height: 400px;
+}
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contakt-company a {
+    text-decoration: none;
+    color: inherit;
+}
+@media(min-width: 767px){
+    .contakt-address {
+        width: 40%;
+        order: -1;
+    }
+    
+    .contact_content {
+        width: 60%;
+    }
+}

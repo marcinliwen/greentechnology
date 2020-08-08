@@ -11,7 +11,7 @@ import Contactform from "../components/contactform"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Faqimg from "../components/Faqimg"
-
+import Gmap from "../components/Gmap"
 import "../components/contactform.css"
 
 
@@ -25,20 +25,27 @@ const IndexPage = () => {
             <h2>Kontakt</h2>
           </div>
         </div>
+        <div className="container contact-content"> 
         <Contactform title="Napisz do nas"/>
-        <div className="container contakt-address">
-            <div className="contakt-title">
-                <h3>Znajdź nas</h3>
-            </div>
-            <div className="contakt-map"></div>
-            <div className="contakt-company">
-              <p>Zielone Technologie</p>
-              <p>ul. Dworcowa 6</p>
-              <p>65-019 Zielona Góra</p>
-              <p>NIP: 9731051910</p>
-              <p>REGON: 369511714</p>
-            </div>
+          <div className="contakt-address">
+              <div className="contakt-title">
+                  <h3>Znajdź nas</h3>
+              </div>          
+              <div className="contakt-company">
+                <p style={{fontWeight: '900'}}>Zielone Technologie</p>
+                <p>ul. Dworcowa 6</p>
+                <p>65-019 Zielona Góra</p>
+                <p>NIP: 9731051910</p>
+                <p>REGON: 369511714</p>
+                <br/>
+                <p>Zadzwoń:</p>
+                <p><a href="tel:694 163 440">694 163 440</a></p>
+                <p><a href="tel:609 594 480">609 594 480</a></p>
+              </div>
+          </div>
         </div>
+       
+        <Gmap />
       </section>
     
     </Layout>

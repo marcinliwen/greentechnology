@@ -91,7 +91,7 @@ export default function Contact(props) {
   }));
   const classes = useStyles();
   return (
-    <div className="contact_content container">
+    <div className="contact_content">
       {props.title ? 
       <div className="contakt-title">
         <h3>{props.title}</h3>
