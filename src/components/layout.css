@@ -799,6 +799,7 @@ nav {
   font-size: 14px;
   line-height: 27px;
   color: #b0b0b0;
+  text-decoration: none;
 }
 
 .footer_nav .contact {
@@ -814,6 +815,12 @@ nav {
 
 .footer_nav>div:first-of-type {
   margin-right: auto;
+}
+section#contact .section-title{
+  padding-bottom: 0px;
+}
+#contact .contact_content{
+  padding-top: 0px;
 }
 @media(max-width: 767px){
   body.menu-open {
