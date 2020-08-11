@@ -49,6 +49,9 @@ const Fcalc =()=>{
     const returnTime = Math.floor(total_price / yearPrice)||0;
     const yearSave =  (15 * yearPrice) - total_price;
 
+    var totalPrice = Math.floor(total_price);
+    var totaLPriceExtra = Math.floor(total_price - 5000);
+    var totalSave = Math.round(yearSave * 100) / 100 > 0? Math.round(yearSave * 100) / 100 : 0;
     const useStyles = makeStyles({
         root: {
           color: '#2b2b2b',
@@ -128,7 +131,7 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={power} width="24px" alt="power"/></div>
                 <div className="k_desc">
                     <div className="k_label">Potrzebna moc instalacji: </div>
-                    <strong className="k_value">{Math.floor(kwp)}kWp</strong>
+                    <strong className="k_value">{Math.round(kwp)}kWp</strong>
                 </div>
             </div>
             
@@ -136,14 +139,14 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={calculator} width="24px" alt="calculator"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto instalacji od: </div>
-                    <strong className="k_value">{Math.floor(total_price)}PLN</strong>
+                    <strong className="k_value">{totalPrice.toLocaleString()}PLN</strong>
                 </div>
             </div>
             <div className="k_element">
                 <div className="k_img blue_gradient"><img src={save_energy} width="24px" alt="save energy"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto z dotacją <span style={{whiteSpace:"nowrap"}}>"Mój prąd":</span></div>
-                    <strong className="k_value">{Math.floor(total_price - 5000)}PLN</strong>
+                    <strong className="k_value">{totaLPriceExtra.toLocaleString()}PLN</strong>
                 </div>
             </div>
            <div className="k_element">
@@ -157,7 +160,7 @@ const Fcalc =()=>{
                 <div className="k_img green_gradient"><img src={money} width="24px" alt="money"/></div>
                 <div className="k_desc">
                     <div className="k_label">Po 15 latach zaoszczędzisz:</div>
-                    <strong className="k_value">{Math.round(yearSave * 100) / 100 > 0? Math.round(yearSave * 100) / 100 : 0}PLN</strong>
+                    <strong className="k_value">{totalSave.toLocaleString()}PLN</strong>
                 </div>
             </div>
             </div>
