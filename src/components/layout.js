@@ -44,7 +44,7 @@ const Layout = (props) => {
               <div>
                 <Link className="navbar-item" 
                   activeClass="active"
-                  to="/home"
+                  to="/"
                 >
                   Kalkulator
                 </Link>

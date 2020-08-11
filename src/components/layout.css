@@ -616,6 +616,13 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -999,6 +1006,8 @@ header a, header h1 {
   font-size: 14px;
   color: #b0b0b0;
   padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 .contact_icon{
   display: none;

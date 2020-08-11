@@ -119,7 +119,7 @@ const Header = (props) => {
         </Links>
 
         : ""}
-        <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
+        <div className="contact mobile"><div>tel: <a href="tel:+48694163440">694 163 440</a> </div><div><a href="tel:+48609594480">609 594 480</a></div></div>
         <div className="social mobile">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>
