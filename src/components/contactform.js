@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -6,42 +6,54 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 
-
+import "./contactform.css"
 function encode(data) {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
-  
-export default function FormDialog() {
-    const [state, setState] = React.useState({})
+export default function Contact(props) {
+  const [state, setState] = React.useState({})
 
-    const handleChange = (e) => {
-      setState({ ...state, [e.target.name]: e.target.value })
-    }
-  
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      const form = e.target
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': form.getAttribute('name'),
-          ...state,
-        }),
-      })
-        //.then(() => navigate(form.getAttribute('action')))
-        .then(()=>{})
-        .catch((error) => alert(error))
-    }
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => handleSuccess())
+      .then(()=> setTimeout (()=>{ handleClose()}, 3000))
+      .catch((error) => handleError(error))
+  }
+
+  const [messageError, setError] = React.useState();
+  const handleError = (error) => {
+      setError(error);
+  }
+
+  const [messageSuccess, setSuccess] = React.useState(false);
+  const handleSuccess = () => {
+      setSuccess(true);
+  }
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
+    setSuccess(false);
+    setError();
   };
 
   const handleClose = () => {
@@ -50,16 +62,26 @@ export default function FormDialog() {
 
   const useStyles = makeStyles((theme) => ({
     root: {
+      display: 'flex',
+      flexWrap: 'wrap',
         '& .MuiInput-underline:after': {
             borderBottomColor: '#11B91B',
             },
         '& label.Mui-focused': {
             color: '#11B91B',
             },
+        '& .MuiTextField-root': {
+          margin: theme.spacing(1),
+          [theme.breakpoints.up('sm')]: {
+            width: '100%'
+          },
+          
+        },
     },
     outlined:{
         borderColor: 'rgba(17, 185, 27, 0.5)',
         color: '#11B91B',
+        marginTop: '20px',
     },
     textPrimary:{
         color: '#11B91B'
@@ -70,32 +92,42 @@ export default function FormDialog() {
   const classes = useStyles();
   return (
     <div className="contact_content">
-        <Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
+      {props.title ? 
+      <div className="contakt-title">
+        <h3>{props.title}</h3>
+      </div>
+      : ""}
+        {/*<Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
             Zapytaj o ofertę
-        </Button>
+  </Button>*/}
 
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-            <form
-                name="contact"
-                method="post"
-            // action="/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-                
-            >
-            <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
+     {/* <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+      <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
             <DialogContent >
-            <DialogContentText>
+            <h4 style={{fontSize:'18px'}}>
                 Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
-            </DialogContentText>
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
-                <label>
-                    Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                </label>
-                </p>
+            </h4>
+            <p style={{fontSize:'14px', padding: '0px'}}>
+              Zostaw kontakt do siebie a my oddzwonimy lub odpiszemy.
+            </p>
+*/}    
+ 
+      <form
+        name="contact-form"
+        method="post"
+        //action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+        className={classes.root}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <input type="hidden" name="form-name" value="contact-form" aria-label="hidden" />
+        <p hidden>
+          <label>
+            Don’t fill this out: <input name="bot-field" onChange={handleChange} aria-label="hidden"/>
+          </label>
+        </p>
                 <TextField
                     margin="dense"
                     id="name"
@@ -118,13 +150,14 @@ export default function FormDialog() {
                 />
                 <TextField
                     margin="dense"
-                    id="kwp_msc"
-                    name="kwp_msc"
-                    label="Ile miesięcznie płacisz za prąd?"
+                    id="phone"
+                    name="phone"
+                    label="Nr telefonu"
                     type="text"
                     fullWidth
                     onChange={handleChange}
                 />
+        
 
                 <TextField
                     margin="dense"
@@ -137,20 +170,24 @@ export default function FormDialog() {
                     onChange={handleChange}
                     className={classes.underline}
                 />
-
-            
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
+        <DialogActions style={{width: '100%'}}>
+       {/*} <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
             Anuluj
-          </Button>
-          <Button onClick={handleClose} color="primary" type="submit" className={classes.textPrimary}>
+              </Button>*/}
+          <Button variant="outlined" className={classes.root, classes.outlined}  type="submit" >
             Wyślij 
           </Button>
-        </DialogActions>
-        </form>
-      </Dialog>
-     
-    </div>
-  );
+          </DialogActions>
+      </form>
+      {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
+      {messageError ? ( <Alert style={{margin:'15px 0 25px 0'}} severity="error">{messageError}</Alert>) : ""}  
+           
+      {/*</DialogContent>
+        
+        
+          
+        
+      </Dialog>*/}
+      </div>
+  )
 }

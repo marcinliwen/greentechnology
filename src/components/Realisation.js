@@ -1,11 +1,28 @@
 import React from 'react';
+import { Link } from "gatsby"
 import './Realisation.css';
 
 import Popover from './Popover';
-
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
 export default function CustomizedTimeline() {
   
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            '& .MuiInput-underline:after': {
+                borderBottomColor: '#11B91B',
+                },
+            '& label.Mui-focused': {
+                color: '#11B91B',
+                },
+        },
+        outlined:{
+            borderColor: 'rgba(17, 185, 27, 0.5)',
+            color: '#11B91B',
+        },  
+    }));
+    const classes = useStyles();
   return (
     <div>
         <div className="steps_item">    
@@ -60,6 +77,16 @@ export default function CustomizedTimeline() {
             <div className="steps_item_title">Ciesz się darmowym prądem.</div>
             <div className="steps_item_desc"></div>
         </div>
+        <div className="steps_item btn">
+            <Button variant="outlined" className={classes.root, classes.outlined}>
+                <Link className="" 
+                    to="/realizacje" 
+                >
+                    Zobacz co już zrobiliśmy
+                </Link>
+            </Button>
+        </div>
+        
     </div>
     
   );

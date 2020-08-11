@@ -15,7 +15,7 @@ import logo from "./../images/logo.svg"
 
 
 
-const Header = ({ siteTitle }) => {
+const Header = (props) => {
   const [menu, setMenu] = useState(false);
   const toggleHamburger =()=>{setMenu(!menu)}
 
@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => {
     if(menu){document.body.classList.add('menu-open')}
     else{document.body.classList.remove('menu-open')}
   });
+
   return(
   <header>    
      <div
@@ -44,14 +45,14 @@ const Header = ({ siteTitle }) => {
     <div className="header">
       <div className="container">
         <div className="logo-container">
-        <Links
+        <Link
             to="/"
           >
             <div className="logo">
             <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
           
-          </Links>
+          </Link>
         </div>
           
 
@@ -61,40 +62,50 @@ const Header = ({ siteTitle }) => {
           //onClick={toggleHamburger}
         >
       
-        <Links className="navbar-item" 
+        <Link className="navbar-item" 
           activeClass="active"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={500}
+          to="/"
           onClick={toggleHamburger}
         >
           Kalkulator
-        </Links>
-        <Links className="navbar-item" 
+        </Link>
+        <Link className="navbar-item" 
           activeClass="active"
-          to="steps"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={800}
-          onClick={toggleHamburger}
+          to="/realizacje"
         >
           Realizacje
-        </Links>
-        <Links className="navbar-item" 
+        </Link>
+        <Link className="navbar-item" 
           activeClass="active"
-          to="faq"
-          spy={true}
-          smooth={true}
-          offset={-65}
-          duration={1000}
+          to="/wiedza"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
           onClick={toggleHamburger}
         >
           Wiedza
-        </Links>
-        <Links className="navbar-item" 
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
+          to="/onas"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
+          onClick={toggleHamburger}
+        >
+          O nas
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
+          to="/kontakt"
+          onClick={toggleHamburger}
+        >
+          Kontakt
+        </Link>
+        {props.location != 'kontakt' ? 
+        <Links className="navbar-item text-green" 
           activeClass="active"
           to="contact"
           spy={true}
@@ -106,7 +117,9 @@ const Header = ({ siteTitle }) => {
         >
           Zapytaj o ofertę
         </Links>
-        <div className="contact mobile"><div>zadzwoń:</div><div><a href="tel:+48694163440">694 163 440</a></div><div><a href="tel:+48609594480">609 594 480</a></div></div>
+
+        : ""}
+        <div className="contact mobile"><div>tel: 694 163 440</div><div>609 594 480</div></div>
         <div className="social mobile">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>

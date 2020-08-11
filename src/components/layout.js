@@ -8,6 +8,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as Links} from "react-scroll";
+import { Link } from "gatsby"
 
 import Header from "./header"
 
@@ -15,7 +16,7 @@ import "./layout.css"
 import logo from "./../images/logo.svg"
 
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,12 +26,12 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+//console.log(props.location)
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title}  location={props.location}/>
      
-        <main>{children}</main>
+        <main>{props.children}</main>
         <footer
           style={{textAlign: `center`}}
         > 
@@ -41,49 +42,36 @@ const Layout = ({ children }) => {
             </div>
             <div className="footer_nav">
               <div>
-                <Links className="navbar-item" 
+                <Link className="navbar-item" 
                   activeClass="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={-65}
-                  duration={500}
-                  
+                  to="/home"
                 >
                   Kalkulator
-                </Links>
-                <Links className="navbar-item" 
+                </Link>
+                <Link className="navbar-item" 
                   activeClass="active"
-                  to="steps"
-                  spy={true}
-                  smooth={true}
-                  offset={-65}
-                  duration={800}
-                  
+                  to="/realizacje"
                 >
                   Realizacje
-                </Links>
-                <Links className="navbar-item" 
+                </Link>
+                <Link className="navbar-item" 
                   activeClass="active"
-                  to="faq"
-                  spy={true}
-                  smooth={true}
-                  offset={-65}
-                  duration={1000}
-                  
+                  to="/wiedza"
                 >
                   Wiedza
-                </Links>
-                <Links className="navbar-item" 
+                </Link>
+                <Link className="navbar-item" 
                   activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-65}
-                  duration={1000}
+                  to="/onas"
                 >
-                  Zapytaj o ofertę
-                </Links>
+                  O nas
+                </Link>
+                <Link className="navbar-item" 
+                  activeClass="active"
+                  to="/kontakt"
+                >
+                  Kontakt
+                </Link>
               </div>
             </div>
             <div className="footer_company">
@@ -95,9 +83,12 @@ const Layout = ({ children }) => {
             </div>
             </div>
             <div className="bottom_bar">
-            © {new Date().getFullYear()}, 
-          {` `}
-          Zielone Technologie
+              <span className="company">
+              © {new Date().getFullYear()} -  
+              {` `}
+              Zielone Technologie
+              </span>
+              <span className="realisation">Realizacja: <a href="https://marcinliwen.netlify.app" style={{color:'inherit'}}>MarcinL.</a></span>
             </div>
          
           </div>

@@ -799,6 +799,7 @@ nav {
   font-size: 14px;
   line-height: 27px;
   color: #b0b0b0;
+  text-decoration: none;
 }
 
 .footer_nav .contact {
@@ -814,6 +815,12 @@ nav {
 
 .footer_nav>div:first-of-type {
   margin-right: auto;
+}
+section#contact .section-title{
+  padding-bottom: 0px;
+}
+#contact .contact_content{
+  padding-top: 0px;
 }
 @media(max-width: 767px){
   body.menu-open {
@@ -849,7 +856,7 @@ section#pros {
 }
 .section-title {
   text-align: center;
-  padding: 60px 0 80px;
+  padding: 120px 0 60px;
 }
 
 .section-title h2 {
@@ -985,12 +992,9 @@ header a, header h1 {
   height: 100vh;
 }
 #contact{
-  background: #fff;
+  background: #eaeaea;
 }
-.contact_content {
-  padding: 0 0 120px;
-  text-align: center;
-}
+
 .bottom_bar {
   font-size: 14px;
   color: #b0b0b0;
@@ -1005,6 +1009,10 @@ header a, header h1 {
 }
 .kalk_container .contact_content {
   padding: 50px 0 20px;
+}
+
+.header a {
+  text-decoration: none;
 }
 @media(min-width:760px){
   .footer_nav a, .footer_company p{
@@ -1062,7 +1070,7 @@ nav a{
   }
   .section-title {
     text-align: center;
-    padding: 160px 0 180px;
+    padding: 160px 0 0px;
   }
   .img_background img {
     height: auto;
@@ -1088,30 +1096,6 @@ nav a{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: 135px 15px;
-}
-
-section#contact .section-title {
-  text-align: left;
-  padding: 0;
-  width: 50%;
-  margin-left: auto;
-  padding-right: 25%;
-}
-
-section#contact .contact_content {
-  padding: 0;
-  width: 50%;
-  margin-left: auto;
-  text-align: left;
-}
-
-section#contact .container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas:
-      "icon text"
-      "icon form";
 }
 
 .contact_icon {
@@ -1130,7 +1114,7 @@ section#contact .section-title {
 
 section#contact .contact_content {
   grid-area: form;
-  width: 100%;
+  width: 60%;
 }
 
 .contact_icon img {

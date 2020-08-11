@@ -1,0 +1,40 @@
+.contakt-title{
+    margin: 0 8px;
+}
+.contakt-company p {
+    margin: 0;
+}
+.contakt-company {
+    width: 240px;
+    margin: 0px 8px;
+}
+.contakt-address, .contact_content {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+#kontakt .gmap {
+    width: 100%;
+    margin: 0;
+    border: none;
+    position: relative;
+    bottom: -7px;
+    height: 400px;
+}
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contakt-company a {
+    text-decoration: none;
+    color: inherit;
+}
+@media(min-width: 767px){
+    .contakt-address {
+        width: 40%;
+        order: -1;
+    }
+    
+    .contact_content {
+        width: 60%;
+    }
+}
