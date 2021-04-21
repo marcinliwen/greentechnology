@@ -23,9 +23,9 @@ const Fcalc =()=>{
     var kwhyear = Math.round(kwhmsc * 12);
 
     var kwp = (((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
-    //console.log(kwp);
+    console.log(kwp);
     var total_price = 0;
-    if(kwp <= 4){
+    if(kwp <= 50){
         if(kwp < 2){
           
             total_price = 12000 ;
@@ -40,10 +40,49 @@ const Fcalc =()=>{
             let unit = (18000 - 15000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
             total_price = 15000 + (unit * perUnit);
+        }
+        else if(kwp >= 4 && kwp < 5 ){
+            let unit = (20200 - 18000)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 18000 + (unit * perUnit);
         }  
+        else if(kwp >= 5 && kwp < 6 ){
+            let unit = (22400 - 20200)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 20200 + (unit * perUnit);
+        }  
+        else if(kwp >= 6 && kwp < 6.5 ){
+            let unit = (23500 - 22400)/5;
+            let perUnit = (kwp%1).toFixed(1)*5;
+            total_price = 22400 + (unit * perUnit);
+        }  
+        else if(kwp >= 6.5 && kwp < 7 ){
+            let unit = (25000 - 23500)/5;
+            let perUnit = (kwp%1).toFixed(1)*5;
+            total_price = 23500 + (unit * perUnit);
+        }
+        else if(kwp >= 7 && kwp < 8 ){
+            let unit = (28000 - 25000)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 25000 + (unit * perUnit);
+        }  
+        else if(kwp >= 8 && kwp < 9 ){
+            let unit = (30000 - 28000)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 28000 + (unit * perUnit);
+        }  
+        else if(kwp >= 9 && kwp < 10 ){
+            let unit = (32000 - 30000)/10;
+            let perUnit = (kwp%1).toFixed(1)*10;
+            total_price = 30000 + (unit * perUnit);
+        }  
+        else{
+            total_price = 32000 + ((kwp-10)*3450);
+         }
     }   
+    
     else{
-        total_price = 18000 + ((kwp-4)*3000);
+       total_price = 170000 + ((kwp-50)*3000);
     }
 
     const returnTime = Math.floor(total_price / yearPrice)||0;
@@ -115,7 +154,7 @@ const Fcalc =()=>{
                 aria-labelledby="continuous-slider"
                 onChange={changeHandler}
                 min={50}
-                max={1000}
+                max={2200}
             />
             </div>
             </form>
@@ -131,7 +170,7 @@ const Fcalc =()=>{
                 <div className="k_img b_grafit"><img src={power} width="24px" alt="power"/></div>
                 <div className="k_desc">
                     <div className="k_label">Potrzebna moc instalacji: </div>
-                    <strong className="k_value">{Math.round(kwp)}kWp</strong>
+                    <strong className="k_value">{kwp >= 6.5 && kwp < 7 ? 6.5 : Math.floor(kwp)}kWp</strong>
                 </div>
             </div>
             
