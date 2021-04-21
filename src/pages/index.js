@@ -8,6 +8,7 @@ import Realisation from "../components/Realisation"
 import Faq from "../components/Faq"
 import Contact from "../components/contact"
 import Jaktodziala from "../components/Jaktodziala"
+import Pompa from "../components/pompa"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -78,6 +79,7 @@ const classes = useStyles();
         <Fcalc />
      </div>
    </section>
+  <Pompa />
   <section id="pros" className="green_gradient">
     <div className="container">
       <div className="section-title">
