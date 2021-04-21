@@ -27,7 +27,7 @@ const Pompa = () =>{
                     <div className="pompa-value"> 29 000 zł <div>/brutto</div></div>
                 </div>
             </div>
-            <div>
+            <div className="pompa-subtitle">
                 <p>Cena obejmuje: montaż jednostki wewnętrznej i zewnętrznej (do 5m instalacji zewnętrznej), montaż i uruchomienie instalacji.</p>
                 <p>Pompy spełniają warunki programu "Czyste powietrze" i dotacji do modernizacji systemów grzewczych prowadzonych przez urzędy miast i gmin</p>
             </div>
