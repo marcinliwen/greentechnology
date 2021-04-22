@@ -966,7 +966,7 @@ header a, header h1 {
   padding: 25px;
   margin: 0;
   text-align: center;
-  margin-top: 40px;
+  margin-top: auto;
 }
 
 .social.mobile {

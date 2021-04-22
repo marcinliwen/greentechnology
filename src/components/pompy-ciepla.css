@@ -1,0 +1,40 @@
+
+.pompy__about-card {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.pompy__about-text {
+    padding: 25px;
+    flex: 1
+}
+
+.pompy__about-icon {
+    padding: 25px;
+    max-width: 200px;
+}
+.pompy__about-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+#pompy-list{
+    padding-bottom: 120px;
+}
+#pompy-list .section-title p {
+    text-align: left;
+    margin: auto;
+}
+#pompy-list .section-title{
+    color: #fff;
+}
+
+
+@media(min-width:760px){
+    #pompy-list .container, #pompy-about .container{
+        max-width: 60%;
+    }
+}

@@ -77,6 +77,12 @@ const Header = (props) => {
         </Link>
         <Link className="navbar-item" 
           activeClass="active"
+          to="/pompy-ciepla"
+        >
+          Pompy ciepła
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
           to="/wiedza"
           //spy={true}
           //smooth={true}
