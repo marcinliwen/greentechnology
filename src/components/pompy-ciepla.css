@@ -35,6 +35,6 @@
 
 @media(min-width:760px){
     #pompy-list .container, #pompy-about .container{
-        max-width: 60%;
+        max-width: 800px;
     }
 }

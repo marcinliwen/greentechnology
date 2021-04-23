@@ -35,7 +35,7 @@ const IndexPage = () => {
               <img src={returnon} />
             </div>
             <div className="pompy__about-text">          
-              <p>Pompy ciepła to ekologiczny i oszczędny sposób ogrzewania Twojegodomu. Wykorzystują one energię ziemi, słońca, wody a także powietrza i pozwalają bezpiecznie wykorzystywać odnawialne źródła energii bez generowania jakichkolwiek zanieczyszczeń. Pompy ciepła są ponadto urządzeniami wyjątkowo trwałymi i niezawodnymi.</p>
+              <p>Pompy ciepła to ekologiczny i oszczędny sposób ogrzewania Twojego domu. Wykorzystują one energię ziemi, słońca, wody a także powietrza i pozwalają bezpiecznie wykorzystywać odnawialne źródła energii bez generowania jakichkolwiek zanieczyszczeń. Pompy ciepła są ponadto urządzeniami wyjątkowo trwałymi i niezawodnymi.</p>
             </div>
           </div>
           <div className="pompy__about-card">
@@ -43,7 +43,7 @@ const IndexPage = () => {
               <img src={resun} />
             </div>
             <div className="pompy__about-text">          
-              <p>Minimalne wykorzystywanie energii elektrycznej do eksploatacji pompciepła stanowi o ich bezkonkurencyjności w porównaniu z innymisystemami grzewczymi, które wykorzystują tradycyjne, wciąż drożejąceźródła energii.</p>
+              <p>Minimalne wykorzystywanie energii elektrycznej do eksploatacji pomp ciepła stanowi o ich bezkonkurencyjności w porównaniu z innymi systemami grzewczymi, które wykorzystują tradycyjne, wciąż drożejące źródła energii.</p>
             </div>
             
           </div>
@@ -52,7 +52,7 @@ const IndexPage = () => {
               <img src={reenergy} />
             </div>
             <div className="pompy__about-text">          
-              <p>Co więcej, pompa ciepła nie wymaga wykonywania drogich przyłączygazowych czy komina. Nie istnieje również konieczność przechowywaniapaliwa, co pozwala na lepsze wykorzystanie dostępnej przestrzeni, atakże zwiększa walory estetyczne domu i podnosi bezpieczeństwo jegoużytkowania.</p>
+              <p>Co więcej, pompa ciepła nie wymaga wykonywania drogich przyłączy gazowych czy komina. Nie istnieje również konieczność przechowywania paliwa, co pozwala na lepsze wykorzystanie dostępnej przestrzeni, atakże zwiększa walory estetyczne domu i podnosi bezpieczeństwo jego użytkowania.</p>
             </div>
             
           </div>
@@ -61,7 +61,7 @@ const IndexPage = () => {
               <img src={rewind} />
             </div>
             <div className="pompy__about-text">          
-              <p>Urządzenia te są bezawaryjne i praktycznie bezobsługowe aich sprawność nie maleje wraz z upływem lat. Sprawia to, iż pompaciepła gwarantuje oszczędności oraz komfort użytkowanianieporównywalny z innymi systemami grzewczymi.</p>
+              <p>Urządzenia te są bezawaryjne i praktycznie bezobsługowe a ich sprawność nie maleje wraz z upływem lat. Sprawia to, iż pompa ciepła gwarantuje oszczędności oraz komfort użytkowania nieporównywalny z innymi systemami grzewczymi.</p>
             </div>
             
           </div>
@@ -75,7 +75,7 @@ const IndexPage = () => {
       <div className="container">
         <div className="section-title">
           <h2>Rodzaje pomp ciepła</h2>
-          <p>Pompy ciepła to inteligentne urządzenia, które dzięki odnawialnymźródłom energii i takim nowoczesnym rozwiązaniom jak m.in. solaryumożliwiają montaż w nowych budynkach oraz obiektach poddawanychmodernizacji.</p>
+          <p>Pompy ciepła to inteligentne urządzenia, które dzięki odnawialnym źródłom energii i takim nowoczesnym rozwiązaniom jak m.in. solary umożliwiają montaż w nowych budynkach oraz obiektach poddawanych modernizacji.</p>
         </div>
         <Rodzajepomp />
       </div>
