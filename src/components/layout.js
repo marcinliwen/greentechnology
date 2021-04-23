@@ -78,6 +78,7 @@ const Layout = (props) => {
               <p>Zielone Technologie</p>
               <p>ul. Dworcowa 6</p>
               <p>65-019 Zielona Góra</p>
+              <p>zielonetechnologie.zg@gmail.com</p>
               <p>NIP: 9731051910</p>
               <p>REGON: 369511714</p>
             </div>
