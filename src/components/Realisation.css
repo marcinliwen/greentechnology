@@ -138,4 +138,10 @@ section#steps .container {
     #moj-prad .container{
         max-width: 800px;
     }
+    .section-title{
+        text-align: center!important;
+    }
+    .section-title p {
+        text-align: center;
+    }
 }
