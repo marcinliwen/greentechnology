@@ -28,10 +28,14 @@ const IndexPage = () => {
     <section id="moj-prad">
       <div className="container">
         <div className="section-title">
-          <h2>Mój prąd 3.0</h2>
+          <h1>Mój prąd 3.0</h1>
           <p>Program dofinansowania mikroinstalacji fotowoltaicznych</p>
         </div>
+        <div className="section-title">
+          <h2>Jak uzyskać dofinansowanie?</h2>
+        </div>
         <div className="steps_content prad">
+        
         <div className="steps_item">    
             <div className="number">1</div>
             <div className="steps_item_title">Kup i zamontuj mikroinstalację fotowoltaiczną</div>
@@ -40,9 +44,9 @@ const IndexPage = () => {
         <div className="steps_item">    
             <div className="number">2</div>
             <div className="steps_item_title">Poczekaj na instalację przez zakład energetyczny licznika dwukierunkowego.
-Ważne!
+<div><em>Ważne!
 Instalacja nie może być przyłączona
-przed 23.07.2019 r.</div>
+przed 23.07.2019 r.</em></div></div>
             <div className="steps_item_desc"></div>
         </div>
         <div className="steps_item">    
@@ -60,7 +64,7 @@ przed 23.07.2019 r.</div>
         <div className="steps_item " style={{width: '100%'}}>    
             <div className="number">5</div>
             <div className="steps_item_title">O wyniku oceny wniosku zostaniesz poinformowany mailem.
-Aktualny status wniosku możesz sprawdzić online.<div>Wnioski odrzucone można składać ponownie po usunięciu powodu odrzucenia.</div></div>
+Aktualny status wniosku możesz sprawdzić online.<div><em>Wnioski odrzucone można składać ponownie po usunięciu powodu odrzucenia.</em></div></div>
             <div className="steps_item_desc"></div>
         </div>
         <div className="steps_item green_gradient" style={{width: '100%'}}>    

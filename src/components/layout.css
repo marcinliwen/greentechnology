@@ -1121,7 +1121,7 @@ nav a{
 
 section#contact .section-title {
   grid-area: text;
-  width: 100%;
+  width: 60%;
 }
 
 section#contact .contact_content {

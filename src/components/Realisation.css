@@ -117,9 +117,25 @@ section#steps .container {
     min-height: 188px;
     align-items: center;
 }
+.section-title{
+    text-align: left!important;
+}
+.section-title h1 {
+    font-size: 53px;
+    font-weight: 200;
+}
+.section-title p {
+    text-align: left;
+}
 @media(min-width: 760px){
     .outside .steps_item_title {
-        padding: 0 0 0 25px;
+        padding: 0px;
         min-height: auto;
+    }
+    .section-title h1 {
+        font-size: 64px;
+    }
+    #moj-prad .container{
+        max-width: 800px;
     }
 }
