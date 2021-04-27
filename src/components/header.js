@@ -83,6 +83,18 @@ const Header = (props) => {
         </Link>
         <Link className="navbar-item" 
           activeClass="active"
+          to="/moj-prad-3.0"
+        >
+          Mój prąd 3.0
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
+          to="/ulga-termomodernizacyjna"
+        >
+          Ulga termomodernizacyjna
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
           to="/wiedza"
           //spy={true}
           //smooth={true}

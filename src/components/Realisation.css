@@ -64,3 +64,62 @@ section#steps .container {
         margin: 60px 0;
     }
 }
+
+.prad .steps_item_title {
+    height: auto;
+    display: block;
+    font-size: 16px;
+    min-height: 138px;
+    font-weight: normal;
+}
+
+.prad .number {
+    vertical-align: top;
+    line-height: 138px;
+    top: 25px;
+    left: 25px;
+}
+
+#pompy-about .container {}
+
+.steps_content.prad {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.steps_item.green_gradient .number {
+    color: #fff;
+}
+
+.prad .steps_item {
+    padding: 25px;
+}
+
+.steps_item.green_gradient .steps_item_title {
+    color: #fff;
+    line-height: 44px;
+    font-size: 32px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.steps_item_title a {
+    display: block;
+    text-decoration: underline;
+    color: #11B91B;
+}
+.outside .steps_item_title {
+    padding: 0px;
+    min-height: auto;
+}
+
+.steps_item.outside {
+    min-height: 188px;
+    align-items: center;
+}
+@media(min-width: 760px){
+    .outside .steps_item_title {
+        padding: 0 0 0 25px;
+        min-height: auto;
+    }
+}
