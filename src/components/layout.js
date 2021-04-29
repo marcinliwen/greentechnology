@@ -11,7 +11,7 @@ import { Link as Links} from "react-scroll";
 import { Link } from "gatsby"
 
 import Header from "./header"
-
+import Cookies from "./cookies"
 import "./layout.css"
 import logo from "./../images/logo.svg"
 
@@ -94,7 +94,7 @@ const Layout = (props) => {
          
           </div>
         </footer>
-    
+        <Cookies />
     </>
   )
 }
