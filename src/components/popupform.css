@@ -1,0 +1,39 @@
+#popup-form .contact_content {
+    width: 100%;
+    padding: 0;
+}
+#popup-form{
+    overflow: hidden;
+}
+#popup-form h3 {
+    font-weight: 200;
+    font-size: 48px;
+    text-align: center;
+}
+
+#popup-form p {
+    text-align: center;
+}
+
+div#popup-form {
+    background: white;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 104px;
+}
+.MuiDialog-paper{
+    margin: 0px !important;
+}
+div#popup-form img {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    bottom: 0;
+    opacity: 0.4;
+    left: -50px;
+}
+@media(min-width: 760px){
+    div#popup-form img{
+        bottom: -34px
+    }
+}

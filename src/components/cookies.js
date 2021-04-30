@@ -29,6 +29,9 @@ const buttonStyle={
     borderRadious: '4px',
     padding: '4px 8px'
 }
+
+
+
 const Cookies = () => {
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -49,10 +52,47 @@ const Cookies = () => {
     const [cookiesClose, setCookiesclose] = useState(false)
     const cookiesAccepted =()=>{
         setCookiesclose(true)
-
+        setCookie("ac", true, 365);
     }
+
+    const [cookiesPresent, setCookiesPresent] = useState(false)
+
+    useEffect( ()=>{
+        console.log(document.cookie)
+        checkCookie()
+    }, [])
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      
+      function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      
+      function checkCookie() {
+        var ac = getCookie("ac");
+        if (ac != "") {
+            setCookiesPresent(true)
+        } 
+      }
+
+      
 return(
-    <div className={`cookies-container ${cookiesClose ? 'hide-cookies':'is-visible'} `} style={cookieStyle}>
+    <div className={`cookies-container ${cookiesClose ? 'hide-cookies':''} ${cookiesPresent ? 'hide-this' :''}`} style={cookieStyle}>
         <p>Na naszej stronie używamy plików cookies do celów statystycznych i lepszego funkcjonowania strony. Aby dowiedzieć się więcej jak kozystamy z plików cookies zobacz naszą  
          <Link title="Polityka Prywatności" to='/polityka-prywatnosci' style={aStyle}>Politykę prywatności</Link>. 
          Kontynuując przeglądanie naszej witryny, wyrażasz zgodę na używanie przez nas plików cookie.</p>

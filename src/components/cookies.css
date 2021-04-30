@@ -11,6 +11,12 @@
     color: rgb(43, 43, 43);
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 15px;
     border-radius: 10px;
+    opacity: 0;
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+.hide-this{
+  display: none !important
 }
 
 @-webkit-keyframes slide-out-bottom {

@@ -15,7 +15,7 @@ function encode(data) {
     .join('&')
 }
 
-export default function Contact() {
+export default function Contact(props) {
   const [state, setState] = React.useState({})
 
   const handleChange = (e) => {
@@ -176,9 +176,17 @@ export default function Contact() {
        {/*} <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
             Anuluj
               </Button>*/}
+          {props.onClose 
+          ?
+          <Button  variant="outlined" className={classes.root, classes.outlined}  onClick={props.onClose}>
+            zamknij
+          </Button>
+          : null
+          }
           <Button variant="outlined" className={classes.root, classes.outlined}  type="submit" >
             Wyślij 
           </Button>
+          
           </DialogActions>
       </form>
       {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
