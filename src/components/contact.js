@@ -8,6 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import CheckboxRodo from "./checkboxRodo"
 
 function encode(data) {
   return Object.keys(data)
@@ -46,6 +47,8 @@ export default function Contact(props) {
   const [messageSuccess, setSuccess] = React.useState(false);
   const handleSuccess = () => {
       setSuccess(true);
+      //zamknij popup i ustaw cookies w popupform.js
+      setTimeout (()=>{ props.onSend()}, 2000);
   }
   const [open, setOpen] = React.useState(false);
 
@@ -74,38 +77,31 @@ export default function Contact(props) {
           [theme.breakpoints.up('sm')]: {
             width: 'calc(50% - 16px)'
           },
+         '& .MuiInputLabel-asterisk': {
+            color: 'red',
+            fontSize: '12px',
+            lineHeight: '21px',
+            verticalAlign: 'text-top'
+        }
           
         },
     },
     outlined:{
         borderColor: 'rgba(17, 185, 27, 0.5)',
         color: '#11B91B',
-        marginTop: '20px',
     },
     textPrimary:{
         color: '#11B91B'
     },
-   
-    
+    close:{
+      color: '#2b2b2b',
+      borderColor: '#2b2b2b85'
+    }
   }));
   const classes = useStyles();
+
   return (
     <div className="contact_content">
-        {/*<Button variant="outlined" className={classes.root, classes.outlined} onClick={handleClickOpen}>
-            Zapytaj o ofertę
-  </Button>*/}
-
-     {/* <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-      <DialogTitle id="form-dialog-title">Kontakt</DialogTitle>
-            <DialogContent >
-            <h4 style={{fontSize:'18px'}}>
-                Dowiedz się co jeszcze zyskasz inwestując w fotowoltaikę.
-            </h4>
-            <p style={{fontSize:'14px', padding: '0px'}}>
-              Zostaw kontakt do siebie a my oddzwonimy lub odpiszemy.
-            </p>
-*/}    
- 
       <form
         name="contact"
         method="post"
@@ -161,24 +157,13 @@ export default function Contact(props) {
                     onChange={handleChange}
                 />
 
-                {/*<TextField
-                    margin="dense"
-                    id="message"
-                    name="message"
-                    label="Wiadomość"
-                    fullWidth
-                    multiline
-                    rowsMax={4}
-                    onChange={handleChange}
-                    className={classes.underline}
-                />*/}
+                {/*checkbox - zgoda RODO */}
+                <CheckboxRodo />
         <DialogActions style={{width: '100%'}}>
-       {/*} <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
-            Anuluj
-              </Button>*/}
+          {/*jezeli component w popupie dodaj button zamknij i ustaw cookies w popupform.js */}
           {props.onClose 
           ?
-          <Button  variant="outlined" className={classes.root, classes.outlined}  onClick={props.onClose}>
+          <Button  variant="outlined" className={classes.root, classes.outlined, classes.close}  onClick={props.onClose}>
             zamknij
           </Button>
           : null
@@ -188,16 +173,11 @@ export default function Contact(props) {
           </Button>
           
           </DialogActions>
+          <div><p style={{fontSize: "12px", margin:'0px'}}><span className="asterisk">* </span>pole wymagane</p></div>
       </form>
+
       {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
       {messageError ? ( <Alert style={{margin:'15px 0 25px 0'}} severity="error">{messageError}</Alert>) : ""}  
-           
-      {/*</DialogContent>
-        
-        
-          
-        
-      </Dialog>*/}
       </div>
   )
 }

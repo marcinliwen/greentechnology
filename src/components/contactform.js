@@ -8,6 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import CheckboxRodo from "./checkboxRodo"
 
 import "./contactform.css"
 function encode(data) {
@@ -77,6 +78,12 @@ export default function Contact(props) {
           },
           
         },
+        '& .MuiInputLabel-asterisk': {
+          color: 'red',
+          fontSize: '12px',
+          lineHeight: '21px',
+          verticalAlign: 'text-top'
+      },
     },
     outlined:{
         borderColor: 'rgba(17, 185, 27, 0.5)',
@@ -170,6 +177,9 @@ export default function Contact(props) {
                     onChange={handleChange}
                     className={classes.underline}
                 />
+
+                {/*checkbox - zgoda RODO */}
+                <CheckboxRodo />
         <DialogActions style={{width: '100%'}}>
        {/*} <Button onClick={handleClose} color="primary" className={classes.textPrimary}>
             Anuluj
@@ -178,6 +188,7 @@ export default function Contact(props) {
             Wyślij 
           </Button>
           </DialogActions>
+          <div><p style={{fontSize: "12px", margin:'0px'}}><span className="asterisk">* </span>pole wymagane</p></div>
       </form>
       {messageSuccess ? (<Alert style={{margin:'15px 0 25px 0'}} severity="success">Dziękujemy! Dostaliśmy Twoją wiadomość.</Alert>) : ""}
       {messageError ? ( <Alert style={{margin:'15px 0 25px 0'}} severity="error">{messageError}</Alert>) : ""}  

@@ -34,8 +34,13 @@ function CustomizedDialogs() {
   
     const handleClose = () => {
       setOpen(false);
-      setCookie('pf_close', true, 365)
+      setCookie('pf_close', true)
     };
+
+    const onSend = () =>{
+      setOpen(false);
+      setCookie('pf_close', true, 365)
+    }
   
     function setCookie(cname, cvalue, exdays) {
         var d = new Date();
@@ -46,11 +51,11 @@ function CustomizedDialogs() {
 
     return (
       <div >
-        <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+        <Dialog  aria-labelledby="customized-dialog-title" open={open}>
             <DialogContent dividers id="popup-form">
                 <h3>Skontaktujemy się z Tobą</h3>
                 <p>zostaw nam swój numer, oddzwonimy!</p>    
-                <Contact onClose={handleClose} />
+                <Contact onClose={handleClose} onSend={onSend} />
                 <img src={solarPower} />
             </DialogContent>
             

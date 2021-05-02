@@ -1026,6 +1026,12 @@ header a, header h1 {
 .header a {
   text-decoration: none;
 }
+.asterisk{
+  color: red;
+  font-size: 12px;
+  line-height: 21px;
+  vertical-align: text-top;
+}
 @media(min-width:760px){
   .footer_nav a, .footer_company p{
     font-size: 16px;
