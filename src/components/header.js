@@ -61,6 +61,15 @@ const Header = (props) => {
           //onKeyDown={toggleHamburger}
           //onClick={toggleHamburger}
         >
+           <Link
+            to="/"
+            className="logo-in-menu"
+          >
+            <div className="logo">
+            <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
+            </div>
+          
+          </Link>
       
         <Link className="navbar-item" 
           activeClass="active"
@@ -137,20 +146,22 @@ const Header = (props) => {
         </Links>
 
         : ""}
-        <div className="contact mobile"><div>tel: <a href="tel:+48694163440">694 163 440</a> </div><div><a href="tel:+48609594480">609 594 480</a></div></div>
-        <div className="social mobile">
+        <div className="contact">tel: <a href="tel:+48694163440">694 163 440</a> | <a href="tel:+48609594480">609 594 480</a></div>
+        <div className="social">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>
         </div>
         </nav>
         <div className="nav_back"></div>
+        {/*
         <div className="h_banner">
         <div className="contact">tel: <a href="tel:+48694163440">694 163 440</a> | <a href="tel:+48609594480">609 594 480</a></div>
         <div className="social">
           <Link to="/"><img src={facebook} width="24px" height="24px" alt="facebook"/></Link>
           <Link to="/"><img src={instagram}  width="24px" height="24px" alt="instagram"/></Link>
         </div>
-      </div>
+        
+        </div>*/}
     </div>
     </div>
   </header>
