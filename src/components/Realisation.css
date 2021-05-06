@@ -66,18 +66,25 @@ section#steps .container {
 }
 
 .prad .steps_item_title {
-    height: auto;
     display: block;
-    font-size: 16px;
+    font-size: 24px;
+    line-height: 32px;
     min-height: 138px;
     font-weight: normal;
+    height: unset;
+    padding: 25px 0 0 0;
+    margin-bottom: 32px;
 }
 
 .prad .number {
     vertical-align: top;
-    line-height: 138px;
+    line-height: 98px;
     top: 25px;
     left: 25px;
+    font-size: 124px;
+    display: flex;
+    position: static;
+    align-items: flex-start;
 }
 
 #pompy-about .container {}
@@ -93,6 +100,10 @@ section#steps .container {
 
 .prad .steps_item {
     padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .steps_item.green_gradient .steps_item_title {
