@@ -59,7 +59,7 @@ const IndexPage = () => {
         <div>
           <b>P: </b><em style={{marginBottom: "10px"}}> Czy inwestować w fotowoltaikę, czy czekać na więcej szczegółów?</em>
         </div>
-        <div><b>O: </b><strong>To najlepszy czas, by zainwestować w fotowoltaikę.</strong></div>
+        <div><b>O: </b><strong style={{color: '#4ab75e'}}>To najlepszy czas, by zainwestować w fotowoltaikę.</strong></div>
     </Box>
     <Box my={{xs:2, md:8}}>
       <div className="pompy__about">
