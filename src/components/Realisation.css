@@ -69,11 +69,10 @@ section#steps .container {
     display: block;
     font-size: 24px;
     line-height: 32px;
-    min-height: 138px;
     font-weight: normal;
     height: unset;
     padding: 25px 0 0 0;
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
 .prad .number {
@@ -104,8 +103,15 @@ section#steps .container {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 3px 6px #2b2b2ba1;
+    border-radius: 10px;
+    margin: 25px;
+    flex: 16% 1;
+    align-content: flex-start;
 }
-
+section#moj-prad {
+    padding-bottom: 80px;
+}
 .steps_item.green_gradient .steps_item_title {
     color: #fff;
     line-height: 44px;
@@ -113,6 +119,8 @@ section#steps .container {
     text-align: left;
     display: flex;
     align-items: center;
+    padding: 0;
+    min-height: 140px;
 }
 .steps_item_title a {
     display: block;
@@ -138,6 +146,14 @@ section#steps .container {
 .section-title p {
     text-align: left;
 }
+.important {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.important>div {
+    padding: 16px 0;
+}
 @media(min-width: 760px){
     .outside .steps_item_title {
         padding: 0px;
@@ -145,9 +161,6 @@ section#steps .container {
     }
     .section-title h1 {
         font-size: 64px;
-    }
-    #moj-prad .container{
-        max-width: 800px;
     }
     .section-title{
         text-align: center!important;

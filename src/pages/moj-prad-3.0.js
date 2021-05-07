@@ -55,13 +55,11 @@ const IndexPage = () => {
         <div>Według strony internetowej NFOŚiGW kolejny nabór wniosków ma rozpocząć się 1 lipca 2021 roku, a zakończyć się 22 grudnia 2021.</div>
       </blockquote>
     </Box>
-    <Box>
-      <blockquote className="alert-info -second">
+    <Box my={{xs:2, md:8}} className="important">
         <div>
           <b>P: </b><em style={{marginBottom: "10px"}}> Czy inwestować w fotowoltaikę, czy czekać na więcej szczegółów?</em>
         </div>
         <div><b>O: </b><strong>To najlepszy czas, by zainwestować w fotowoltaikę.</strong></div>
-      </blockquote>
     </Box>
     <Box my={{xs:2, md:8}}>
       <div className="pompy__about">
@@ -149,8 +147,10 @@ const IndexPage = () => {
         <div className="steps_item " style={{width: '100%'}}>    
             <div className="number">5</div>
             <div className="icon"><img src={iconCalendar} width="auto" height="84px"/></div>
-            <div className="steps_item_title">O wyniku oceny wniosku zostaniesz poinformowany mailem.
-Aktualny status wniosku możesz sprawdzić online.<div><em>Wnioski odrzucone można składać ponownie po usunięciu powodu odrzucenia.</em></div></div>
+            <div className="steps_item_title">
+              O wyniku oceny wniosku zostaniesz poinformowany mailem. Aktualny status wniosku możesz sprawdzić online.
+              <div><em style={{fontSize: '16px', lineHeight: '18px', display: 'block', marginTop: '15px'}}>Wnioski odrzucone można składać ponownie po usunięciu powodu odrzucenia.</em></div>
+            </div>
             <div className="steps_item_desc"></div>
         </div>
         <div className="steps_item green_gradient" style={{width: '100%'}}>    
@@ -161,55 +161,6 @@ Aktualny status wniosku możesz sprawdzić online.<div><em>Wnioski odrzucone mo�
         </div>
     </div>
           
-        
-      
-      </div>
-    </section>
-    <section id="pompy-about">
-      <div className="container">
-        <div className="pompy__about">
-          <div className="pompy__about-card">
-            <div className="pompy__about-icon">
-              <img src={returnon} />
-            </div>
-            <div className="pompy__about-text">   
-            <h3>Kto może skorzystać z programu?</h3>       
-            <p>Program skierowany jest do osób fizycznych wytwarzających energię elektryczną na własne potrzeby, które mają zawartą umowę kompleksową
-(z Operatorem Sieci Dystrybucyjnej – OSD, zakładem energetycznym) regulującą kwestie związane z wprowadzeniem do sieci energii elektrycznej wytworzonej w mikroinstalacji.</p>           
-          </div>
-          </div>
-          <div className="pompy__about-card">
-            <div className="pompy__about-icon">
-              <img src={resun} />
-            </div>
-            <div className="pompy__about-text">   
-            <h3>O dotację w programie Mój Prąd możesz ubiegać się jeśli:</h3>       
-<p>Twoja instalacja jest już wykonana i podłączona do sieci elektroenergetycznej
-(m.in. posiadasz licznik dwukierunkowy);
-Twoja instalacja fotowoltaiczna jest o mocy 2-10 kW i jest przeznaczona na cele mieszkaniowe;
-Wydatki poniosłeś od 23 lipca 2019 r. i instalacja nie została zakończona przed tą datą;
-Twoja inwestycja nie jest rozbudową już istniejącej instalacji;</p>            </div>
-            
-          </div>
-          <div className="pompy__about-card">
-            <div className="pompy__about-icon">
-              <img src={reenergy} />
-            </div>
-            <div className="pompy__about-text">  
-            <h3>Co zyskasz?</h3>        
-<p>Zwrot do 50% kosztów inwestycji, maksymalnie 5000 zł na instalację.
-
-Dotacja jest zwolniona z podatku PIT.
-
-Koszty inwestycji, które nie zostały pokryte wsparciem
-możesz odliczyć od podatku (ulga termomodernizacyjna).
-
-Instalacja paneli fotowoltaicznych zwraca się
-średnio po 6-8 latach od zainstalowania.</p>            </div>
-            
-          </div>
-          
-        </div>
         
       
       </div>
