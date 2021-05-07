@@ -84,7 +84,19 @@ body.kalk .kalk_container h2 {
     height: 54px;
     transition-duration: .4s;
 }
+.k_label a {
+    text-decoration: none;
+    color: #26a5fc;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    transition-duration: .3s;
+    border-bottom: 2px solid transparent;
+}
 
+.k_label a:hover {
+    border-bottom: 2px solid #26a5fc;
+}
 @media(min-width:760px){
     .k_element{
         width: 50%;
@@ -112,5 +124,8 @@ body.kalk .kalk_container h2 {
     
     .k_img>img {
         width: 44px;
+    }
+    .k_label a{
+        font-size: 24px;
     }
 }
