@@ -67,7 +67,7 @@ section#steps .container {
 
 .prad .steps_item_title {
     display: block;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 32px;
     font-weight: normal;
     height: unset;
@@ -152,18 +152,48 @@ section#moj-prad {
 .important>div {
     padding: 16px 0;
 }
+.img_bg_moj-prad {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.subheader {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.section-title.moj-prad {
+    padding: 0 0 50px 0;
+}
 @media(min-width: 760px){
     .outside .steps_item_title {
         padding: 0px;
         min-height: auto;
     }
     .section-title h1 {
-        font-size: 64px;
+        font-size: 120px;
     }
     .section-title{
-        text-align: center!important;
     }
     .section-title p {
-        text-align: center;
+        font-size: 21px;
+    }
+    .section-title.moj-prad {
+        padding: 120px 0 60px 0;
+    }
+    .img_bg_moj-prad {
+        bottom: 0px;
+        top: auto;
+        right: 0;
+        left: auto;
+        width: 60%;
+    }
+    .img_bg_moj-prad .gatsby-image-wrapper{
+        height: unset;
     }
 }

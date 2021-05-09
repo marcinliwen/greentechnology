@@ -30,22 +30,38 @@ import "./../components/pompy-ciepla.css"
 import './../components/Realisation.css';
 
 const IndexPage = () => { 
-  
+  const data = useStaticQuery( graphql`
+  query {
+    file(relativePath: {eq: "moj-prad-bg.png"}) {
+      childImageSharp {
+        fluid (fit: COVER){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`);
   return(
   <Layout>
     <SEO title="Zielone Technologie - Mój prąd 3.0" />
-    <section>
+    <section className="has_img_bg subheader">
+    <div className="img_bg_moj-prad">
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Fotovoltaic"
+      />
+    </div>
       <div className="container">
       <div className="section-title">
-          <h1>Mój prąd 3.0</h1>
+          <h1>Mój Prąd 3.0</h1>
           <p>Program dofinansowania mikroinstalacji fotowoltaicznych</p>
         </div>
       </div>
     </section>
     <section>
       <div className="container">
-        <div className="section-title">
-          <h2>Kiedy rozpocznie się program ,,Mój Prąd”?</h2>
+        <div className="section-title moj-prad" >
+          <h2>Kiedy rozpocznie się program "Mój Prąd”?</h2>
         </div>
     <Box my={{xs:2, md:4}}>
       <blockquote className="alert-info">

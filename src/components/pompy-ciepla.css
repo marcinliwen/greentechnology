@@ -11,7 +11,9 @@
 
 .pompy__about-text {
     padding: 25px;
-    flex: 1
+    flex: 1;
+    font-size: 18px;
+    line-height: 32px;
 }
 
 .pompy__about-icon {
@@ -36,5 +38,9 @@
 @media(min-width:760px){
     #pompy-list .container, #pompy-about .container{
         max-width: 800px;
+    }
+    .pompy__about-text {
+        font-size: 22px;
+        line-height: 32px;
     }
 }
