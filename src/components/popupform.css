@@ -2,9 +2,6 @@
     width: 100%;
     padding: 0;
 }
-#popup-form{
-    overflow: hidden;
-}
 #popup-form h3 {
     font-weight: 200;
     font-size: 48px;
@@ -29,15 +26,13 @@ div#popup-form .gatsby-image-wrapper {
     width: 90%;
     bottom: 0;
     opacity: 0.4;
-    left: -50px;
     height: unset;
 }
 #popup-form .gatsby-image-wrapper img {
     bottom: -34px;
+    left: -50px;
     top: auto!important;
 }
 @media(min-width: 760px){
-    div#popup-form .gatsby-image-wrapper{
-        bottom: -34px
-    }
+    
 }
