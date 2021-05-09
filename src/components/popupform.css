@@ -19,12 +19,11 @@ div#popup-form {
     background: white;
     position: relative;
     z-index: 1;
-    padding-bottom: 104px;
 }
 .MuiDialog-paper{
     margin: 0px !important;
 }
-div#popup-form img {
+div#popup-form .gatsby-image-wrapper {
     position: absolute;
     z-index: -1;
     width: 90%;
@@ -33,7 +32,7 @@ div#popup-form img {
     left: -50px;
 }
 @media(min-width: 760px){
-    div#popup-form img{
+    div#popup-form .gatsby-image-wrapper{
         bottom: -34px
     }
 }

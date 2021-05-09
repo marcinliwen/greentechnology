@@ -2,6 +2,9 @@ import React, {useState, useEffect}  from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogContent from '@material-ui/core/DialogContent';
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
+
 
 import Typography from '@material-ui/core/Typography';
 import './popupform.css'
@@ -29,7 +32,7 @@ const DialogContent = withStyles((theme) => ({
 }))(MuiDialogContent);
   
 
-function CustomizedDialogs() {
+function CustomizedDialogs(props) {
     const [open, setOpen] = React.useState(true);
   
     const handleClose = () => {
@@ -49,6 +52,7 @@ function CustomizedDialogs() {
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
+    console.log(props.data)
     return (
       <div >
         <Dialog  aria-labelledby="customized-dialog-title" open={open}>
@@ -56,7 +60,12 @@ function CustomizedDialogs() {
                 <h3>Skontaktujemy się z Tobą</h3>
                 <p>zostaw nam swój numer, oddzwonimy!</p>    
                 <Contact onClose={handleClose} onSend={onSend} />
-                <img src={solarPower} />
+                {/*<img src={solarPower} />*/}
+                <Img
+                style={{position: "absolute"}}
+                  fluid={props.data.file.childImageSharp.fluid}
+                   alt="Fotovoltaic"
+                />
             </DialogContent>
             
         </Dialog>
@@ -99,11 +108,23 @@ const Popupform = () =>{
             }
         }
       }
+      const data = useStaticQuery( graphql`
+  query {
+    file(relativePath: {eq: "solar-power.jpg"}) {
+      childImageSharp {
+        fluid (fit: COVER){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`);
+
     return(
         <div>
             {popupformDisplay
             ? <div>
-                <CustomizedDialogs />
+                <CustomizedDialogs data={data}/>
             </div>
             : null
             }
