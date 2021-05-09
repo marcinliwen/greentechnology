@@ -134,9 +134,7 @@ section#moj-prad {
     min-height: 188px;
     align-items: center;
 }
-.section-title{
-    text-align: left!important;
-}
+
 .section-title h1 {
     font-size: 53px;
     font-weight: 200;

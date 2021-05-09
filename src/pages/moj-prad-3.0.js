@@ -53,7 +53,7 @@ const IndexPage = () => {
     </div>
       <div className="container">
       <div className="section-title">
-          <h1>Mój Prąd 3.0</h1>
+          <h1 style={{textAlign: 'left'}}>Mój Prąd 3.0</h1>
           <p>Program dofinansowania mikroinstalacji fotowoltaicznych</p>
         </div>
       </div>
