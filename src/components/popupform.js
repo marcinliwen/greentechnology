@@ -55,7 +55,11 @@ function CustomizedDialogs(props) {
     console.log(props.data)
     return (
       <div >
-        <Dialog  aria-labelledby="customized-dialog-title" open={open}>
+        <Dialog  
+          aria-labelledby="customized-dialog-title" 
+          open={open}
+          scroll='body'
+        >
             <DialogContent dividers id="popup-form">
                 <h3>Skontaktujemy się z Tobą</h3>
                 <p>zostaw nam swój numer, oddzwonimy!</p>    
