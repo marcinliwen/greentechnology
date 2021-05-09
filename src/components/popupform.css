@@ -30,6 +30,7 @@ div#popup-form .gatsby-image-wrapper {
     bottom: 0;
     opacity: 0.4;
     left: -50px;
+    height: unset;
 }
 @media(min-width: 760px){
     div#popup-form .gatsby-image-wrapper{
