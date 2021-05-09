@@ -2,8 +2,12 @@ import React, {useState, useEffect}  from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogContent from '@material-ui/core/DialogContent';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+
 
 
 import Typography from '@material-ui/core/Typography';
@@ -23,6 +27,7 @@ const styles = (theme) => ({
       color: theme.palette.grey[500],
     },
 });
+
 
   
 const DialogContent = withStyles((theme) => ({
@@ -51,14 +56,18 @@ function CustomizedDialogs(props) {
         var expires = "expires="+d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
-
-    console.log(props.data)
+    
+    
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    
     return (
       <div >
         <Dialog  
           aria-labelledby="customized-dialog-title" 
           open={open}
           scroll='body'
+          fullScreen={fullScreen}
         >
             <DialogContent dividers id="popup-form">
                 <h3>Skontaktujemy się z Tobą</h3>
