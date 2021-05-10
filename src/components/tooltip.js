@@ -47,7 +47,7 @@ export default function CustomTooltip(props) {
         <em style={{whiteSpace: 'nowrap', cursor: 'pointer'}}
         onClick={handleTooltipOpen}
         
-        >{props.children}<ContactSupportRoundedIcon style={{fontSize: '24px'}}/></em >
+        >{props.children}<ContactSupportRoundedIcon style={{fontSize: '24px'}} width='24px'/></em >
       </LightTooltip>
       </ClickAwayListener>
   );
