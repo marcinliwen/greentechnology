@@ -36,9 +36,6 @@
 
 
 @media(min-width:760px){
-    #pompy-list .container, #pompy-about .container{
-        max-width: 800px;
-    }
     .pompy__about-text {
         font-size: 22px;
         line-height: 32px;

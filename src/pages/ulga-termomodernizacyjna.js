@@ -6,6 +6,7 @@ import Welcome from "../components/Welcome"
 import Realisation from "../components/Realisation"
 import Rodzajepomp from "../components/Rodzajepomp"
 import Contact from "../components/contact"
+import CustomTooltip from "../components/tooltip"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -20,15 +21,37 @@ import reenergy from "../images/re-energy.svg"
 import "./../components/pompy-ciepla.css"
 
 const IndexPage = () => { 
-  
+
+  const data = useStaticQuery( graphql`
+  query {
+    file(relativePath: {eq: "ulga-bg.png"}) {
+      childImageSharp {
+        fluid (fit: COVER){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`);
+
+const tolltiptText = "Za budynek mieszkalny jednorodzinny uważa się budynek wolno stojący albo budynek w zabudowie bliźniaczej, szeregowej lub grupowej, służący zaspokajaniu potrzeb mieszkaniowych, stanowiący konstrukcyjnie samodzielną całość, w którym dopuszcza się wydzielenie nie więcej niż dwóch lokali mieszkalnych albo jednego lokalu mieszkalnego i lokalu użytkowego o powierzchni całkowitej nieprzekraczającej 30% powierzchni całkowitej budynku."
   return(
   <Layout>
     <SEO title="Zielone Technologie - Ulga termomodernizacyjna" />
-    <section id="pompy-about">
+    <section id="pompy-about" className="has_img_bg subheader">
       <div className="container">
-        <div className="section-title">
+      <div className="img_bg_moj-prad">
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Fotovoltaic"
+      />
+    </div>
+        <div className="section-title" style={{textAlign: 'left'}}>
           <h1>Ulga termomodernizacyjna</h1>
-          <p>Ulga polega na odliczeniu od podstawy obliczenia podatku (przychodów - w przypadku podatku zryczałtowanego) wydatków poniesionych na realizację przedsięwzięcia termomodernizacyjnego w budynku mieszkalnym jednorodzinnym.</p>
+          <p>
+            Ulga polega na odliczeniu od podstawy obliczenia podatku (przychodów - w przypadku podatku zryczałtowanego) wydatków poniesionych na realizację przedsięwzięcia termomodernizacyjnego w  
+            <CustomTooltip title={tolltiptText}> budynku mieszkalnym jednorodzinnym</CustomTooltip>.
+          </p>
         </div>
        
       </div>
@@ -37,9 +60,6 @@ const IndexPage = () => {
       <div className="container">
         <div className="pompy__about">
           <div className="pompy__about-card">
-            <div className="pompy__about-icon">
-              <img src={returnon} />
-            </div>
             <div className="pompy__about-text">   
             <h3>Komu przysługuje ulga</h3>       
             <p>Ulga przysługuje podatnikowi, który jest właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego.</p>
@@ -85,9 +105,6 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="pompy__about-card">
-            <div className="pompy__about-icon">
-              <img src={resun} />
-            </div>
             <div className="pompy__about-text">   
                 <h3>Ile można odliczyć</h3>       
                 <p>Kwota odliczenia nie może przekroczyć <strong>53 000 zł</strong> w odniesieniu do wszystkich realizowanych przedsięwzięć termomodernizacyjnych w poszczególnych budynkach, których podatnik jest właścicielem lub współwłaścicielem.</p> 
