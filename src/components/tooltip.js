@@ -5,6 +5,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Zoom from '@material-ui/core/Zoom';
 import ContactSupportRoundedIcon from '@material-ui/icons/ContactSupportRounded';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 
 const LightTooltip = withStyles((theme) => ({
@@ -20,25 +21,34 @@ const LightTooltip = withStyles((theme) => ({
 export default function CustomTooltip(props) {
     const [open, setOpen] = React.useState(false);
 
-    const handleClose = () => {
-      setOpen(false);
-    };
-  
-    const handleOpen = () => {
-      setOpen(true);
-    };
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
   
   return (
+    <ClickAwayListener onClickAway={handleTooltipClose}>
       <LightTooltip 
-        disableFocusListener
+        
         title={
             <React.Fragment>{props.title}</React.Fragment>
         }
         arrow
         TransitionComponent={Zoom}
+        onClose={handleTooltipClose}
+                open={open}
+                disableFocusListener
+                disableHoverListener
+                disableTouchListener
       >
-        <em style={{whiteSpace: 'nowrap'}}>{props.children}<ContactSupportRoundedIcon /></em >
+        <em style={{whiteSpace: 'nowrap', cursor: 'pointer'}}
+        onClick={handleTooltipOpen}
+        
+        >{props.children}<ContactSupportRoundedIcon /></em >
       </LightTooltip>
-  
+      </ClickAwayListener>
   );
 }
