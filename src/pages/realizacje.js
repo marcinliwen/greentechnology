@@ -19,27 +19,6 @@ import blob from "../images/blob.svg"
 import "./../components/realizacje.css"
 
 const IndexPage = () => { 
- 
-    const data = useStaticQuery( graphql `
-    query Realizacje {
-        allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "realizacje"}}) {
-          edges {
-            node {
-              base
-              childImageSharp {
-                fluid {
-                  base64
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                }
-              }
-            }
-          }
-        }
-      }
-      `)
   return(
   <Layout>
     <SEO title="Zielone Technologie - realizacje" />
@@ -50,36 +29,24 @@ const IndexPage = () => {
         </div>
         <div className="re_content">
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
-                    node.base === 'realize_1.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
-                ))}
                 <div className="re_description">
                     <h4>Montaż generatora PV o łącznej mocy 39,6 kWp na dachu budynku OZEnergia w miejscowości Kiełpin koło Zielonej Góry</h4>
                     <p>Montaż został zrealizowany w ramach projektu „Rozwój firmy HEMIBAU Sp. z o.o. w zakresie projektowania i montażu generatorów  słonecznych i hybrydowych” Projekt jest współfinansowany przez Unię Europejską ze środków Europejskiego Funduszu Rozwoju Regionalnego oraz z budżetu państwa w ramach Lubuskiego Regionalnego Programu Operacyjnego na lata 2007-2013 „Fundusze Europejskie dla rozwoju Lubuskiego”.</p>
                 </div>
             </div>
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
-                    node.base === 'realize_2.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
-                ))}
                 <div className="re_description">
                     <h4>Montaż dwóch generatorów PV: Letnica 1 o mocy 39,875 i Letnica 2 o mocy 39,95</h4>
                     <p>Montaż został zrealizowany w ramach projektu „Rozwój firmy HEMIBAU Sp. z o.o. w zakresie projektowania i montażu generatorów  słonecznych i hybrydowych” Projekt jest współfinansowany przez Unię Europejską ze środków Europejskiego Funduszu Rozwoju Regionalnego oraz z budżetu państwa w ramach Lubuskiego Regionalnego Programu Operacyjnego na lata 2007-2013 „Fundusze Europejskie dla rozwoju Lubuskiego”.</p>
                 </div>
             </div>
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
-                    node.base === 'realize_3.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
-                ))}
                 <div className="re_description">
                     <h4>Montaż generatora PV o mocy 39,48 kWp na dachu budynku Schenker w Zielonej Górze przy ul. Dworcowej 14</h4>
                     <p>Montaż został zrealizowany w ramach projektu „Rozwój firmy HEMIBAU Sp. z o.o. w zakresie projektowania i montażu generatorów  słonecznych i hybrydowych” Projekt jest współfinansowany przez Unię Europejską ze środków Europejskiego Funduszu Rozwoju Regionalnego oraz z budżetu państwa w ramach Lubuskiego Regionalnego Programu Operacyjnego na lata 2007-2013 „Fundusze Europejskie dla rozwoju Lubuskiego”.</p>
                 </div>
             </div>
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
-                    node.base === 'realize_4.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
-                ))}
                 <div className="re_description">
                     <h4>Montaż generatora PV o mocy 14,1 kWp na dachu budynku OBR Nemo w Zielonej Górze przy ul. Dworcowej 6</h4>
                     <p>Montaż został zrealizowany w ramach projektu „Rozwój firmy HEMIBAU Sp. z o.o. w zakresie projektowania i montażu generatorów  słonecznych i hybrydowych” Projekt jest współfinansowany przez Unię Europejską ze środków Europejskiego Funduszu Rozwoju Regionalnego oraz z budżetu państwa w ramach Lubuskiego Regionalnego Programu Operacyjnego na lata 2007-2013 „Fundusze Europejskie dla rozwoju Lubuskiego”.</p>
