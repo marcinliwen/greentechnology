@@ -103,6 +103,10 @@
 .jtd_content {
     padding-bottom: 120px;
 }
+.jtd_img .gatsby-image-wrapper {
+    height: unset;
+    width: 100%;
+}
 @media(min-width: 768px){
     .jtd_img {
         width: 50%;

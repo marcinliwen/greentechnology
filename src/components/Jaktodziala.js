@@ -1,4 +1,6 @@
 import { Link } from "gatsby"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
 import jaktodziala_img from "../images/jaktodziala.jpg"
@@ -8,6 +10,18 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Jaktodziala = () =>{
+
+    const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "jaktodziala.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 625) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -64,7 +78,7 @@ const Jaktodziala = () =>{
     return(
     <div className="section_content jtd_content">
         <div className="jtd_img">
-          <img src={jaktodziala_img} alt="jak działa fotowoltaika"/>
+          <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="jak działa fotowoltaika"/>
         </div>
         <div className="jdt_mapping_container">
           <div className="jtd_mapping">
