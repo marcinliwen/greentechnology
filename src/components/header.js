@@ -61,6 +61,7 @@ const Header = (props) => {
           //onKeyDown={toggleHamburger}
           //onClick={toggleHamburger}
         >
+          <div className="nav-wrapper">
            <Link
             to="/"
             className="logo-in-menu"
@@ -150,6 +151,7 @@ const Header = (props) => {
         <div className="social">
           <Link to="/"><img src={f_white} width="24px" height="24px"  alt="facebook"/></Link>
           <Link to="/"><img src={inst_white}  width="24px" height="24px" alt="instagram"/></Link>
+        </div>
         </div>
         </nav>
         <div className="nav_back"></div>

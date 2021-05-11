@@ -738,9 +738,7 @@ header{
   cursor: pointer;
 }
 nav {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -751,11 +749,16 @@ nav {
   left: 0;
   transition-duration: 0.4s;
   width: 100%;
+  height: 100%;
   background: #2b2b2b;
   padding-top: 46px;
   opacity: 0;
   z-index: -10;
   visibility: hidden;
+}
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .nav_back{
   position: fixed;
@@ -1083,23 +1086,20 @@ nav.-open {
     box-shadow: none;
   }
   nav {
-    /*visibility: visible; */
-    /* position: static; */
-    /* display: inline-block; */
-    /* padding: 0; */
-    /* box-shadow: none; */
-    /* width: auto; */
-    /* background: transparent; */
-    /* flex: 1 1; */
-    /* text-align: center;*/
     padding-left: 25%;
     padding-right: 25%;
-    flex-direction: revert;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: baseline;
-    align-content: center;
-    justify-content: center;
+   
+}
+.nav-wrapper{
+  flex-direction: revert;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+  justify-content: center;
+}
+a.navbar-item.text-green{
+  width: 100%;
 }
 .navbar-burger.burger img {
   width: 44px;
@@ -1143,7 +1143,7 @@ nav a{
     margin: 0;
     width: max-content;
     text-align: center;
-    padding:40px;
+    padding:15px 25px;
     border-radius: 4px;
 }
 nav .navbar-item:hover {
@@ -1177,9 +1177,6 @@ nav .navbar-item:hover {
 .logo-in-menu span{
   font-size: 44px;
    
-}
-.navbar-item.text-green {
-  font-size: 44px;
 }
   #faq .container{
     background: #e2e2e2a8;
