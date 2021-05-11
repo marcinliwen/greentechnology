@@ -78,12 +78,13 @@ const Fcalc =()=>{
             total_price = 30000 + (unit * perUnit);
         }  
         else{
-            total_price = 32000 + ((kwp-10)*3450);
+            total_price = 32000 + ((kwp-10)*3200);
+            console.log('total price ')
          }
     }   
     
     else{
-       total_price = 170000 + ((kwp-50)*3000);
+       total_price = 160000 + ((kwp-50)*3000);
     }
 
     const returnTime = Math.floor(total_price / yearPrice)||0;
@@ -155,7 +156,7 @@ const Fcalc =()=>{
                 aria-labelledby="continuous-slider"
                 onChange={changeHandler}
                 min={50}
-                max={2200}
+                max={2300}
             />
             </div>
             </form>
