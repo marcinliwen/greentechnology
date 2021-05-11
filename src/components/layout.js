@@ -39,7 +39,7 @@ const Layout = (props) => {
           <div className="container">
             <div className="footer_content">
             <div className="logo">
-              <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
+              <span className="text-green">Zielone</span> <img src={logo} width="32px" height="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
             <div className="footer_nav">
               <div>

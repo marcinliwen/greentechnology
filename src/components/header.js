@@ -49,7 +49,7 @@ const Header = (props) => {
             to="/"
           >
             <div className="logo">
-            <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
+            <span className="text-green">Zielone</span> <img src={logo} width="32px" height="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
           
           </Link>
@@ -67,7 +67,7 @@ const Header = (props) => {
             className="logo-in-menu"
           >
             <div className="logo">
-            <span className="text-green">Zielone</span> <img src={logo} width="32px" alt="logo"/><span className="text-gray">Technologie</span>
+            <span className="text-green">Zielone</span> <img src={logo} width="32px" height="32px" alt="logo"/><span className="text-gray">Technologie</span>
             </div>
           
           </Link>
