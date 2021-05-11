@@ -12,7 +12,6 @@ const GreenCheckbox = withStyles({
         color: '#11B91B',
       },
     },
-    checked: {},
   })((props) => <Checkbox color="default" {...props} required="true"/>);
 
 export default function CheckboxRodo(){
