@@ -9,6 +9,7 @@ import Faq from "../components/Faq"
 import Contact from "../components/contact"
 import Jaktodziala from "../components/Jaktodziala"
 import Pompa from "../components/pompa"
+import Brands from "../components/brands"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -118,6 +119,14 @@ const classes = useStyles();
         <h2>Jak działa fotowoltaika?</h2>
       </div>
       <Jaktodziala />
+    </div>
+  </section>
+  <section id="brands" className="green_gradient">
+    <div className="container">
+      <div className="section-title">
+        <h2 style={{color: '#fff'}}>Nasi Partnerzy</h2>
+      </div>
+      <Brands />
     </div>
   </section>
   <section id="contact">
