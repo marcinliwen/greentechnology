@@ -17,6 +17,8 @@ import "./layout.css"
 import logo from "./../images/logo.svg"
 
 
+
+
 const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

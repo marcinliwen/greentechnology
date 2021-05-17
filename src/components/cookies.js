@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import './cookies.css'
+import { connect , useSelector} from "react-redux"
 
 const cookieStyle ={
     position: 'fixed',
@@ -30,9 +31,7 @@ const buttonStyle={
     padding: '4px 8px'
 }
 
-
-
-const Cookies = () => {
+const SetCookies = ({ cookiesAccepted }) => {
     const useStyles = makeStyles((theme) => ({
         root: {
             '& .MuiInput-underline:after': {
@@ -48,19 +47,38 @@ const Cookies = () => {
         },  
     }));
     const classes = useStyles();
+    return(
+    <Button variant="outlined" className={classes.root, classes.outlined} onClick={cookiesAccepted}>Rozumiem</Button>
+)}
+
+const mapStateToProps = ({ count }) => {
+    return { count }
+}
+
+const mapDispatchToProps = dispatch => {
+return { cookiesAccepted: () => dispatch({ type: `INCREMENT` }) }
+}
+
+const ButtonCookies = connect(mapStateToProps, mapDispatchToProps)(SetCookies)
+  
+
+
+const Cookies = () => {
+    const counter = useSelector(state => state.count)
 
     const [cookiesClose, setCookiesclose] = useState(false)
-    const cookiesAccepted =()=>{
-        setCookiesclose(true)
-        setCookie("ac", true, 365);
-    }
-
+    //const cookiesAccepted =()=>{
+    ////    setCookiesclose(true)
+    //    setCookie("ac", true, 365);
+    //}
+   counter &&   setCookie("ac", true, 365);
     const [cookiesPresent, setCookiesPresent] = useState(false)
 
     useEffect( ()=>{
         console.log(document.cookie)
         checkCookie()
     }, [cookiesPresent])
+    
     function setCookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -68,7 +86,7 @@ const Cookies = () => {
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
       }
       
-      function getCookie(cname) {
+    function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
         for(var i = 0; i < ca.length; i++) {
@@ -83,7 +101,7 @@ const Cookies = () => {
         return "";
       }
       
-      function checkCookie() {
+    function checkCookie() {
         var ac = getCookie("ac");
         if (ac != "") {
             setCookiesPresent(true)
@@ -92,11 +110,11 @@ const Cookies = () => {
 
       
 return(
-    <div className={`cookies-container ${cookiesClose ? 'hide-cookies':''} ${cookiesPresent ? 'hide-this' :''}`} style={cookieStyle}>
+    <div className={`cookies-container ${counter? 'hide-cookies':''} ${cookiesPresent ? 'hide-this' :''}`} style={cookieStyle}>
         <p>Na naszej stronie używamy plików cookies do celów statystycznych i lepszego funkcjonowania strony. Aby dowiedzieć się więcej jak kozystamy z plików cookies zobacz naszą  
          <Link title="Polityka Prywatności" to='/polityka-prywatnosci' style={aStyle}>Politykę prywatności</Link>. 
          Kontynuując przeglądanie naszej witryny, wyrażasz zgodę na używanie przez nas plików cookie.</p>
-        <Button variant="outlined" className={classes.root, classes.outlined} onClick={cookiesAccepted}>Rozumiem</Button>
+       <ButtonCookies />
         
     </div>
 )}

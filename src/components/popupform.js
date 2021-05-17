@@ -8,12 +8,23 @@ import { useTheme } from '@material-ui/core/styles';
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-
+import { connect, useSelector } from "react-redux"
 
 import Typography from '@material-ui/core/Typography';
 import './popupform.css'
 import Contact from './contact'
 import solarPower from '../images/solar-power.jpg'
+
+const Counter = ({ count }) => (
+  <div>
+    <p>Count: {count}</p>
+  </div>
+)
+const mapStateToProps = ({ count }) => {
+  return { count }
+}
+const ConnectedCounter = connect(mapStateToProps, undefined)(Counter)
+
 
 const styles = (theme) => ({
     root: {
@@ -85,9 +96,10 @@ function CustomizedDialogs(props) {
       </div>
     );
   }
-
 const Popupform = () =>{
-    
+  const counter = useSelector(state => state.count)
+  console.log( 'in popform',counter)
+
     const [popupformDisplay, setPopupformDisplay] = useState(false)
     const [ispopupClose, setIspopupClose] = useState(false)
     
@@ -121,7 +133,9 @@ const Popupform = () =>{
             }
         }
       }
-      const data = useStaticQuery( graphql`
+
+      
+const data = useStaticQuery( graphql`
   query {
     file(relativePath: {eq: "solar-power.jpg"}) {
       childImageSharp {
@@ -135,7 +149,7 @@ const Popupform = () =>{
 
     return(
         <div>
-            {popupformDisplay
+            {popupformDisplay && counter
             ? <div>
                 <CustomizedDialogs data={data}/>
             </div>
