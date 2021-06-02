@@ -106,9 +106,8 @@ export default function Contact(props) {
         name="contact"
         method="post"
         //action="/thanks/"
-        netlify-honeypot="bot-field" 
+        data-netlify-honeypot="bot-field"
         data-netlify="true"
-        data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
         className={classes.root}
       >
@@ -174,7 +173,6 @@ export default function Contact(props) {
           </Button>
           
           </DialogActions>
-          <div data-netlify-recaptcha="true"></div>
           <div><p style={{fontSize: "12px", margin:'0px'}}><span className="asterisk">* </span>pole wymagane</p></div>
       </form>
 
