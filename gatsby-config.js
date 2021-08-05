@@ -40,7 +40,13 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        output: "/sitemap.xml",
+        addUncaughtPages: false
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

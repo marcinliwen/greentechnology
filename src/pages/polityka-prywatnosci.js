@@ -3,12 +3,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./../components/layout.css"
 
+import { Helmet } from "react-helmet"
 
 
 
 const IndexPage = () => (
     <Layout>
     <SEO title="Zielone Technologie - Polityka Prywatności" />
+    <Helmet>
+        <meta name="robots" content="noindex" />
+    </Helmet>
     <div className="container" style={{paddingTop:'100px', maxWidth: '800px'}}>
         <div className="page-content privary-policy-content privary-policy-legal-content">
 
