@@ -23,7 +23,8 @@ const IndexPage = () => {
   
   return(
   <Layout>
-    <SEO title="Zielone Technologie - pompy ciepła" />
+    <SEO title="Pompy ciepła - Panele fotowoltaiczne Zielona Góra lubuskie" 
+    description="Pompy ciepła to ekologiczny i oszczędny sposób ogrzewania Twojego domu. Są ponadto urządzeniami wyjątkowo trwałymi i niezawodnymi"/>
     <section id="pompy-about">
       <div className="container">
         <div className="section-title">

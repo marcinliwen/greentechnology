@@ -18,7 +18,9 @@ import "../components/contactform.css"
 const IndexPage = () => {   
     return(
     <Layout location="kontakt">
-      <SEO title="Zielone Technologie - kontakt" />
+      <SEO 
+        title="Kontakt - Panele fotowoltaiczne Zielona Góra lubuskie"
+        description="Szukasz firmy, która zajmuje się wykonaniem instalacji fotowoltaicznych? ZieloneTechnologie.net zajmuje się projektowaniem i montażem paneli fotowoltaicznych" />
       <section id="kontakt">
         <div className="container">
           <div className="section-title">

@@ -42,7 +42,8 @@ const IndexPage = () => {
       `)
   return(
   <Layout>
-    <SEO title="Zielone Technologie - realizacje" />
+    <SEO title="Realizacje - Panele fotowoltaiczne Zielona Góra lubuskie"
+    description="Zielone Technologie - Rachunki za prąd za 0zł z panelami słonecznymi. Sprawdź nasze realizacje. Zapraszamy do kontaktu pod nr 694 163 440 oraz 609 594 480" />
     <section id="realizacje">
       <div className="container">
         <div className="section-title">

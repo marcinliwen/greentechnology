@@ -59,7 +59,10 @@ const useStyles = makeStyles((theme) => ({
 const classes = useStyles();
   return(
   <Layout>
-    <SEO title="Zielone Technologie" />
+    <SEO 
+      title="Instalacje fotowoltaiczne, monterzy fotowoltaiki Zielona Góra lubuskie" 
+      description="Firma ZieloneTechnologie.net z Zielonej Góry oferuje doradztwo i montaż paneli fotowoltaicznych na terenie województwa lubuskiego. Zapraszamy do kontaktu"
+    />
    <section className="has_img_bg" id="home">
     <div className="img_background">
       <Img

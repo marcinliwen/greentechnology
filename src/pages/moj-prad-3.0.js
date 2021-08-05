@@ -43,7 +43,9 @@ const IndexPage = () => {
 `);
   return(
   <Layout>
-    <SEO title="Zielone Technologie - Mój prąd 3.0" />
+    <SEO 
+    title="Mój Prąd 3.0 - Fotowoltaika dofinansowanie Zielona Góra lubuskie" 
+    description="O dotację w programie Mój Prąd możesz ubiegać się jeśli Twoja instalacja jest już wykonana, jest o mocy 2-10 kW i jest przeznaczona na cele mieszkaniowe"/>
     <section className="has_img_bg subheader">
     <div className="img_bg_moj-prad">
       <Img

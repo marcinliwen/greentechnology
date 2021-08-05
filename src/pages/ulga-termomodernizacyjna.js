@@ -37,7 +37,8 @@ const IndexPage = () => {
 const tolltiptText = "Za budynek mieszkalny jednorodzinny uważa się budynek wolno stojący albo budynek w zabudowie bliźniaczej, szeregowej lub grupowej, służący zaspokajaniu potrzeb mieszkaniowych, stanowiący konstrukcyjnie samodzielną całość, w którym dopuszcza się wydzielenie nie więcej niż dwóch lokali mieszkalnych albo jednego lokalu mieszkalnego i lokalu użytkowego o powierzchni całkowitej nieprzekraczającej 30% powierzchni całkowitej budynku."
   return(
   <Layout>
-    <SEO title="Zielone Technologie - Ulga termomodernizacyjna" />
+    <SEO title="Ulga termomodernizacyjna - Panele fotowoltaiczne Zielona Góra lubuskie" 
+    description="Ulga termomodernizacyjna przysługuje podatnikowi, który jest właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego. Zapraszamy do kontaktu"/>
     <section id="pompy-about" className="has_img_bg subheader">
       <div className="container">
       <div className="img_bg_moj-prad">

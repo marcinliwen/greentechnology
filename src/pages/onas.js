@@ -42,7 +42,8 @@ const IndexPage = () => {
 
   return(
   <Layout>
-    <SEO title="Zielone Technologie - o nas" />
+    <SEO title="O nas - Panele słoneczne Zielona Góra lubuskie" 
+    description="Firma Zielone Technologie powstała aby energia pozyskiwana ze słońca była dostępna w każdym domu. Wspieramy naszych klientów, na każdym etapie inwestycji"/>
     <section id="onas">
       <div className="container">
         <div className="section-title">

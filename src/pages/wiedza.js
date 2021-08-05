@@ -30,7 +30,8 @@ const IndexPage = () => {
 `)
   return(
   <Layout>
-    <SEO title="Zielone Technologie" />
+    <SEO title="Baza wiedzy - Panele fotowoltaiczne Zielona Góra lubuskie" 
+    desccription="Czy fotowoltaika jest opłacalna? Zapraszamy do zapoznania się z informacjami dotyczącymi instalacji fotowoltaicznych, kosztami instalacji i utrzymania"/>
   <section id="faq" className="has_img_bg">
     <div className="img_background">
       <Faqimg />
