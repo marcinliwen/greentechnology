@@ -92,7 +92,7 @@ const Layout = (props) => {
               {` `}
               Zielone Technologie
               </span>
-              <span className="realisation">Realizacja: <a href="https://starywieloryb.pl" style={{color:'inherit'}} target="blank">StaryWieloryb.pl</a></span>
+              <span className="realisation">Realizacja: <a href="https://starywieloryb.pl" style={{color:'inherit'}} target="blank" rel="nofollow">StaryWieloryb.pl</a></span>
             </div>
          
           </div>

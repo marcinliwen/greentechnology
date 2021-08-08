@@ -43,7 +43,7 @@ export default function Brands() {
       <div className="brand-list"  >
         {tileData.map((tile) => (
           <div key={tile.img} className="brand-element">
-              <a href={tile.link} target="_blank">
+              <a href={tile.link} target="_blank" rel="nofollow">
                 <img src={tile.img} alt={tile.title} />
               </a>
           </div>

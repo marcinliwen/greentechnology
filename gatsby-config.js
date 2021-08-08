@@ -41,13 +41,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        output: "/sitemap.xml",
-        addUncaughtPages: false
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -79,6 +72,14 @@ module.exports = {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-91684421-2",
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host:'https://zielonetechnologie.net',
+        sitemap: 'https://zielonetechnologie.net/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],      
+      }
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",
