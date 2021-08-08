@@ -77,9 +77,12 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host:'https://zielonetechnologie.net',
-        sitemap: 'https://zielonetechnologie.net/sitemap.xml',
+        sitemap: 'https://zielonetechnologie.net/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],      
       }
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",
