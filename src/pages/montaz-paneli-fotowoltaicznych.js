@@ -34,7 +34,7 @@ const IndexPage = () => {
         alt="Fotovoltaic"
       />
     </div>
-        <div className="section-title" style={{textAlign: 'left'}}>
+        <div className="section-title montaz" style={{textAlign: 'left'}}>
           <h1>Montaż paneli fotowoltaicznych</h1>
           
         </div>

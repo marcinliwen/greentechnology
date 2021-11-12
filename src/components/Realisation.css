@@ -139,6 +139,9 @@ section#moj-prad {
     font-size: 53px;
     font-weight: 200;
 }
+.section-title.montaz h1{
+    font-size: 44px;
+}
 .section-title p {
     text-align: left;
 }
