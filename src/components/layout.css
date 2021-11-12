@@ -838,6 +838,14 @@ section#contact .section-title{
 #contact .contact_content{
   padding-top: 0px;
 }
+.container.text {
+  max-width: 800px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container.text h2{
+  margin-top: 100px;
+}
 @media(max-width: 767px){
   body.menu-open {
     overflow: hidden;

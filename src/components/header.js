@@ -104,6 +104,14 @@ const Header = (props) => {
           Ulga termomodernizacyjna
         </Link>
         <Link className="navbar-item" 
+          style={{width: '100%',
+            maxWidth: '100%'}}
+          activeClass="active"
+          to="/montaz-paneli-fotowoltaicznych"
+        >
+          Montaż paneli fotowoltaicznych
+        </Link>
+        <Link className="navbar-item" 
           activeClass="active"
           to="/wiedza"
           //spy={true}

@@ -184,6 +184,24 @@ const IndexPage = () => {
       
       </div>
     </section>
+    <section>
+    <div className="container text">
+      <h2>Koszt instalacji fotowoltaicznej 10 kW</h2>
+      <p>Wiele osób błędnie zakłada, że programy dofinansowania do fotowoltaiki pozwalają zdobyć środki na realizację
+inwestycji. W rzeczywistości program Mój Prąd w pewnym sensie zwraca poniesione koszty, jednak aby tak się
+stało, należy spełnić szereg kryteriów. Jakie wymagania narzuca program? Jaki jest 
+<strong>koszt paneli fotowoltaicznych </strong> o mocy <strong>10 kW</strong>? Co jeszcze warto wiedzieć, zanim inwestycja wystartuje?
+</p>
+<h2>Fotowoltaika 10 kW: cena</h2>
+<p>Inwestycja w instalację fotowoltaiczną to niemały wydatek, nawet w przypadku niewielkiego zapotrzebowania
+gospodarstwa domowego. Program Mój Prąd pozwala odzyskać część poniesionych kosztów po zakończeniu
+realizacji. Najważniejsze kryteria dotyczą mocy w granicach od 2 do <strong>10 kW</strong>, przeznaczenia energii na cele
+mieszkaniowe, przestrzegania terminów określonych w programie oraz tego, że instalacja ma być zupełnie nowa,
+a nie rozbudowana. Zastanawiasz się, na jakie jeszcze <strong>dotacje</strong> mogą liczyć mieszkańcy takich miast jak <strong>Zielona
+Góra</strong>? Chcesz poznać szczegółowy <strong>koszt paneli fotowoltaicznych</strong> dla Twojego domu? Zapraszamy do
+kontaktu!</p>
+      </div>
+    </section>
   <section id="contact" >
   <div className="container">
       <div className="section-title">

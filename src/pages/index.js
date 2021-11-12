@@ -132,6 +132,46 @@ const classes = useStyles();
       <Brands />
     </div>
   </section>
+  <section>
+    <div className="container text">
+      <h2>Instalacje fotowoltaiczne — Zielona Góra</h2>
+      <p>Szukasz rozwiązań, które pozwolą Ci ograniczyć wysokość rachunków za prąd? Chcesz uniezależnić się od
+dostawców energii elektrycznej oraz rosnących cen? W takim razie <strong>fotowoltaika</strong> z pewnością spełni Twoje
+oczekiwania. Jeśli marzysz o nowoczesnym, energooszczędnym domu, to <strong>instalacja fotowoltaiczna</strong> jest
+pierwszym krokiem w procesie realizacji tego marzenia. W naszej firmie specjalizujemy się w tworzeniu
+projektów, montażu oraz przygotowaniu dokumentacji niezbędnej, aby uzyskać <strong>dofinansowanie fotowoltaiki</strong>.
+Działamy profesjonalnie, kompleksowo i terminowo. Osoby mieszkające na terenie <strong>Zielonej Góry</strong> bądź okolic
+zachęcamy do kontaktu w celu ustalenia szczegółów współpracy!</p>
+<h2>Fotowoltaika — lubuskie</h2>
+<p>Firmę Zielone Technologie tworzy zespół wykwalifikowanych specjalistów z bogatym doświadczeniem w zakresie
+odnawialnych źródeł energii. Naszym celem jest dostarczanie sprawdzonych rozwiązań wspierających troskę o
+ekologię, pozwalających na niezależność energetyczną oraz ułatwiających codzienne życie. Pragniemy, aby
+energia pozyskiwana ze słońca mogła być wykorzystywana w każdym gospodarstwie domowym, ale nie tylko.
+Tworzymy <strong>farmy paneli słonecznych</strong>, zajmujemy się kompleksowymi realizacjami <strong>instalacji
+fotowoltaicznych</strong> zarówno dla Klientów indywidualnych, jak i przedsiębiorców czy rolników. Dopasowujemy
+ofertę do indywidualnych potrzeb naszych Klientów z <strong>Zielonej Góry</strong> oraz innych miast województwa
+<strong>lubuskiego</strong>.</p>
+<h2>Wysokiej klasy panele słoneczne wraz z montażem — poznaj naszą ofertę!</h2>
+<p>Jeśli masz dość wysokich rachunków za prąd, dążysz do niezależności energetycznej, a przy tym zależy Ci na
+środowisku naturalnym, to <strong>fotowoltaika</strong> jest najlepszym rozwiązaniem dla Ciebie i Twojego domu. W naszej
+firmie świadczymy kompleksowe usługi <strong>instalacji fotowoltaicznych</strong> — wstępną konsultację z oględzinami,
+stworzenie koncepcji i projektu, a następnie podpisanie umowy, przygotowanie dokumentacji niezbędnej dla
+uzyskania dofinansowania, montaż <strong>paneli słonecznych</strong>, zgłoszenie instalacji do Zakładu Energetycznego,
+kończąc na konsultacjach dotyczących umowy z operatorem sieci elektroenergetycznej. Wszystkie te działania
+prowadzą do pełnej niezależności od dostawców energii elektrycznej. Przekonaj się sam, dlaczego warto z nami
+współpracować!
+</p>
+<h2>Fotowoltaika — inwestycja, która się opłaca</h2>
+<p>Chociaż <strong>koszt instalacji fotowoltaicznej</strong> nie należy do najniższych, to wciąż jest to inwestycja, która już po
+kilku lub kilkunastu latach się zwróci, dodatkowo zwalniając z opłat za zużycie prądu. Co więcej, współpracując z
+naszą firmą, możesz liczyć na wsparcie w przygotowaniu dokumentacji, dzięki której możliwe jest uzyskanie
+<strong>dofinansowania fotowoltaiki</strong>. Klientom z <strong>Zielonej Góry</strong> oraz całego województwa <strong>lubuskiego</strong> zapewniamy
+kompleksową obsługę na każdym etapie realizacji, sprawny montaż, który świadczą wykwalifikowani <strong>monterzy
+fotowoltaiki</strong>, pomoc w uzyskaniu finansowania, a także przystępne <strong>ceny</strong> naszych usług. Serdecznie
+zapraszamy do współpracy!
+</p>
+    </div>
+  </section>
   <section id="contact">
   <div className="container">
       <div className="section-title">

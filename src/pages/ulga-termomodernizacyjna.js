@@ -58,7 +58,7 @@ const tolltiptText = "Za budynek mieszkalny jednorodzinny uważa się budynek wo
       </div>
     </section>
     <section id="pompy-about">
-      <div className="container">
+      <div className="container text">
         <div className="pompy__about">
           <div className="pompy__about-card">
             <div className="pompy__about-text">   
