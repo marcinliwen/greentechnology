@@ -98,7 +98,7 @@ function CustomizedDialogs(props) {
   }
 const Popupform = () =>{
   const counter = useSelector(state => state.count)
-  console.log( 'in popform',counter)
+  //console.log( 'in popform',counter)
 
     const [popupformDisplay, setPopupformDisplay] = useState(false)
     const [ispopupClose, setIspopupClose] = useState(false)
@@ -125,7 +125,7 @@ const Popupform = () =>{
       function checkCookie() {
         var ac = getCookie("ac");
         var pf_close = getCookie("pf_close")
-        console.log(ac, pf_close)
+        //console.log(ac, pf_close)
         if (ac === 'true') {
             setPopupformDisplay(true)
             if(pf_close === 'true'){

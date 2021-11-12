@@ -75,7 +75,7 @@ const Cookies = () => {
     const [cookiesPresent, setCookiesPresent] = useState(false)
 
     useEffect( ()=>{
-        console.log(document.cookie)
+        //console.log(document.cookie)
         checkCookie()
     }, [cookiesPresent])
     

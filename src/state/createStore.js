@@ -2,7 +2,7 @@ import { createStore as reduxCreateStore } from "redux"
 
 const reducer = (state, action) => {
   if (action.type === `INCREMENT`) {
-    console.log('increment', state.count)
+    //console.log('increment', state.count)
     return Object.assign({}, state, {
       count: !state.count,
     })

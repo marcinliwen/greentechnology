@@ -26,7 +26,7 @@ const Navbar = class extends React.Component {
   handleScroll = () => {
     
     const scrolled = window.pageYOffset;
-    console.log(window.pageYOffset);
+    //console.log(window.pageYOffset);
     this.setState({
       fromTop: scrolled,
       windowHeight: window.innerHeight,

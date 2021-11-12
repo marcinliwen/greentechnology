@@ -24,7 +24,7 @@ const Fcalc =()=>{
     var kwhyear = Math.round(kwhmsc * 12);
 
     var kwp = (((kwhyear*0.25) + ((kwhyear * 0.75)/0.8))/1000);
-    console.log(kwp);
+    //console.log(kwp);
     var total_price = 0;
     if(kwp <= 50){
         if(kwp < 2){
@@ -79,7 +79,7 @@ const Fcalc =()=>{
         }  
         else{
             total_price = 32000 + ((kwp-10)*3200);
-            console.log('total price ')
+            //console.log('total price ')
          }
     }   
     
