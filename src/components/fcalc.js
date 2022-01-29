@@ -38,47 +38,47 @@ const Fcalc =()=>{
             total_price = 13500 + (unit * perUnit);
         }
         else if(kwp >= 3 && kwp < 4 ){
-            let unit = (18000 - 15000)/10;
+            let unit = (19000 - 15000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
             total_price = 15000 + (unit * perUnit);
         }
         else if(kwp >= 4 && kwp < 5 ){
-            let unit = (20200 - 18000)/10;
+            let unit = (21000 - 19000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
-            total_price = 18000 + (unit * perUnit);
+            total_price = 19000 + (unit * perUnit);
         }  
         else if(kwp >= 5 && kwp < 6 ){
-            let unit = (22400 - 20200)/10;
+            let unit = (23000 - 21000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
-            total_price = 20200 + (unit * perUnit);
+            total_price = 21000 + (unit * perUnit);
         }  
         else if(kwp >= 6 && kwp < 6.5 ){
-            let unit = (23500 - 22400)/5;
+            let unit = (24000 - 23000)/5;
             let perUnit = (kwp%1).toFixed(1)*5;
-            total_price = 22400 + (unit * perUnit);
+            total_price = 23000 + (unit * perUnit);
         }  
         else if(kwp >= 6.5 && kwp < 7 ){
-            let unit = (25000 - 23500)/5;
+            let unit = (27000 - 24000)/5;
             let perUnit = (kwp%1).toFixed(1)*5;
-            total_price = 23500 + (unit * perUnit);
+            total_price = 24000 + (unit * perUnit);
         }
         else if(kwp >= 7 && kwp < 8 ){
-            let unit = (28000 - 25000)/10;
+            let unit = (29000 - 27000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
-            total_price = 25000 + (unit * perUnit);
+            total_price = 27000 + (unit * perUnit);
         }  
         else if(kwp >= 8 && kwp < 9 ){
-            let unit = (30000 - 28000)/10;
+            let unit = (31000 - 29000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
             total_price = 28000 + (unit * perUnit);
         }  
         else if(kwp >= 9 && kwp < 10 ){
-            let unit = (32000 - 30000)/10;
+            let unit = (33000 - 31000)/10;
             let perUnit = (kwp%1).toFixed(1)*10;
             total_price = 30000 + (unit * perUnit);
         }  
         else{
-            total_price = 32000 + ((kwp-10)*3200);
+            total_price = 33000 + ((kwp-10)*300);
             //console.log('total price ')
          }
     }   
