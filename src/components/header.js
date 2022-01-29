@@ -91,12 +91,12 @@ const Header = (props) => {
         >
           Pompy ciepła
         </Link>
-        <Link className="navbar-item" 
+        {/*<Link className="navbar-item" 
           activeClass="active"
           to="/moj-prad-3.0"
         >
           Mój prąd 3.0
-        </Link>
+    </Link>*/}
         <Link className="navbar-item" 
           activeClass="active"
           to="/ulga-termomodernizacyjna"

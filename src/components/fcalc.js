@@ -183,13 +183,13 @@ const Fcalc =()=>{
                     <strong className="k_value">{totalPrice.toLocaleString()}PLN</strong>
                 </div>
             </div>
-            <div className="k_element">
+            {/*<div className="k_element">
                 <div className="k_img blue_gradient"><img src={save_energy} width="24px" alt="save energy"/></div>
                 <div className="k_desc">
                     <div className="k_label">Koszt brutto z dotacją <Link to="/moj-prad-3.0"><span style={{whiteSpace:"nowrap"}}>"Mój prąd 3.0"</span></Link>:</div>
                     <strong className="k_value">{totaLPriceExtra.toLocaleString()}PLN</strong>
                 </div>
-            </div>
+            </div>*/}
            <div className="k_element">
                 <div className="k_img b_grafit"><img src={line} width="24px" alt="line"/></div>
                 <div className="k_desc">
