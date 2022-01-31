@@ -43,3 +43,9 @@
     transform: scale(1.1);
     color: #11B91B;
 }
+.gallery-row > div {
+    max-width: 100%;
+}
+.gallery-row .gatsby-image-wrapper{
+    max-width: 100%;
+}
