@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import ImageGallery from "react-image-gallery"
 import "./gallery.css"
-import Close from "../../static/assets/close.svg"
+//import Close from "../../static/assets/close.svg"
+//import cancel from '../images/csncel.svg'
 
 const Gallery = props => {
   const [currentClick, setCurrentClick] = useState(0)
