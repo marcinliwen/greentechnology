@@ -11,7 +11,7 @@
     "fs.promises": "^0.1.2",
     "gatsby": "^4.6.0",
     "gatsby-image": "^3.5.0",
-    "gatsby-plugin-google-analytics": "^3.5.0",
+    "gatsby-plugin-google-gtag": "^4.6.0",
     "gatsby-plugin-google-tagmanager": "^3.11.0",
     "gatsby-plugin-manifest": "^3.5.0",
     "gatsby-plugin-material-ui": "^3.0.1",
