@@ -20,7 +20,6 @@
     align-items: flex-start;
     padding: 32px 0;
 }
-
 @media(min-width: 767px){
     .re_item .gatsby-image-wrapper {
         width: 50%;

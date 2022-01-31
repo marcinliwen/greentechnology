@@ -17,12 +17,15 @@ import planet from "../images/planet.svg"
 import blob from "../images/blob.svg"
 //import solar_panel from "../images/solar-panel.svg"
 import "./../components/realizacje.css"
+import ImageGallery from 'react-image-gallery';
+import Gallery from "../components/gallery"
+
 
 const IndexPage = () => { 
  
     const data = useStaticQuery( graphql `
     query Realizacje {
-        allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "realizacje"}}) {
+        case1 : allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "realizacje/re04"}}) {
           edges {
             node {
               base
@@ -38,8 +41,97 @@ const IndexPage = () => {
             }
           }
         }
+        case2: 
+        allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "realizacje/re01"}}) {
+          edges {
+            node {
+              base
+              childImageSharp {
+                fixed {
+                  src
+                  srcSet
+                  width
+                  height
+                  base64
+                  aspectRatio
+                }
+              }
+            }
+          }
+        }
+        case3: 
+        allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "realizacje/re02"}}) {
+          edges {
+            node {
+              base
+              childImageSharp {
+                fixed {
+                  src
+                  srcSet
+                  width
+                  height
+                  base64
+                  aspectRatio
+                }
+              }
+            }
+          }
+        }
+        case4: 
+        allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "realizacje/re03"}}) {
+          edges {
+            node {
+              base
+              childImageSharp {
+                fixed {
+                  src
+                  srcSet
+                  width
+                  height
+                  base64
+                  aspectRatio
+                }
+              }
+            }
+          }
+        }
+        thumb: 
+        allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "realizacje/all"}}) {
+          edges {
+            node {
+              base
+              childImageSharp {
+                fixed(height: 400, width: 400) {
+                  src
+                  srcSet
+                  width
+                  height
+                  base64
+                  aspectRatio
+                }
+              }
+            }
+          }
+        }
+        full: 
+        allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "realizacje/full"}}) {
+          edges {
+            node {
+              childImageSharp {
+                fixed(quality: 100, width: 900) {
+                  src
+                }
+              }
+            }
+          }
+        }
       }
       `)
+
+      var newGalery = data.full.edges.slice(0).reverse().map((item)=>{
+        return(
+        {original: item.node.childImageSharp.fixed.src,}
+      )})
   return(
   <Layout>
     <SEO title="Realizacje - Panele fotowoltaiczne Zielona Góra lubuskie"
@@ -49,17 +141,20 @@ const IndexPage = () => {
         <div className="section-title">
           <h2>Realaizacje</h2>
         </div>
-        <div className="re_content">
+        <Gallery thumb={data.thumb.edges} items={newGalery}/>
+        {/*<div className="re_content">
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
+                {data.case1.edges.map(({node})=>(
                     node.base === 'realize_1.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
                 ))}
                 <div className="re_description">
                     <h4>Montaż generatora PV o łącznej mocy 39,6 kWp na dachu budynku OZEnergia w miejscowości Kiełpin koło Zielonej Góry</h4>
                 </div>
             </div>
+            
+             
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
+                {data.case1.edges.map(({node})=>(
                     node.base === 'realize_2.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
                 ))}
                 <div className="re_description">
@@ -67,7 +162,7 @@ const IndexPage = () => {
                 </div>
             </div>
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
+                {data.case1.edges.map(({node})=>(
                     node.base === 'realize_3.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
                 ))}
                 <div className="re_description">
@@ -75,7 +170,7 @@ const IndexPage = () => {
                 </div>
             </div>
             <div className="re_item">
-                {data.allFile.edges.map(({node})=>(
+                {data.case1.edges.map(({node})=>(
                     node.base === 'realize_4.jpg' ? <Img fluid={node.childImageSharp.fluid} />  :""
                 ))}
                 <div className="re_description">
@@ -84,7 +179,7 @@ const IndexPage = () => {
             </div>
         </div>
         
-       
+                */}
       </div>
     </section>
   <section id="contact">
@@ -101,4 +196,3 @@ const IndexPage = () => {
 )
     }
 export default IndexPage
-
