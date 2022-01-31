@@ -47,14 +47,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /assets/ 
-        }
-      }
-    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
